@@ -335,7 +335,7 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_categoryComboBoxActionPerformed
 
     private void cartBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartBtn1ActionPerformed
-        cartPanel1.setVisible(!cartPanel.isVisible());
+        cartPanel1.setVisible(!cartPanel1.isVisible());
     }//GEN-LAST:event_cartBtn1ActionPerformed
 
     private void aboutBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutBtn1ActionPerformed
