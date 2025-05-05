@@ -1,9 +1,11 @@
 
 package coffee.ordering.system;
 
+import java.awt.Image;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -13,8 +15,22 @@ public class SignUp extends javax.swing.JFrame {
 
 
     public SignUp() {
-        initComponents();
+    initComponents();
+    int logoSize = 225;
+    logo.setIcon(getScaledIcon("/images/logo-white.png", logoSize, logoSize));
+}
+
+private ImageIcon getScaledIcon(String path, int width, int height) {
+    java.net.URL imageUrl = getClass().getResource(path);
+    if (imageUrl == null) {
+        System.out.println("Image not found at: " + path);
+        return null;
     }
+    ImageIcon icon = new ImageIcon(imageUrl);
+    Image img = icon.getImage();
+    Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+    return new ImageIcon(scaledImg);
+}
 
 
     @SuppressWarnings("unchecked")
@@ -23,6 +39,7 @@ public class SignUp extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         Right = new javax.swing.JPanel();
+        logo = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         Left = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -32,44 +49,50 @@ public class SignUp extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextPane2 = new javax.swing.JTextPane();
+        Username = new javax.swing.JTextPane();
         jLabel9 = new javax.swing.JLabel();
-        jTextPane4 = new javax.swing.JTextPane();
-        jTextPane5 = new javax.swing.JTextPane();
+        LastName = new javax.swing.JTextPane();
+        FirstName = new javax.swing.JTextPane();
         jLabel10 = new javax.swing.JLabel();
-        jTextPane3 = new javax.swing.JTextPane();
+        Email = new javax.swing.JTextPane();
         jLabel11 = new javax.swing.JLabel();
-        jTextPane6 = new javax.swing.JTextPane();
-        jTextPane7 = new javax.swing.JTextPane();
+        Password = new javax.swing.JTextPane();
+        ConfirmPassword = new javax.swing.JTextPane();
         jLabel12 = new javax.swing.JLabel();
+        user_type = new javax.swing.JComboBox<>();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SIGNUP");
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFocusCycleRoot(false);
-        setMaximizedBounds(new java.awt.Rectangle(800, 568, 568, 568));
         setMaximumSize(new java.awt.Dimension(800, 568));
         setMinimumSize(new java.awt.Dimension(800, 568));
         setResizable(false);
         setSize(new java.awt.Dimension(800, 568));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(239, 233, 233));
         jPanel1.setToolTipText("");
         jPanel1.setAlignmentX(0.0F);
         jPanel1.setAlignmentY(0.0F);
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 568));
 
-        Right.setBackground(new java.awt.Color(89, 51, 20));
+        Right.setBackground(new java.awt.Color(239, 233, 233));
         Right.setPreferredSize(new java.awt.Dimension(400, 568));
         Right.setLayout(null);
+
+        logo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Right.add(logo);
+        logo.setBounds(90, 0, 250, 160);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Front.JPG"))); // NOI18N
         jLabel6.setAlignmentY(0.0F);
         Right.add(jLabel6);
         jLabel6.setBounds(0, -1, 400, 570);
 
+        Left.setBackground(new java.awt.Color(239, 233, 233));
         Left.setAlignmentX(0.0F);
         Left.setAlignmentY(0.0F);
         Left.setMinimumSize(new java.awt.Dimension(400, 568));
@@ -101,7 +124,7 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
         Left.add(SignUpBtn);
-        SignUpBtn.setBounds(35, 450, 330, 31);
+        SignUpBtn.setBounds(245, 450, 120, 31);
 
         jLabel4.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel4.setText("I already have an account?");
@@ -134,12 +157,12 @@ public class SignUp extends javax.swing.JFrame {
         Left.add(jLabel8);
         jLabel8.setBounds(35, 190, 74, 22);
 
-        jTextPane2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
-        jTextPane2.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        jTextPane2.setAlignmentX(0.0F);
-        jTextPane2.setAlignmentY(0.0F);
-        Left.add(jTextPane2);
-        jTextPane2.setBounds(35, 215, 330, 22);
+        Username.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
+        Username.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        Username.setAlignmentX(0.0F);
+        Username.setAlignmentY(0.0F);
+        Left.add(Username);
+        Username.setBounds(35, 215, 330, 22);
 
         jLabel9.setBackground(new java.awt.Color(153, 153, 153));
         jLabel9.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -147,19 +170,19 @@ public class SignUp extends javax.swing.JFrame {
         Left.add(jLabel9);
         jLabel9.setBounds(35, 125, 73, 22);
 
-        jTextPane4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
-        jTextPane4.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        jTextPane4.setAlignmentX(0.0F);
-        jTextPane4.setAlignmentY(0.0F);
-        Left.add(jTextPane4);
-        jTextPane4.setBounds(35, 150, 130, 22);
+        LastName.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
+        LastName.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        LastName.setAlignmentX(0.0F);
+        LastName.setAlignmentY(0.0F);
+        Left.add(LastName);
+        LastName.setBounds(35, 150, 130, 22);
 
-        jTextPane5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
-        jTextPane5.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        jTextPane5.setAlignmentX(0.0F);
-        jTextPane5.setAlignmentY(0.0F);
-        Left.add(jTextPane5);
-        jTextPane5.setBounds(235, 150, 130, 22);
+        FirstName.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
+        FirstName.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        FirstName.setAlignmentX(0.0F);
+        FirstName.setAlignmentY(0.0F);
+        Left.add(FirstName);
+        FirstName.setBounds(235, 150, 130, 22);
 
         jLabel10.setBackground(new java.awt.Color(153, 153, 153));
         jLabel10.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -167,12 +190,12 @@ public class SignUp extends javax.swing.JFrame {
         Left.add(jLabel10);
         jLabel10.setBounds(35, 255, 74, 22);
 
-        jTextPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
-        jTextPane3.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        jTextPane3.setAlignmentX(0.0F);
-        jTextPane3.setAlignmentY(0.0F);
-        Left.add(jTextPane3);
-        jTextPane3.setBounds(35, 280, 330, 22);
+        Email.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
+        Email.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        Email.setAlignmentX(0.0F);
+        Email.setAlignmentY(0.0F);
+        Left.add(Email);
+        Email.setBounds(35, 280, 330, 22);
 
         jLabel11.setBackground(new java.awt.Color(153, 153, 153));
         jLabel11.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -180,25 +203,42 @@ public class SignUp extends javax.swing.JFrame {
         Left.add(jLabel11);
         jLabel11.setBounds(35, 320, 74, 22);
 
-        jTextPane6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
-        jTextPane6.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        jTextPane6.setAlignmentX(0.0F);
-        jTextPane6.setAlignmentY(0.0F);
-        Left.add(jTextPane6);
-        jTextPane6.setBounds(35, 345, 330, 22);
+        Password.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
+        Password.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        Password.setAlignmentX(0.0F);
+        Password.setAlignmentY(0.0F);
+        Left.add(Password);
+        Password.setBounds(35, 345, 330, 22);
 
-        jTextPane7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
-        jTextPane7.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        jTextPane7.setAlignmentX(0.0F);
-        jTextPane7.setAlignmentY(0.0F);
-        Left.add(jTextPane7);
-        jTextPane7.setBounds(35, 410, 330, 22);
+        ConfirmPassword.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
+        ConfirmPassword.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        ConfirmPassword.setAlignmentX(0.0F);
+        ConfirmPassword.setAlignmentY(0.0F);
+        Left.add(ConfirmPassword);
+        ConfirmPassword.setBounds(35, 410, 330, 22);
 
         jLabel12.setBackground(new java.awt.Color(153, 153, 153));
         jLabel12.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel12.setText("Confirm Password");
         Left.add(jLabel12);
         jLabel12.setBounds(35, 385, 150, 22);
+
+        user_type.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        user_type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Admin" }));
+        user_type.setName(""); // NOI18N
+        user_type.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                user_typeActionPerformed(evt);
+            }
+        });
+        Left.add(user_type);
+        user_type.setBounds(115, 455, 80, 20);
+
+        jLabel13.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel13.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        jLabel13.setText("Sign Up as");
+        Left.add(jLabel13);
+        jLabel13.setBounds(35, 455, 74, 22);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -233,59 +273,82 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void SignUpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpBtnActionPerformed
-        String fullName, email, Password, userType, query;
-        String SUrl, SUser, SPass;
-        SUrl = "jdbc:MySQL://localhost:3306/java_user_database";
-        SUser = "root";
-        SPass = "";
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
-            Statement st = con.createStatement();
-            if("".equals(fname.getText())){
-                JOptionPane.showMessageDialog(new JFrame(), "Full Name is require", "Error",
-                    JOptionPane.ERROR_MESSAGE);
-            }else if("".equals(emailAddress.getText())){
-                JOptionPane.showMessageDialog(new JFrame(), "Email Address is require", "Error",
-                    JOptionPane.ERROR_MESSAGE);
-            }else if("".equals(pass.getText())){
-                JOptionPane.showMessageDialog(new JFrame(), "Password is require", "Error",
-                    JOptionPane.ERROR_MESSAGE);
-            } else if (user_type.getSelectedItem() == null) {
-                JOptionPane.showMessageDialog(new JFrame(), "Please select a User Type", "Error",
-                    JOptionPane.ERROR_MESSAGE);
-            } else {
-                fullName = fname.getText();
-                email    = emailAddress.getText();
-                Password = pass.getText();
-                userType = user_type.getSelectedItem().toString();
-                System.out.println(Password);
+ String fullName, email, password, confirmPassword, username, userType; // default or static type
+    String SUrl = "jdbc:mysql://localhost:3306/java_user_database"; // Note: lowercase 'mysql'
+    String SUser = "root";
+    String SPass = "";
 
-                query = "INSERT INTO user(full_name, email, password, user_type) " +
-                "VALUES('" + fullName + "', '" + email + "', '" + Password + "', '" + userType + "')";
+    try {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
 
-                st.execute(query);
-                fname.setText("");
-                emailAddress.setText("");
-                pass.setText("");
+        String firstName = FirstName.getText();
+        String lastName = LastName.getText();
+        username = Username.getText();
+        email = Email.getText();
+        password = Password.getText();
+        confirmPassword = ConfirmPassword.getText();
+        userType = user_type.getSelectedItem().toString();
+
+
+        if (firstName.isEmpty() || lastName.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "First and Last Name are required.", "Error", JOptionPane.ERROR_MESSAGE);
+        } else if (username.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Username is required.", "Error", JOptionPane.ERROR_MESSAGE);
+        } else if (email.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Email is required.", "Error", JOptionPane.ERROR_MESSAGE);
+        } else if (password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Password is required.", "Error", JOptionPane.ERROR_MESSAGE);
+        } else if (!password.equals(confirmPassword)) {
+            JOptionPane.showMessageDialog(this, "Passwords do not match.", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            fullName = firstName + " " + lastName;
+
+            String query = "INSERT INTO user(lastName, firstName, username, email, password, confirmPassword, user_type)" + 
+                "VALUES('" + lastName + "', '" + firstName + "', '" + username + "', '" + email + "', '" + password + "', '" + confirmPassword + "', '" + userType + "')";
+
+            try (java.sql.PreparedStatement pst = con.prepareStatement(query)) {
+
+                pst.executeUpdate();
+
+                JOptionPane.showMessageDialog(this, "New account has been created successfully!");
+
+                // Clear fields
+                Username.setText("");
+                Email.setText("");
+                LastName.setText("");
+                FirstName.setText("");
+                Password.setText("");
+                ConfirmPassword.setText("");
                 user_type.setSelectedIndex(0);
-                showMessageDialog(null, "New account has been created successfully!");
             }
-        }catch(Exception e){
-            System.out.println("Error!" + e.getMessage());
         }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Database Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
     }//GEN-LAST:event_SignUpBtnActionPerformed
+
+    private void user_typeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_typeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_user_typeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextPane ConfirmPassword;
+    private javax.swing.JTextPane Email;
+    private javax.swing.JTextPane FirstName;
+    private javax.swing.JTextPane LastName;
     private javax.swing.JPanel Left;
+    private javax.swing.JTextPane Password;
     private javax.swing.JPanel Right;
     private javax.swing.JButton SignUpBtn;
+    private javax.swing.JTextPane Username;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -293,11 +356,7 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane3;
-    private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextPane jTextPane6;
-    private javax.swing.JTextPane jTextPane7;
+    private javax.swing.JLabel logo;
+    private javax.swing.JComboBox<String> user_type;
     // End of variables declaration//GEN-END:variables
 }

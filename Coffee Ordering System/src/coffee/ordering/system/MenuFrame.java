@@ -15,7 +15,7 @@ import java.awt.Insets;
 
 
 
-public class UserFrame extends javax.swing.JFrame {
+public class MenuFrame extends javax.swing.JFrame {
     
     CardLayout cardLayout;
     
@@ -26,17 +26,14 @@ public class UserFrame extends javax.swing.JFrame {
     
     String[] categories = {"Choose", "Main Courses", "Desserts"};
    
-    public UserFrame() {
+    public MenuFrame() {
         initComponents();
         cardLayout = (CardLayout)(getContentPane().getLayout());
-        updateDisplay();
         cartPanel.setVisible(false);
         cartPanel1.setVisible(false);
         int logoSize = 110;
         logo.setIcon(getScaledIcon("/images/logo.png", logoSize, logoSize));
         int iconSize = 15; // You can use 48 or 64 depending on desired size
-        leftButton.setIcon(getScaledIcon("/images/left-arrow.png", iconSize));
-        rightButton.setIcon(getScaledIcon("/images/right-arrow.png", iconSize));
         int homeIconSize = 16; // Or any size that fits well
         homeBtn.setIcon(getScaledIcon("/images/home.png", homeIconSize));
         homeBtn.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT); // Optional: text to the right of icon
@@ -109,19 +106,34 @@ public class UserFrame extends javax.swing.JFrame {
         logo = new javax.swing.JLabel();
         cartPanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        leftButton = new javax.swing.JButton();
         LogoutBtn = new javax.swing.JButton();
-        productImage = new javax.swing.JLabel();
-        productDescription = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        productName = new javax.swing.JLabel();
         aboutBtn = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        HotCoffee1 = new javax.swing.JButton();
+        IcedCoffee1 = new javax.swing.JButton();
+        Pastries1 = new javax.swing.JButton();
         categoriesBtn = new javax.swing.JButton();
         homeBtn = new javax.swing.JButton();
         cartBtn = new javax.swing.JButton();
-        rightButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         roundedPanel = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        Pastries = new javax.swing.JButton();
+        IcedCoffee = new javax.swing.JButton();
+        HotCoffee = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        Pastries2 = new javax.swing.JButton();
+        IcedCoffee2 = new javax.swing.JButton();
+        IcedCoffee3 = new javax.swing.JButton();
+        IcedCoffee4 = new javax.swing.JButton();
+        IcedCoffee5 = new javax.swing.JButton();
         panelCategory = new javax.swing.JPanel();
         cartPanel1 = new javax.swing.JPanel();
         product1 = new javax.swing.JPanel();
@@ -140,8 +152,7 @@ public class UserFrame extends javax.swing.JFrame {
         user.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("HOME");
-        setMaximumSize(null);
+        setTitle("MENU");
         setMinimumSize(null);
         setPreferredSize(new java.awt.Dimension(813, 606));
         setResizable(false);
@@ -154,7 +165,7 @@ public class UserFrame extends javax.swing.JFrame {
         panelHome.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 7, 160, 90));
 
         cartPanel.setLayout(new javax.swing.OverlayLayout(cartPanel));
-        panelHome.add(cartPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, 160, 320));
+        panelHome.add(cartPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, -50, 160, 320));
 
         jButton1.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jButton1.setText("Order Now");
@@ -166,17 +177,6 @@ public class UserFrame extends javax.swing.JFrame {
         });
         panelHome.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 520, 120, -1));
 
-        leftButton.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        leftButton.setToolTipText("");
-        leftButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        leftButton.setPreferredSize(new java.awt.Dimension(85, 23));
-        leftButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                leftButtonActionPerformed(evt);
-            }
-        });
-        panelHome.add(leftButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, 30, 30));
-
         LogoutBtn.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         LogoutBtn.setText("Logout");
         LogoutBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -186,26 +186,11 @@ public class UserFrame extends javax.swing.JFrame {
         });
         panelHome.add(LogoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 120, -1));
 
-        productImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelHome.add(productImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 300, 300));
-
-        productDescription.setFont(new java.awt.Font("Poppins Light", 0, 20)); // NOI18N
-        productDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        productDescription.setText("Product Description");
-        panelHome.add(productDescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 270, 150, 150));
-
         jLabel2.setFont(new java.awt.Font("Poppins Light", 1, 36)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Best Products");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         panelHome.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 810, -1));
-
-        productName.setFont(new java.awt.Font("Poppins Light", 3, 30)); // NOI18N
-        productName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        productName.setText("Product name ");
-        productName.setToolTipText("");
-        productName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        panelHome.add(productName, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 120, 150, 150));
 
         aboutBtn.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         aboutBtn.setText("About Us");
@@ -216,6 +201,62 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         panelHome.add(aboutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 385, 120, -1));
+
+        jLabel8.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Name");
+        panelHome.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 70, 40));
+
+        jLabel9.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Name");
+        panelHome.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 70, 40));
+
+        jLabel10.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Name");
+        panelHome.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 70, 40));
+
+        jLabel11.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Name");
+        panelHome.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 440, 70, 40));
+
+        HotCoffee1.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        HotCoffee1.setToolTipText("");
+        HotCoffee1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        HotCoffee1.setPreferredSize(new java.awt.Dimension(85, 23));
+        HotCoffee1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HotCoffee1ActionPerformed(evt);
+            }
+        });
+        panelHome.add(HotCoffee1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 140, 160));
+
+        IcedCoffee1.setBackground(new java.awt.Color(138, 80, 43));
+        IcedCoffee1.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee1.setForeground(new java.awt.Color(255, 255, 255));
+        IcedCoffee1.setText("Add to Cart");
+        IcedCoffee1.setToolTipText("");
+        IcedCoffee1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee1.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee1ActionPerformed(evt);
+            }
+        });
+        panelHome.add(IcedCoffee1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 480, 130, 30));
+
+        Pastries1.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        Pastries1.setToolTipText("");
+        Pastries1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Pastries1.setPreferredSize(new java.awt.Dimension(85, 23));
+        Pastries1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pastries1ActionPerformed(evt);
+            }
+        });
+        panelHome.add(Pastries1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, 130, 160));
 
         categoriesBtn.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         categoriesBtn.setText("Menu");
@@ -248,16 +289,6 @@ public class UserFrame extends javax.swing.JFrame {
         });
         panelHome.add(cartBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 295, 120, -1));
 
-        rightButton.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        rightButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rightButton.setPreferredSize(new java.awt.Dimension(85, 23));
-        rightButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rightButtonActionPerformed(evt);
-            }
-        });
-        panelHome.add(rightButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, 30, 30));
-
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -265,7 +296,7 @@ public class UserFrame extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 858, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -280,14 +311,134 @@ public class UserFrame extends javax.swing.JFrame {
         roundedPanel.setLayout(roundedPanelLayout);
         roundedPanelLayout.setHorizontalGroup(
             roundedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         roundedPanelLayout.setVerticalGroup(
             roundedPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 567, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         panelHome.add(roundedPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 567));
+
+        jLabel6.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Pastries");
+        panelHome.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 70, 40));
+
+        jLabel5.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Hot Coffee");
+        panelHome.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 70, 40));
+
+        jLabel3.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Iced Coffee");
+        panelHome.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 70, 40));
+
+        Pastries.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        Pastries.setToolTipText("");
+        Pastries.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Pastries.setPreferredSize(new java.awt.Dimension(85, 23));
+        Pastries.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PastriesActionPerformed(evt);
+            }
+        });
+        panelHome.add(Pastries, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 90, 90));
+
+        IcedCoffee.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee.setToolTipText("");
+        IcedCoffee.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffeeActionPerformed(evt);
+            }
+        });
+        panelHome.add(IcedCoffee, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 90, 90));
+
+        HotCoffee.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        HotCoffee.setToolTipText("");
+        HotCoffee.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        HotCoffee.setPreferredSize(new java.awt.Dimension(85, 23));
+        HotCoffee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HotCoffeeActionPerformed(evt);
+            }
+        });
+        panelHome.add(HotCoffee, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 90, 90));
+
+        jLabel4.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel4.setText("Popular Picks");
+        panelHome.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 170, 60));
+
+        jLabel7.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel7.setText("Categories");
+        panelHome.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 170, 60));
+
+        Pastries2.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        Pastries2.setToolTipText("");
+        Pastries2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Pastries2.setPreferredSize(new java.awt.Dimension(85, 23));
+        Pastries2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pastries2ActionPerformed(evt);
+            }
+        });
+        panelHome.add(Pastries2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 130, 160));
+
+        IcedCoffee2.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee2.setToolTipText("");
+        IcedCoffee2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee2.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee2ActionPerformed(evt);
+            }
+        });
+        panelHome.add(IcedCoffee2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 140, 160));
+
+        IcedCoffee3.setBackground(new java.awt.Color(138, 80, 43));
+        IcedCoffee3.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee3.setForeground(new java.awt.Color(255, 255, 255));
+        IcedCoffee3.setText("Add to Cart");
+        IcedCoffee3.setToolTipText("");
+        IcedCoffee3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee3.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee3ActionPerformed(evt);
+            }
+        });
+        panelHome.add(IcedCoffee3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 480, 140, 30));
+
+        IcedCoffee4.setBackground(new java.awt.Color(138, 80, 43));
+        IcedCoffee4.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee4.setForeground(new java.awt.Color(255, 255, 255));
+        IcedCoffee4.setText("Add to Cart");
+        IcedCoffee4.setToolTipText("");
+        IcedCoffee4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee4.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee4ActionPerformed(evt);
+            }
+        });
+        panelHome.add(IcedCoffee4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 480, 140, 30));
+
+        IcedCoffee5.setBackground(new java.awt.Color(138, 80, 43));
+        IcedCoffee5.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee5.setForeground(new java.awt.Color(255, 255, 255));
+        IcedCoffee5.setText("Add to Cart");
+        IcedCoffee5.setToolTipText("");
+        IcedCoffee5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee5.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee5ActionPerformed(evt);
+            }
+        });
+        panelHome.add(IcedCoffee5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 480, 130, 30));
 
         getContentPane().add(panelHome);
         panelHome.setBounds(0, 0, 890, 600);
@@ -432,36 +583,7 @@ public class UserFrame extends javax.swing.JFrame {
         LoginFrame.setLocationRelativeTo(null); 
         this.dispose();
     }//GEN-LAST:event_LogoutBtnActionPerformed
-    private void updateDisplay() {
-    // Load image from the "images" folder
-    ImageIcon icon = new ImageIcon(getClass().getResource("/images/" + imageNames[currentIndex]));
-    
 
-    // Get original image
-    Image originalImage = icon.getImage();
-
-    // Calculate scaled dimensions while preserving aspect ratio
-    int labelWidth = productImage.getWidth();
-    int labelHeight = productImage.getHeight();
-
-    int imgWidth = icon.getIconWidth();
-    int imgHeight = icon.getIconHeight();
-
-    float widthRatio = (float) labelWidth / imgWidth;
-    float heightRatio = (float) labelHeight / imgHeight;
-    float scaleFactor = Math.min(widthRatio, heightRatio);
-
-    int newWidth = Math.round(imgWidth * scaleFactor);
-    int newHeight = Math.round(imgHeight * scaleFactor);
-
-    // Scale image smoothly and maintain aspect ratio
-    Image scaledImage = originalImage.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
-
-    // Set scaled image to label
-    productImage.setIcon(new ImageIcon(scaledImage));
-    productName.setText(productNames[currentIndex]);
-    productDescription.setText(productDescriptions[currentIndex]);
-}
     private ImageIcon getScaledIcon(String path, int size) {
     ImageIcon icon = new ImageIcon(getClass().getResource(path));
     Image img = icon.getImage().getScaledInstance(size, size, Image.SCALE_SMOOTH);
@@ -470,12 +592,6 @@ public class UserFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         cardLayout.show(getContentPane(), "card3");
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void rightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rightButtonActionPerformed
-        currentIndex++;
-        if (currentIndex >= imageNames.length) currentIndex = 0;
-        updateDisplay();
-    }//GEN-LAST:event_rightButtonActionPerformed
 
     private void aboutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutBtnActionPerformed
         // TODO add your handling code here:
@@ -514,19 +630,57 @@ public class UserFrame extends javax.swing.JFrame {
     this.dispose(); 
     }//GEN-LAST:event_homeBtnActionPerformed
 
-    private void leftButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leftButtonActionPerformed
-        currentIndex--;
-        if (currentIndex < 0) currentIndex = imageNames.length - 1;
-        updateDisplay();
-    }//GEN-LAST:event_leftButtonActionPerformed
-
     private void categoriesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriesBtnActionPerformed
     MenuFrame MenuFrame = new MenuFrame(); // Instantiate your target JFrame
     MenuFrame.setVisible(true);
     MenuFrame.pack();    
     MenuFrame.setLocationRelativeTo(null); // Center the window
-    this.dispose();                     // Optional: close the current window
+    this.dispose();               // Optional: close the current window
     }//GEN-LAST:event_categoriesBtnActionPerformed
+
+    private void PastriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PastriesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PastriesActionPerformed
+
+    private void IcedCoffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffeeActionPerformed
+
+    private void HotCoffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HotCoffeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HotCoffeeActionPerformed
+
+    private void HotCoffee1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HotCoffee1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HotCoffee1ActionPerformed
+
+    private void IcedCoffee1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee1ActionPerformed
+
+    private void Pastries1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pastries1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pastries1ActionPerformed
+
+    private void Pastries2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pastries2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pastries2ActionPerformed
+
+    private void IcedCoffee2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee2ActionPerformed
+
+    private void IcedCoffee3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee3ActionPerformed
+
+    private void IcedCoffee4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee4ActionPerformed
+
+    private void IcedCoffee5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee5ActionPerformed
     
     void updateFoodsDisplay(String category) {
     if (category.equals("Product1")) {
@@ -563,7 +717,7 @@ public class UserFrame extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UserFrame().setVisible(true);
+                new MenuFrame().setVisible(true);
             }
         });
         
@@ -571,8 +725,19 @@ public class UserFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton HotCoffee;
+    private javax.swing.JButton HotCoffee1;
+    private javax.swing.JButton IcedCoffee;
+    private javax.swing.JButton IcedCoffee1;
+    private javax.swing.JButton IcedCoffee2;
+    private javax.swing.JButton IcedCoffee3;
+    private javax.swing.JButton IcedCoffee4;
+    private javax.swing.JButton IcedCoffee5;
     private javax.swing.JButton LogoutBtn;
     private javax.swing.JButton LogoutBtn1;
+    private javax.swing.JButton Pastries;
+    private javax.swing.JButton Pastries1;
+    private javax.swing.JButton Pastries2;
     private javax.swing.JButton aboutBtn;
     private javax.swing.JButton aboutBtn1;
     private javax.swing.JButton cartBtn;
@@ -586,10 +751,18 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JButton homeBtn1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JButton leftButton;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel panelCategory;
     private javax.swing.JPanel panelHome;
@@ -597,10 +770,6 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JPanel product2;
     private javax.swing.JPanel product3;
     private javax.swing.JPanel product4;
-    private javax.swing.JLabel productDescription;
-    private javax.swing.JLabel productImage;
-    private javax.swing.JLabel productName;
-    private javax.swing.JButton rightButton;
     private javax.swing.JPanel roundedPanel;
     private javax.swing.JLabel user;
     // End of variables declaration//GEN-END:variables
