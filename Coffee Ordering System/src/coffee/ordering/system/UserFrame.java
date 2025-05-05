@@ -17,7 +17,6 @@ import java.awt.Insets;
 
 public class UserFrame extends javax.swing.JFrame {
     
-    CardLayout cardLayout;
     
     
     private String[] imageNames = {"diwata.png", "hiwaga.png", "romnick.png"}; 
@@ -29,12 +28,13 @@ public class UserFrame extends javax.swing.JFrame {
    
     public UserFrame() {
         initComponents();
-        cardLayout = (CardLayout)(getContentPane().getLayout());
         updateDisplay();
         hotCoffeePanel.setVisible(false);
         coldCoffeePanel.setVisible(false);
         pastriesPanel.setVisible(false);
-        categoryBack.setVisible(false);
+        categoryBack.setVisible(false);//back button
+        americanoPanel.setVisible(false);
+        
         
         int logoSize = 110;
         logo.setIcon(getScaledIcon("/images/logo.png", logoSize, logoSize));
@@ -124,8 +124,12 @@ public class UserFrame extends javax.swing.JFrame {
         tab2 = new javax.swing.JPanel();
         categoryBack = new javax.swing.JButton();
         hotCoffeePanel = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        americanoButton = new javax.swing.JButton();
         coldCoffeePanel = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
         pastriesPanel = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -152,6 +156,16 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         tab4 = new javax.swing.JPanel();
         tab5 = new javax.swing.JPanel();
+        americanoPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        sizeComboBox = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
+        quantitySpinner = new javax.swing.JSpinner();
+        jLabel15 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         LogoutBtn = new javax.swing.JButton();
         aboutBtn = new javax.swing.JButton();
         categoriesBtn = new javax.swing.JButton();
@@ -308,15 +322,37 @@ public class UserFrame extends javax.swing.JFrame {
 
         hotCoffeePanel.setBackground(new java.awt.Color(239, 233, 233));
 
+        jLabel11.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel11.setText("Hot Coffees");
+
+        americanoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                americanoButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout hotCoffeePanelLayout = new javax.swing.GroupLayout(hotCoffeePanel);
         hotCoffeePanel.setLayout(hotCoffeePanelLayout);
         hotCoffeePanelLayout.setHorizontalGroup(
             hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGroup(hotCoffeePanelLayout.createSequentialGroup()
+                .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(hotCoffeePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(hotCoffeePanelLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(americanoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(599, Short.MAX_VALUE))
         );
         hotCoffeePanelLayout.setVerticalGroup(
             hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGroup(hotCoffeePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(americanoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(310, Short.MAX_VALUE))
         );
 
         tab2.add(hotCoffeePanel);
@@ -324,15 +360,24 @@ public class UserFrame extends javax.swing.JFrame {
 
         coldCoffeePanel.setBackground(new java.awt.Color(239, 233, 233));
 
+        jLabel12.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel12.setText("Cold Coffees");
+
         javax.swing.GroupLayout coldCoffeePanelLayout = new javax.swing.GroupLayout(coldCoffeePanel);
         coldCoffeePanel.setLayout(coldCoffeePanelLayout);
         coldCoffeePanelLayout.setHorizontalGroup(
             coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGroup(coldCoffeePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12)
+                .addContainerGap(639, Short.MAX_VALUE))
         );
         coldCoffeePanelLayout.setVerticalGroup(
             coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGroup(coldCoffeePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12)
+                .addContainerGap(458, Short.MAX_VALUE))
         );
 
         tab2.add(coldCoffeePanel);
@@ -340,15 +385,24 @@ public class UserFrame extends javax.swing.JFrame {
 
         pastriesPanel.setBackground(new java.awt.Color(239, 233, 233));
 
+        jLabel13.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel13.setText("Pastries");
+
         javax.swing.GroupLayout pastriesPanelLayout = new javax.swing.GroupLayout(pastriesPanel);
         pastriesPanel.setLayout(pastriesPanelLayout);
         pastriesPanelLayout.setHorizontalGroup(
             pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGroup(pastriesPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel13)
+                .addContainerGap(682, Short.MAX_VALUE))
         );
         pastriesPanelLayout.setVerticalGroup(
             pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGroup(pastriesPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel13)
+                .addContainerGap(458, Short.MAX_VALUE))
         );
 
         tab2.add(pastriesPanel);
@@ -625,15 +679,108 @@ public class UserFrame extends javax.swing.JFrame {
 
         tab5.setBackground(new java.awt.Color(239, 233, 233));
 
+        americanoPanel.setPreferredSize(new java.awt.Dimension(670, 480));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/americano.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+
+        sizeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal 12 oz", "Large 16 oz" }));
+        sizeComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sizeComboBoxActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setText("Size");
+
+        jLabel15.setText("Quantity");
+
+        jButton4.setText("Add to Cart");
+
+        jLabel16.setText("135");
+
+        jLabel17.setText("Americano");
+
+        javax.swing.GroupLayout americanoPanelLayout = new javax.swing.GroupLayout(americanoPanel);
+        americanoPanel.setLayout(americanoPanelLayout);
+        americanoPanelLayout.setHorizontalGroup(
+            americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(americanoPanelLayout.createSequentialGroup()
+                .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(americanoPanelLayout.createSequentialGroup()
+                        .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(americanoPanelLayout.createSequentialGroup()
+                                .addGap(76, 76, 76)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(49, 49, 49))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, americanoPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel16)
+                                .addGap(179, 179, 179)))
+                        .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sizeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10)
+                            .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(quantitySpinner, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(americanoPanelLayout.createSequentialGroup()
+                        .addGap(210, 210, 210)
+                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(182, Short.MAX_VALUE))
+        );
+        americanoPanelLayout.setVerticalGroup(
+            americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(americanoPanelLayout.createSequentialGroup()
+                .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(americanoPanelLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jLabel17)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(americanoPanelLayout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(sizeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(64, 64, 64)
+                        .addComponent(jLabel15)
+                        .addGap(18, 18, 18)
+                        .addComponent(quantitySpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(americanoPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton4)
+                        .addGap(45, 45, 45))
+                    .addGroup(americanoPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel16)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+
+        jLabel14.setText("Your Order");
+
         javax.swing.GroupLayout tab5Layout = new javax.swing.GroupLayout(tab5);
         tab5.setLayout(tab5Layout);
         tab5Layout.setHorizontalGroup(
             tab5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGroup(tab5Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(americanoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(270, 270, 270))
         );
         tab5Layout.setVerticalGroup(
             tab5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 615, Short.MAX_VALUE)
+            .addGroup(tab5Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addComponent(americanoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         jTabbedPanel.addTab("tab5", tab5);
@@ -706,7 +853,7 @@ public class UserFrame extends javax.swing.JFrame {
         panelHome.add(roundedPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 567));
 
         getContentPane().add(panelHome);
-        panelHome.setBounds(0, 0, 930, 600);
+        panelHome.setBounds(0, 0, 970, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -754,7 +901,7 @@ public class UserFrame extends javax.swing.JFrame {
     return new ImageIcon(img);
 }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        cardLayout.show(getContentPane(), "card3");
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void rightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rightButtonActionPerformed
@@ -853,6 +1000,15 @@ public class UserFrame extends javax.swing.JFrame {
         coldCoffeePanel.setVisible(false);
         pastriesPanel.setVisible(false);
     }//GEN-LAST:event_categoryBackActionPerformed
+
+    private void sizeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sizeComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sizeComboBoxActionPerformed
+
+    private void americanoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_americanoButtonActionPerformed
+        jTabbedPanel.setSelectedIndex(4);
+        americanoPanel.setVisible(true);
+    }//GEN-LAST:event_americanoButtonActionPerformed
     
     public void setUser(String name){
         user.setText(name);
@@ -882,6 +1038,8 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JButton LogoutBtn;
     private javax.swing.JButton Pastries;
     private javax.swing.JButton aboutBtn;
+    private javax.swing.JButton americanoButton;
+    private javax.swing.JPanel americanoPanel;
     private javax.swing.JButton cartBtn;
     private javax.swing.JPanel cartPanel;
     private javax.swing.JButton categoriesBtn;
@@ -892,6 +1050,16 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -911,8 +1079,10 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel productDescription;
     private javax.swing.JLabel productImage;
     private javax.swing.JLabel productName;
+    private javax.swing.JSpinner quantitySpinner;
     private javax.swing.JButton rightButton;
     private javax.swing.JPanel roundedPanel;
+    private javax.swing.JComboBox<String> sizeComboBox;
     private javax.swing.JPanel tab1;
     private javax.swing.JPanel tab2;
     private javax.swing.JPanel tab3;

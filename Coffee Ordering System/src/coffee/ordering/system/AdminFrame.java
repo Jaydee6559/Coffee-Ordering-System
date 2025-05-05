@@ -4,17 +4,31 @@
  */
 package coffee.ordering.system;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author jayde
  */
 public class AdminFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AdminFrame
-     */
+    Connection con;
+    
     public AdminFrame() {
         initComponents();
+        usersInternalFrame.setVisible(false);
+        String url="jdbc:MySQL://localhost:3306/java_user_database";
+        String user="root";
+        String pass="";
+        try{
+            con = DriverManager.getConnection(url,user,pass); // Assign to 'con'
+        }catch(Exception ex){
+            System.out.println("Error : " + ex.getMessage());
+        }
     }
 
     /**
@@ -28,10 +42,15 @@ public class AdminFrame extends javax.swing.JFrame {
 
         LogoutBtn = new javax.swing.JButton();
         user = new javax.swing.JLabel();
+        usersInternalFrame = new javax.swing.JInternalFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblUsers = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ADMIN");
         setPreferredSize(new java.awt.Dimension(1100, 700));
+        getContentPane().setLayout(null);
 
         LogoutBtn.setText("LOGOUT");
         LogoutBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -39,31 +58,53 @@ public class AdminFrame extends javax.swing.JFrame {
                 LogoutBtnActionPerformed(evt);
             }
         });
+        getContentPane().add(LogoutBtn);
+        LogoutBtn.setBounds(32, 549, 77, 23);
 
         user.setText("jLabel1");
+        getContentPane().add(user);
+        user.setBounds(495, 43, 157, 99);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(LogoutBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(136, Short.MAX_VALUE)
-                .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(107, 107, 107))
+        usersInternalFrame.setTitle("USERS");
+        usersInternalFrame.setVisible(true);
+
+        tblUsers.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "First Name", "Last Name", "Email", "Username", "Password", "User Type"
+            }
+        ));
+        jScrollPane1.setViewportView(tblUsers);
+
+        javax.swing.GroupLayout usersInternalFrameLayout = new javax.swing.GroupLayout(usersInternalFrame.getContentPane());
+        usersInternalFrame.getContentPane().setLayout(usersInternalFrameLayout);
+        usersInternalFrameLayout.setHorizontalGroup(
+            usersInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
-                .addComponent(LogoutBtn)
-                .addGap(26, 26, 26))
+        usersInternalFrameLayout.setVerticalGroup(
+            usersInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(usersInternalFrameLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 7, Short.MAX_VALUE))
         );
+
+        getContentPane().add(usersInternalFrame);
+        usersInternalFrame.setBounds(200, 120, 630, 370);
+
+        jButton1.setText("usersButton");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(50, 270, 110, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -75,6 +116,23 @@ public class AdminFrame extends javax.swing.JFrame {
         LoginFrame.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_LogoutBtnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        usersInternalFrame.setVisible(!usersInternalFrame.isVisible());
+        String sql= "SELECT * FROM user";
+        try{
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)tblUsers.getModel();
+            model.setRowCount(0);
+            while(rs.next()) {
+                model.addRow(new String[]{rs.getString(6), rs.getString(7), rs.getString(2), rs.getString(8), rs.getString(3), rs.getString(4)});
+            }
+        }catch(Exception ex){
+            System.out.println("Error : " +ex.getMessage());
+        }
+   
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     public void setUser(String name){
         user.setText(name);
@@ -116,6 +174,10 @@ public class AdminFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LogoutBtn;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tblUsers;
     private javax.swing.JLabel user;
+    private javax.swing.JInternalFrame usersInternalFrame;
     // End of variables declaration//GEN-END:variables
 }
