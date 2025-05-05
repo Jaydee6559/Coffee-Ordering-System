@@ -19,6 +19,7 @@ public class UserFrame extends javax.swing.JFrame {
     
     CardLayout cardLayout;
     
+    
     private String[] imageNames = {"diwata.png", "hiwaga.png", "romnick.png"}; 
     private String[] productNames = {"<html>Spanish Latte</html>", "<html>Hot Coffee</html>", "<html>Croissant</html>"};
     private String[] productDescriptions = {"<html>The perfect blend of bold and breezy.</html>", "<html>The only thing warmer than your smile? This perfectly brewed cup.</html>", "<html>Treat yourself to a little piece of Paris.</html>"};
@@ -30,7 +31,11 @@ public class UserFrame extends javax.swing.JFrame {
         initComponents();
         cardLayout = (CardLayout)(getContentPane().getLayout());
         updateDisplay();
-        cartPanel.setVisible(false);
+        hotCoffeePanel.setVisible(false);
+        coldCoffeePanel.setVisible(false);
+        pastriesPanel.setVisible(false);
+        categoryBack.setVisible(false);
+        
         int logoSize = 110;
         logo.setIcon(getScaledIcon("/images/logo.png", logoSize, logoSize));
         int iconSize = 15; // You can use 48 or 64 depending on desired size
@@ -106,7 +111,7 @@ public class UserFrame extends javax.swing.JFrame {
         user = new javax.swing.JLabel();
         cartPanel = new javax.swing.JPanel();
         panelHome = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        line = new javax.swing.JPanel();
         jTabbedPanel = new javax.swing.JTabbedPane();
         tab1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -117,6 +122,10 @@ public class UserFrame extends javax.swing.JFrame {
         rightButton = new javax.swing.JButton();
         leftButton = new javax.swing.JButton();
         tab2 = new javax.swing.JPanel();
+        categoryBack = new javax.swing.JButton();
+        hotCoffeePanel = new javax.swing.JPanel();
+        coldCoffeePanel = new javax.swing.JPanel();
+        pastriesPanel = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -135,13 +144,14 @@ public class UserFrame extends javax.swing.JFrame {
         IcedCoffee9 = new javax.swing.JButton();
         IcedCoffee10 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        logo = new javax.swing.JLabel();
         tab3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton3 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
         tab4 = new javax.swing.JPanel();
         tab5 = new javax.swing.JPanel();
-        logo = new javax.swing.JLabel();
         LogoutBtn = new javax.swing.JButton();
         aboutBtn = new javax.swing.JButton();
         categoriesBtn = new javax.swing.JButton();
@@ -164,21 +174,21 @@ public class UserFrame extends javax.swing.JFrame {
         panelHome.setBackground(new java.awt.Color(239, 233, 233));
         panelHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        line.setBackground(new java.awt.Color(255, 255, 255));
+        line.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lineLayout = new javax.swing.GroupLayout(line);
+        line.setLayout(lineLayout);
+        lineLayout.setHorizontalGroup(
+            lineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 858, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lineLayout.setVerticalGroup(
+            lineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        panelHome.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 90, 860, 1));
+        panelHome.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 90, 860, 1));
 
         jTabbedPanel.setBackground(new java.awt.Color(239, 233, 233));
 
@@ -256,7 +266,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addGroup(tab1Layout.createSequentialGroup()
                         .addGap(228, 228, 228)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 160, Short.MAX_VALUE))
+                .addGap(0, 140, Short.MAX_VALUE))
         );
         tab1Layout.setVerticalGroup(
             tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -287,10 +297,67 @@ public class UserFrame extends javax.swing.JFrame {
         tab2.setBackground(new java.awt.Color(239, 233, 233));
         tab2.setLayout(null);
 
+        categoryBack.setText("Back");
+        categoryBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                categoryBackActionPerformed(evt);
+            }
+        });
+        tab2.add(categoryBack);
+        categoryBack.setBounds(80, 30, 75, 23);
+
+        hotCoffeePanel.setBackground(new java.awt.Color(239, 233, 233));
+
+        javax.swing.GroupLayout hotCoffeePanelLayout = new javax.swing.GroupLayout(hotCoffeePanel);
+        hotCoffeePanel.setLayout(hotCoffeePanelLayout);
+        hotCoffeePanelLayout.setHorizontalGroup(
+            hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        hotCoffeePanelLayout.setVerticalGroup(
+            hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
+        );
+
+        tab2.add(hotCoffeePanel);
+        hotCoffeePanel.setBounds(10, 110, 760, 490);
+
+        coldCoffeePanel.setBackground(new java.awt.Color(239, 233, 233));
+
+        javax.swing.GroupLayout coldCoffeePanelLayout = new javax.swing.GroupLayout(coldCoffeePanel);
+        coldCoffeePanel.setLayout(coldCoffeePanelLayout);
+        coldCoffeePanelLayout.setHorizontalGroup(
+            coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        coldCoffeePanelLayout.setVerticalGroup(
+            coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
+        );
+
+        tab2.add(coldCoffeePanel);
+        coldCoffeePanel.setBounds(10, 110, 760, 490);
+
+        pastriesPanel.setBackground(new java.awt.Color(239, 233, 233));
+
+        javax.swing.GroupLayout pastriesPanelLayout = new javax.swing.GroupLayout(pastriesPanel);
+        pastriesPanel.setLayout(pastriesPanelLayout);
+        pastriesPanelLayout.setHorizontalGroup(
+            pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        pastriesPanelLayout.setVerticalGroup(
+            pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
+        );
+
+        tab2.add(pastriesPanel);
+        pastriesPanel.setBounds(10, 110, 760, 490);
+
         jLabel7.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         jLabel7.setText("Categories");
         tab2.add(jLabel7);
-        jLabel7.setBounds(10, 90, 170, 60);
+        jLabel7.setBounds(10, 110, 110, 30);
 
         jLabel3.setFont(new java.awt.Font("Poppins Light", 1, 36)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -477,6 +544,10 @@ public class UserFrame extends javax.swing.JFrame {
         tab2.add(jButton2);
         jButton2.setBounds(510, 540, 110, 29);
 
+        logo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        tab2.add(logo);
+        logo.setBounds(0, 0, 0, 0);
+
         jTabbedPanel.addTab("tab1", tab2);
 
         tab3.setBackground(new java.awt.Color(239, 233, 233));
@@ -489,7 +560,7 @@ public class UserFrame extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Order", "Quantity", "Size", "Amount"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -500,6 +571,11 @@ public class UserFrame extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+
+        jLabel9.setFont(new java.awt.Font("Poppins Light", 1, 36)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Your Orders");
+        jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout tab3Layout = new javax.swing.GroupLayout(tab3);
         tab3.setLayout(tab3Layout);
@@ -512,13 +588,18 @@ public class UserFrame extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(tab3Layout.createSequentialGroup()
                         .addGap(261, 261, 261)
-                        .addComponent(jButton3)))
-                .addContainerGap(292, Short.MAX_VALUE))
+                        .addComponent(jButton3))
+                    .addGroup(tab3Layout.createSequentialGroup()
+                        .addGap(204, 204, 204)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(272, Short.MAX_VALUE))
         );
         tab3Layout.setVerticalGroup(
             tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tab3Layout.createSequentialGroup()
-                .addGap(148, 148, 148)
+                .addGap(24, 24, 24)
+                .addComponent(jLabel9)
+                .addGap(77, 77, 77)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(jButton3)
@@ -533,7 +614,7 @@ public class UserFrame extends javax.swing.JFrame {
         tab4.setLayout(tab4Layout);
         tab4Layout.setHorizontalGroup(
             tab4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 780, Short.MAX_VALUE)
+            .addGap(0, 760, Short.MAX_VALUE)
         );
         tab4Layout.setVerticalGroup(
             tab4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -548,7 +629,7 @@ public class UserFrame extends javax.swing.JFrame {
         tab5.setLayout(tab5Layout);
         tab5Layout.setHorizontalGroup(
             tab5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 780, Short.MAX_VALUE)
+            .addGap(0, 760, Short.MAX_VALUE)
         );
         tab5Layout.setVerticalGroup(
             tab5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -557,10 +638,7 @@ public class UserFrame extends javax.swing.JFrame {
 
         jTabbedPanel.addTab("tab5", tab5);
 
-        panelHome.add(jTabbedPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, -40, 780, 650));
-
-        logo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        panelHome.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 7, 160, 90));
+        panelHome.add(jTabbedPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, -40, 760, 650));
 
         LogoutBtn.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         LogoutBtn.setText("Logout");
@@ -705,18 +783,25 @@ public class UserFrame extends javax.swing.JFrame {
 
     private void categoriesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriesBtnActionPerformed
         jTabbedPanel.setSelectedIndex(1);
+        hotCoffeePanel.setVisible(false);
+        coldCoffeePanel.setVisible(false);
+        pastriesPanel.setVisible(false);
+        categoryBack.setVisible(false);
     }//GEN-LAST:event_categoriesBtnActionPerformed
 
     private void PastriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PastriesActionPerformed
-        // TODO add your handling code here:
+        pastriesPanel.setVisible(true);
+        categoryBack.setVisible(true);
     }//GEN-LAST:event_PastriesActionPerformed
 
     private void IcedCoffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffeeActionPerformed
-        // TODO add your handling code here:
+        coldCoffeePanel.setVisible(true);
+        categoryBack.setVisible(true);
     }//GEN-LAST:event_IcedCoffeeActionPerformed
 
     private void HotCoffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HotCoffeeActionPerformed
-        // TODO add your handling code here:
+        hotCoffeePanel.setVisible(true);
+        categoryBack.setVisible(true);
     }//GEN-LAST:event_HotCoffeeActionPerformed
 
     private void IcedCoffee2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee2ActionPerformed
@@ -761,6 +846,13 @@ public class UserFrame extends javax.swing.JFrame {
         billingFrame.pack();
         billingFrame.setLocationRelativeTo(null); 
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void categoryBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBackActionPerformed
+        jTabbedPanel.setSelectedIndex(1);
+        hotCoffeePanel.setVisible(false);
+        coldCoffeePanel.setVisible(false);
+        pastriesPanel.setVisible(false);
+    }//GEN-LAST:event_categoryBackActionPerformed
     
     public void setUser(String name){
         user.setText(name);
@@ -793,7 +885,10 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JButton cartBtn;
     private javax.swing.JPanel cartPanel;
     private javax.swing.JButton categoriesBtn;
+    private javax.swing.JButton categoryBack;
+    private javax.swing.JPanel coldCoffeePanel;
     private javax.swing.JButton homeBtn;
+    private javax.swing.JPanel hotCoffeePanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -804,13 +899,15 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPanel;
     private javax.swing.JTable jTable1;
     private javax.swing.JButton leftButton;
+    private javax.swing.JPanel line;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel panelHome;
+    private javax.swing.JPanel pastriesPanel;
     private javax.swing.JLabel productDescription;
     private javax.swing.JLabel productImage;
     private javax.swing.JLabel productName;
