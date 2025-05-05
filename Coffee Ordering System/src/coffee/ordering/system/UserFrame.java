@@ -31,7 +31,6 @@ public class UserFrame extends javax.swing.JFrame {
         cardLayout = (CardLayout)(getContentPane().getLayout());
         updateDisplay();
         cartPanel.setVisible(false);
-        cartPanel1.setVisible(false);
         int logoSize = 110;
         logo.setIcon(getScaledIcon("/images/logo.png", logoSize, logoSize));
         int iconSize = 15; // You can use 48 or 64 depending on desired size
@@ -105,39 +104,54 @@ public class UserFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         user = new javax.swing.JLabel();
-        panelHome = new javax.swing.JPanel();
-        logo = new javax.swing.JLabel();
         cartPanel = new javax.swing.JPanel();
+        panelHome = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jTabbedPanel = new javax.swing.JTabbedPane();
+        tab1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        leftButton = new javax.swing.JButton();
-        LogoutBtn = new javax.swing.JButton();
-        productImage = new javax.swing.JLabel();
-        productDescription = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         productName = new javax.swing.JLabel();
+        productDescription = new javax.swing.JLabel();
+        productImage = new javax.swing.JLabel();
+        rightButton = new javax.swing.JButton();
+        leftButton = new javax.swing.JButton();
+        tab2 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        Pastries = new javax.swing.JButton();
+        IcedCoffee = new javax.swing.JButton();
+        HotCoffee = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        IcedCoffee2 = new javax.swing.JButton();
+        IcedCoffee3 = new javax.swing.JButton();
+        IcedCoffee4 = new javax.swing.JButton();
+        IcedCoffee5 = new javax.swing.JButton();
+        IcedCoffee7 = new javax.swing.JButton();
+        IcedCoffee8 = new javax.swing.JButton();
+        IcedCoffee9 = new javax.swing.JButton();
+        IcedCoffee10 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        tab3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton3 = new javax.swing.JButton();
+        tab4 = new javax.swing.JPanel();
+        tab5 = new javax.swing.JPanel();
+        logo = new javax.swing.JLabel();
+        LogoutBtn = new javax.swing.JButton();
         aboutBtn = new javax.swing.JButton();
         categoriesBtn = new javax.swing.JButton();
         homeBtn = new javax.swing.JButton();
         cartBtn = new javax.swing.JButton();
-        rightButton = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
         roundedPanel = new javax.swing.JPanel();
-        panelCategory = new javax.swing.JPanel();
-        cartPanel1 = new javax.swing.JPanel();
-        product1 = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        product2 = new javax.swing.JPanel();
-        product3 = new javax.swing.JPanel();
-        product4 = new javax.swing.JPanel();
-        categoryComboBox = new javax.swing.JComboBox<>();
-        homeBtn1 = new javax.swing.JButton();
-        cartBtn1 = new javax.swing.JButton();
-        aboutBtn1 = new javax.swing.JButton();
-        categoriesBtn1 = new javax.swing.JButton();
-        LogoutBtn1 = new javax.swing.JButton();
 
         user.setText("jLabel1");
+
+        cartPanel.setLayout(new javax.swing.OverlayLayout(cartPanel));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("HOME");
@@ -150,11 +164,25 @@ public class UserFrame extends javax.swing.JFrame {
         panelHome.setBackground(new java.awt.Color(239, 233, 233));
         panelHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        logo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        panelHome.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 7, 160, 90));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        cartPanel.setLayout(new javax.swing.OverlayLayout(cartPanel));
-        panelHome.add(cartPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, 160, 320));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 858, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        panelHome.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 90, 860, 1));
+
+        jTabbedPanel.setBackground(new java.awt.Color(239, 233, 233));
+
+        tab1.setBackground(new java.awt.Color(239, 233, 233));
 
         jButton1.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jButton1.setText("Order Now");
@@ -164,7 +192,32 @@ public class UserFrame extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        panelHome.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 520, 120, -1));
+
+        jLabel2.setFont(new java.awt.Font("Poppins Light", 1, 36)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Best Products");
+        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        productName.setFont(new java.awt.Font("Poppins Light", 3, 30)); // NOI18N
+        productName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        productName.setText("Product name ");
+        productName.setToolTipText("");
+        productName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        productDescription.setFont(new java.awt.Font("Poppins Light", 0, 20)); // NOI18N
+        productDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        productDescription.setText("Product Description");
+
+        productImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        rightButton.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        rightButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        rightButton.setPreferredSize(new java.awt.Dimension(85, 23));
+        rightButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rightButtonActionPerformed(evt);
+            }
+        });
 
         leftButton.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         leftButton.setToolTipText("");
@@ -175,7 +228,339 @@ public class UserFrame extends javax.swing.JFrame {
                 leftButtonActionPerformed(evt);
             }
         });
-        panelHome.add(leftButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, 30, 30));
+
+        javax.swing.GroupLayout tab1Layout = new javax.swing.GroupLayout(tab1);
+        tab1.setLayout(tab1Layout);
+        tab1Layout.setHorizontalGroup(
+            tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab1Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(159, 159, 159))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab1Layout.createSequentialGroup()
+                        .addComponent(leftButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(rightButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(393, 393, 393))))
+            .addGroup(tab1Layout.createSequentialGroup()
+                .addGroup(tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tab1Layout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addGroup(tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(productDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(57, 57, 57)
+                        .addComponent(productImage, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(tab1Layout.createSequentialGroup()
+                        .addGap(228, 228, 228)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 160, Short.MAX_VALUE))
+        );
+        tab1Layout.setVerticalGroup(
+            tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab1Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel2)
+                .addGroup(tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tab1Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(productDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE))
+                    .addGroup(tab1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(productImage, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addGroup(tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rightButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(leftButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(16, 16, 16)))
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61))
+        );
+
+        jTabbedPanel.addTab("tab5", tab1);
+
+        tab2.setBackground(new java.awt.Color(239, 233, 233));
+        tab2.setLayout(null);
+
+        jLabel7.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel7.setText("Categories");
+        tab2.add(jLabel7);
+        jLabel7.setBounds(10, 90, 170, 60);
+
+        jLabel3.setFont(new java.awt.Font("Poppins Light", 1, 36)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Best Products");
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        tab2.add(jLabel3);
+        jLabel3.setBounds(238, 27, 261, 47);
+
+        jLabel6.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Pastries");
+        tab2.add(jLabel6);
+        jLabel6.setBounds(240, 200, 70, 40);
+
+        jLabel5.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Hot Coffee");
+        tab2.add(jLabel5);
+        jLabel5.setBounds(20, 200, 70, 40);
+
+        jLabel4.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Iced Coffee");
+        tab2.add(jLabel4);
+        jLabel4.setBounds(130, 200, 70, 40);
+
+        Pastries.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        Pastries.setToolTipText("");
+        Pastries.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Pastries.setPreferredSize(new java.awt.Dimension(85, 23));
+        Pastries.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PastriesActionPerformed(evt);
+            }
+        });
+        tab2.add(Pastries);
+        Pastries.setBounds(230, 150, 90, 90);
+
+        IcedCoffee.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee.setToolTipText("");
+        IcedCoffee.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffeeActionPerformed(evt);
+            }
+        });
+        tab2.add(IcedCoffee);
+        IcedCoffee.setBounds(10, 150, 90, 90);
+
+        HotCoffee.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        HotCoffee.setToolTipText("");
+        HotCoffee.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        HotCoffee.setPreferredSize(new java.awt.Dimension(85, 23));
+        HotCoffee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HotCoffeeActionPerformed(evt);
+            }
+        });
+        tab2.add(HotCoffee);
+        HotCoffee.setBounds(120, 150, 90, 90);
+
+        jLabel8.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel8.setText("Popular Picks");
+        tab2.add(jLabel8);
+        jLabel8.setBounds(10, 260, 120, 26);
+
+        IcedCoffee2.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee2.setToolTipText("");
+        IcedCoffee2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee2.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee2ActionPerformed(evt);
+            }
+        });
+        tab2.add(IcedCoffee2);
+        IcedCoffee2.setBounds(490, 300, 140, 160);
+
+        IcedCoffee3.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee3.setToolTipText("");
+        IcedCoffee3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee3.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee3ActionPerformed(evt);
+            }
+        });
+        tab2.add(IcedCoffee3);
+        IcedCoffee3.setBounds(10, 300, 140, 160);
+
+        IcedCoffee4.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee4.setToolTipText("");
+        IcedCoffee4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee4.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee4ActionPerformed(evt);
+            }
+        });
+        tab2.add(IcedCoffee4);
+        IcedCoffee4.setBounds(170, 300, 140, 160);
+
+        IcedCoffee5.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee5.setToolTipText("");
+        IcedCoffee5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee5.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee5ActionPerformed(evt);
+            }
+        });
+        tab2.add(IcedCoffee5);
+        IcedCoffee5.setBounds(330, 300, 140, 160);
+
+        IcedCoffee7.setBackground(new java.awt.Color(138, 80, 43));
+        IcedCoffee7.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee7.setForeground(new java.awt.Color(255, 255, 255));
+        IcedCoffee7.setText("Add to Cart");
+        IcedCoffee7.setToolTipText("");
+        IcedCoffee7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee7.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee7ActionPerformed(evt);
+            }
+        });
+        tab2.add(IcedCoffee7);
+        IcedCoffee7.setBounds(490, 470, 140, 30);
+
+        IcedCoffee8.setBackground(new java.awt.Color(138, 80, 43));
+        IcedCoffee8.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee8.setForeground(new java.awt.Color(255, 255, 255));
+        IcedCoffee8.setText("Add to Cart");
+        IcedCoffee8.setToolTipText("");
+        IcedCoffee8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee8.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee8ActionPerformed(evt);
+            }
+        });
+        tab2.add(IcedCoffee8);
+        IcedCoffee8.setBounds(10, 470, 140, 30);
+
+        IcedCoffee9.setBackground(new java.awt.Color(138, 80, 43));
+        IcedCoffee9.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee9.setForeground(new java.awt.Color(255, 255, 255));
+        IcedCoffee9.setText("Add to Cart");
+        IcedCoffee9.setToolTipText("");
+        IcedCoffee9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee9.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee9ActionPerformed(evt);
+            }
+        });
+        tab2.add(IcedCoffee9);
+        IcedCoffee9.setBounds(170, 470, 140, 30);
+
+        IcedCoffee10.setBackground(new java.awt.Color(138, 80, 43));
+        IcedCoffee10.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        IcedCoffee10.setForeground(new java.awt.Color(255, 255, 255));
+        IcedCoffee10.setText("Add to Cart");
+        IcedCoffee10.setToolTipText("");
+        IcedCoffee10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IcedCoffee10.setPreferredSize(new java.awt.Dimension(85, 23));
+        IcedCoffee10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IcedCoffee10ActionPerformed(evt);
+            }
+        });
+        tab2.add(IcedCoffee10);
+        IcedCoffee10.setBounds(330, 470, 140, 30);
+
+        jButton2.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
+        jButton2.setText("Order Now");
+        jButton2.setPreferredSize(new java.awt.Dimension(77, 29));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        tab2.add(jButton2);
+        jButton2.setBounds(510, 540, 110, 29);
+
+        jTabbedPanel.addTab("tab1", tab2);
+
+        tab3.setBackground(new java.awt.Color(239, 233, 233));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jButton3.setText("Proceed to Billing");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout tab3Layout = new javax.swing.GroupLayout(tab3);
+        tab3.setLayout(tab3Layout);
+        tab3Layout.setHorizontalGroup(
+            tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tab3Layout.createSequentialGroup()
+                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tab3Layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(tab3Layout.createSequentialGroup()
+                        .addGap(261, 261, 261)
+                        .addComponent(jButton3)))
+                .addContainerGap(292, Short.MAX_VALUE))
+        );
+        tab3Layout.setVerticalGroup(
+            tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tab3Layout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(jButton3)
+                .addContainerGap(89, Short.MAX_VALUE))
+        );
+
+        jTabbedPanel.addTab("tab3", tab3);
+
+        tab4.setBackground(new java.awt.Color(239, 233, 233));
+
+        javax.swing.GroupLayout tab4Layout = new javax.swing.GroupLayout(tab4);
+        tab4.setLayout(tab4Layout);
+        tab4Layout.setHorizontalGroup(
+            tab4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+        tab4Layout.setVerticalGroup(
+            tab4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 615, Short.MAX_VALUE)
+        );
+
+        jTabbedPanel.addTab("tab4", tab4);
+
+        tab5.setBackground(new java.awt.Color(239, 233, 233));
+
+        javax.swing.GroupLayout tab5Layout = new javax.swing.GroupLayout(tab5);
+        tab5.setLayout(tab5Layout);
+        tab5Layout.setHorizontalGroup(
+            tab5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+        tab5Layout.setVerticalGroup(
+            tab5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 615, Short.MAX_VALUE)
+        );
+
+        jTabbedPanel.addTab("tab5", tab5);
+
+        panelHome.add(jTabbedPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, -40, 780, 650));
+
+        logo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        panelHome.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 7, 160, 90));
 
         LogoutBtn.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         LogoutBtn.setText("Logout");
@@ -185,27 +570,6 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         panelHome.add(LogoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 120, -1));
-
-        productImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelHome.add(productImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 300, 300));
-
-        productDescription.setFont(new java.awt.Font("Poppins Light", 0, 20)); // NOI18N
-        productDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        productDescription.setText("Product Description");
-        panelHome.add(productDescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 270, 150, 150));
-
-        jLabel2.setFont(new java.awt.Font("Poppins Light", 1, 36)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Best Products");
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        panelHome.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 810, -1));
-
-        productName.setFont(new java.awt.Font("Poppins Light", 3, 30)); // NOI18N
-        productName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        productName.setText("Product name ");
-        productName.setToolTipText("");
-        productName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        panelHome.add(productName, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 120, 150, 150));
 
         aboutBtn.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         aboutBtn.setText("About Us");
@@ -248,32 +612,6 @@ public class UserFrame extends javax.swing.JFrame {
         });
         panelHome.add(cartBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 295, 120, -1));
 
-        rightButton.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        rightButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rightButton.setPreferredSize(new java.awt.Dimension(85, 23));
-        rightButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rightButtonActionPerformed(evt);
-            }
-        });
-        panelHome.add(rightButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, 30, 30));
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 858, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        panelHome.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 90, 860, 1));
-
         roundedPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout roundedPanelLayout = new javax.swing.GroupLayout(roundedPanel);
@@ -290,137 +628,7 @@ public class UserFrame extends javax.swing.JFrame {
         panelHome.add(roundedPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 567));
 
         getContentPane().add(panelHome);
-        panelHome.setBounds(0, 0, 890, 600);
-
-        panelCategory.setMaximumSize(null);
-        panelCategory.setLayout(null);
-
-        cartPanel1.setLayout(new javax.swing.OverlayLayout(cartPanel1));
-        panelCategory.add(cartPanel1);
-        cartPanel1.setBounds(800, 50, 290, 420);
-
-        product1.setBackground(new java.awt.Color(204, 255, 204));
-        product1.setLayout(null);
-
-        jLabel1.setText("jLabel1");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(117, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(138, Short.MAX_VALUE))
-        );
-
-        product1.add(jPanel1);
-        jPanel1.setBounds(70, 40, 160, 160);
-
-        panelCategory.add(product1);
-        product1.setBounds(130, 80, 840, 510);
-
-        product2.setBackground(new java.awt.Color(0, 51, 255));
-
-        javax.swing.GroupLayout product2Layout = new javax.swing.GroupLayout(product2);
-        product2.setLayout(product2Layout);
-        product2Layout.setHorizontalGroup(
-            product2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 840, Short.MAX_VALUE)
-        );
-        product2Layout.setVerticalGroup(
-            product2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 510, Short.MAX_VALUE)
-        );
-
-        panelCategory.add(product2);
-        product2.setBounds(130, 80, 840, 510);
-
-        product3.setBackground(new java.awt.Color(255, 204, 204));
-
-        javax.swing.GroupLayout product3Layout = new javax.swing.GroupLayout(product3);
-        product3.setLayout(product3Layout);
-        product3Layout.setHorizontalGroup(
-            product3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 840, Short.MAX_VALUE)
-        );
-        product3Layout.setVerticalGroup(
-            product3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 510, Short.MAX_VALUE)
-        );
-
-        panelCategory.add(product3);
-        product3.setBounds(130, 80, 840, 510);
-
-        product4.setBackground(new java.awt.Color(204, 204, 255));
-
-        javax.swing.GroupLayout product4Layout = new javax.swing.GroupLayout(product4);
-        product4.setLayout(product4Layout);
-        product4Layout.setHorizontalGroup(
-            product4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 840, Short.MAX_VALUE)
-        );
-        product4Layout.setVerticalGroup(
-            product4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 510, Short.MAX_VALUE)
-        );
-
-        panelCategory.add(product4);
-        product4.setBounds(130, 80, 840, 510);
-
-        categoryComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose", "Product1", "Product2", "Product3", "Product4" }));
-        categoryComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                categoryComboBoxActionPerformed(evt);
-            }
-        });
-        panelCategory.add(categoryComboBox);
-        categoryComboBox.setBounds(70, 40, 82, 22);
-
-        homeBtn1.setText("Home");
-        panelCategory.add(homeBtn1);
-        homeBtn1.setBounds(290, 20, 90, 23);
-
-        cartBtn1.setText("Cart");
-        cartBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cartBtn1ActionPerformed(evt);
-            }
-        });
-        panelCategory.add(cartBtn1);
-        cartBtn1.setBounds(910, 20, 72, 23);
-
-        aboutBtn1.setText("About us");
-        aboutBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aboutBtn1ActionPerformed(evt);
-            }
-        });
-        panelCategory.add(aboutBtn1);
-        aboutBtn1.setBounds(548, 20, 100, 23);
-
-        categoriesBtn1.setText("Categories");
-        panelCategory.add(categoriesBtn1);
-        categoriesBtn1.setBounds(416, 20, 100, 23);
-
-        LogoutBtn1.setText("LOGOUT");
-        LogoutBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogoutBtn1ActionPerformed(evt);
-            }
-        });
-        panelCategory.add(LogoutBtn1);
-        LogoutBtn1.setBounds(20, 630, 140, 40);
-
-        getContentPane().add(panelCategory);
-        panelCategory.setBounds(0, 0, 0, 0);
+        panelHome.setBounds(0, 0, 930, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -478,40 +686,15 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_rightButtonActionPerformed
 
     private void aboutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutBtnActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(3);
     }//GEN-LAST:event_aboutBtnActionPerformed
 
     private void cartBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartBtnActionPerformed
-        cartPanel.setVisible(!cartPanel.isVisible());
+        jTabbedPanel.setSelectedIndex(2);
     }//GEN-LAST:event_cartBtnActionPerformed
 
-    private void categoryComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryComboBoxActionPerformed
-        String selectedCategory = (String) categoryComboBox.getSelectedItem();
-        updateFoodsDisplay(selectedCategory);
-    }//GEN-LAST:event_categoryComboBoxActionPerformed
-
-    private void cartBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartBtn1ActionPerformed
-        cartPanel1.setVisible(!cartPanel1.isVisible());
-    }//GEN-LAST:event_cartBtn1ActionPerformed
-
-    private void aboutBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutBtn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_aboutBtn1ActionPerformed
-
-    private void LogoutBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutBtn1ActionPerformed
-        Login LoginFrame = new Login();
-        LoginFrame.setVisible(true);
-        LoginFrame.pack();
-        LoginFrame.setLocationRelativeTo(null); 
-        this.dispose();
-    }//GEN-LAST:event_LogoutBtn1ActionPerformed
-
     private void homeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtnActionPerformed
-    UserFrame UserFrame = new UserFrame(); // Instantiate your target JFrame
-    UserFrame.setVisible(true);
-    UserFrame.pack();    
-    UserFrame.setLocationRelativeTo(null); // Center the window
-    this.dispose(); 
+        jTabbedPanel.setSelectedIndex(0);
     }//GEN-LAST:event_homeBtnActionPerformed
 
     private void leftButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leftButtonActionPerformed
@@ -521,41 +704,64 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_leftButtonActionPerformed
 
     private void categoriesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriesBtnActionPerformed
-    MenuFrame MenuFrame = new MenuFrame(); // Instantiate your target JFrame
-    MenuFrame.setVisible(true);
-    MenuFrame.pack();    
-    MenuFrame.setLocationRelativeTo(null); // Center the window
-    this.dispose();                     // Optional: close the current window
+        jTabbedPanel.setSelectedIndex(1);
     }//GEN-LAST:event_categoriesBtnActionPerformed
+
+    private void PastriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PastriesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PastriesActionPerformed
+
+    private void IcedCoffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffeeActionPerformed
+
+    private void HotCoffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HotCoffeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HotCoffeeActionPerformed
+
+    private void IcedCoffee2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee2ActionPerformed
+
+    private void IcedCoffee3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee3ActionPerformed
+
+    private void IcedCoffee4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee4ActionPerformed
+
+    private void IcedCoffee5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee5ActionPerformed
+
+    private void IcedCoffee7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee7ActionPerformed
+
+    private void IcedCoffee8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee8ActionPerformed
+
+    private void IcedCoffee9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee9ActionPerformed
+
+    private void IcedCoffee10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedCoffee10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcedCoffee10ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        jTabbedPanel.setSelectedIndex(3);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        BillingFrame billingFrame = new BillingFrame();
+        billingFrame.setVisible(true);
+        billingFrame.pack();
+        billingFrame.setLocationRelativeTo(null); 
+    }//GEN-LAST:event_jButton3ActionPerformed
     
-    void updateFoodsDisplay(String category) {
-    if (category.equals("Product1")) {
-        product1.setVisible(true);
-        product2.setVisible(false);
-        product3.setVisible(false);
-        product4.setVisible(false);
-    } else if (category.equals("Product2")) {
-        product1.setVisible(false);
-        product2.setVisible(true);
-        product3.setVisible(false);
-        product4.setVisible(false);
-    } else if (category.equals("Product3")) {
-        product1.setVisible(false);
-        product2.setVisible(false);
-        product3.setVisible(true);
-        product4.setVisible(false);
-    } else if (category.equals("Product4")) {
-        product1.setVisible(false);
-        product2.setVisible(false);
-        product3.setVisible(false);
-        product4.setVisible(true);
-    } else {
-        product1.setVisible(false);
-        product2.setVisible(false);
-        product3.setVisible(false);
-        product4.setVisible(true);
-    }
-}
     public void setUser(String name){
         user.setText(name);
     }
@@ -564,44 +770,57 @@ public class UserFrame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new UserFrame().setVisible(true);
+                
             }
         });
         
         
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton HotCoffee;
+    private javax.swing.JButton IcedCoffee;
+    private javax.swing.JButton IcedCoffee10;
+    private javax.swing.JButton IcedCoffee2;
+    private javax.swing.JButton IcedCoffee3;
+    private javax.swing.JButton IcedCoffee4;
+    private javax.swing.JButton IcedCoffee5;
+    private javax.swing.JButton IcedCoffee7;
+    private javax.swing.JButton IcedCoffee8;
+    private javax.swing.JButton IcedCoffee9;
     private javax.swing.JButton LogoutBtn;
-    private javax.swing.JButton LogoutBtn1;
+    private javax.swing.JButton Pastries;
     private javax.swing.JButton aboutBtn;
-    private javax.swing.JButton aboutBtn1;
     private javax.swing.JButton cartBtn;
-    private javax.swing.JButton cartBtn1;
     private javax.swing.JPanel cartPanel;
-    private javax.swing.JPanel cartPanel1;
     private javax.swing.JButton categoriesBtn;
-    private javax.swing.JButton categoriesBtn1;
-    private javax.swing.JComboBox<String> categoryComboBox;
     private javax.swing.JButton homeBtn;
-    private javax.swing.JButton homeBtn1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTabbedPane jTabbedPanel;
+    private javax.swing.JTable jTable1;
     private javax.swing.JButton leftButton;
     private javax.swing.JLabel logo;
-    private javax.swing.JPanel panelCategory;
     private javax.swing.JPanel panelHome;
-    private javax.swing.JPanel product1;
-    private javax.swing.JPanel product2;
-    private javax.swing.JPanel product3;
-    private javax.swing.JPanel product4;
     private javax.swing.JLabel productDescription;
     private javax.swing.JLabel productImage;
     private javax.swing.JLabel productName;
     private javax.swing.JButton rightButton;
     private javax.swing.JPanel roundedPanel;
+    private javax.swing.JPanel tab1;
+    private javax.swing.JPanel tab2;
+    private javax.swing.JPanel tab3;
+    private javax.swing.JPanel tab4;
+    private javax.swing.JPanel tab5;
     private javax.swing.JLabel user;
     // End of variables declaration//GEN-END:variables
 }

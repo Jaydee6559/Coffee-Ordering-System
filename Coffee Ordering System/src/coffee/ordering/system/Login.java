@@ -25,23 +25,23 @@ public class Login extends javax.swing.JFrame {
         }
     }
     
-public Login() {
-    initComponents();
-    int logoSize = 225;
-    logo.setIcon(getScaledIcon("/images/logo-white.png", logoSize, logoSize));
-}
-
-private ImageIcon getScaledIcon(String path, int width, int height) {
-    java.net.URL imageUrl = getClass().getResource(path);
-    if (imageUrl == null) {
-        System.out.println("Image not found at: " + path);
-        return null;
+    public Login() {
+        initComponents();
+        int logoSize = 225;
+        logo.setIcon(getScaledIcon("/images/logo-white.png", logoSize, logoSize));
     }
-    ImageIcon icon = new ImageIcon(imageUrl);
-    Image img = icon.getImage();
-    Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
-    return new ImageIcon(scaledImg);
-}
+
+    private ImageIcon getScaledIcon(String path, int width, int height) {
+        java.net.URL imageUrl = getClass().getResource(path);
+        if (imageUrl == null) {
+            System.out.println("Image not found at: " + path);
+            return null;
+        }
+        ImageIcon icon = new ImageIcon(imageUrl);
+        Image img = icon.getImage();
+        Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+        return new ImageIcon(scaledImg);
+    }
 
 
 
