@@ -231,6 +231,7 @@ public class Login extends javax.swing.JFrame {
         SUser = "root";
         SPass = "";
         int notFound = 0;
+        int userId = -1;
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -261,14 +262,17 @@ public class Login extends javax.swing.JFrame {
                     String lastName = rs.getString("lastName");
                     fname = firstName + " " + lastName;
                     userTypeDb = rs.getString("user_type");
+                    userId = rs.getInt("id");
                     notFound = 1;
+                    userId = rs.getInt("id");
                 }
 
                 if (notFound == 1 && Password.equals(passDb)) {
                     if (userTypeDb != null && userTypeDb.equals(selectedType)) {
                         if (userTypeDb.equals("User")) {
                             UserFrame userFrame = new UserFrame();
-                            userFrame.setUser(fname);
+                            userFrame.setUser(fname);   
+                            userFrame.setCurrentUserId(userId);
                             userFrame.setVisible(true);
                             userFrame.pack();
                             userFrame.setLocationRelativeTo(null);

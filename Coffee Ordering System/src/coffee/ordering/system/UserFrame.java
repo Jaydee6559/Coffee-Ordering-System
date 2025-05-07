@@ -1,6 +1,7 @@
 
 package coffee.ordering.system;
 
+
 import java.awt.CardLayout;
 import java.awt.Image;
 import javax.swing.ImageIcon;
@@ -12,9 +13,16 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.Insets;
-import java.awt.List;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.sql.PreparedStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.List;
+import java.sql.ResultSet;
+
 
 
 
@@ -30,7 +38,8 @@ public class UserFrame extends javax.swing.JFrame {
     String[] categories = {"Choose", "Main Courses", "Desserts"};
     private java.util.List<OrderItem> cart = new java.util.ArrayList<>();
     private javax.swing.table.DefaultTableModel cartModel;
-    
+    private int currentUserId;
+    private List<OrderItem> currentOrderList = new ArrayList<>();
    
    
     
@@ -42,6 +51,8 @@ public class UserFrame extends javax.swing.JFrame {
         pastriesPanel.setVisible(false);
         categoryBack.setVisible(false);//back button
         americanoPanel.setVisible(false);
+        jLayeredPane1.setVisible(false);
+        billingPanel.setVisible(false);
         
         cartModel = new DefaultTableModel(new String[]{"Order", "Quantity", "Size", "Price"}, 0);
         cartTable.setModel(cartModel);
@@ -113,7 +124,13 @@ public class UserFrame extends javax.swing.JFrame {
     Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
     return new ImageIcon(scaledImg);
 }
-
+    
+    public void setCurrentUserId(int userId) {
+        this.currentUserId = userId;
+        // Optional: Update UI to show logged in user
+        user.setText("User ID: " + userId); 
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -156,6 +173,20 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel48 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
+        jLayeredPane1 = new javax.swing.JLayeredPane();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        receiptInternalFrame = new javax.swing.JInternalFrame();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         panelHome = new javax.swing.JPanel();
         line = new javax.swing.JPanel();
         jTabbedPanel = new javax.swing.JTabbedPane();
@@ -225,6 +256,28 @@ public class UserFrame extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
         tab3 = new javax.swing.JPanel();
+        billingPanel = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jLabel59 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        adw = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        currentOrderTable = new javax.swing.JTable();
         jScrollPane1 = new javax.swing.JScrollPane();
         cartTable = new javax.swing.JTable();
         jButton3 = new javax.swing.JButton();
@@ -589,6 +642,120 @@ public class UserFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel50)
                         .addGap(58, 58, 58))))
+        );
+
+        jLabel51.setText("Full Name");
+
+        jLabel52.setText("City");
+
+        jLabel53.setText("Address");
+
+        jLabel54.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel54.setText("Billing Address");
+
+        jLabel55.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel55.setText("Payment");
+
+        jButton5.setText("gcash");
+
+        jButton6.setText("paypall");
+
+        jRadioButton1.setText("jRadioButton1");
+
+        jLayeredPane1.setLayer(jLabel51, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLabel52, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLabel53, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLabel54, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLabel55, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jButton5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jButton6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jRadioButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
+        jLayeredPane1.setLayout(jLayeredPane1Layout);
+        jLayeredPane1Layout.setHorizontalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel53)
+                            .addComponent(jLabel52))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addComponent(jLabel54)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 208, Short.MAX_VALUE)
+                        .addComponent(jLabel55)
+                        .addGap(92, 92, 92))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addComponent(jLabel51)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton5)
+                        .addGap(53, 53, 53)
+                        .addComponent(jButton6)
+                        .addGap(42, 42, 42))))
+            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addComponent(jRadioButton1)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jLayeredPane1Layout.setVerticalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel54)
+                            .addComponent(jLabel55))
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel51))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(115, 115, 115)
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton5)
+                            .addComponent(jButton6))))
+                .addGap(51, 51, 51)
+                .addComponent(jLabel53)
+                .addGap(69, 69, 69)
+                .addComponent(jLabel52)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addComponent(jRadioButton1)
+                .addGap(83, 83, 83))
+        );
+
+        receiptInternalFrame.setTitle("Receipt");
+        receiptInternalFrame.setVisible(true);
+
+        jLabel64.setText("Full Name");
+
+        jLabel65.setText("Address");
+
+        jLabel66.setText("City");
+
+        javax.swing.GroupLayout receiptInternalFrameLayout = new javax.swing.GroupLayout(receiptInternalFrame.getContentPane());
+        receiptInternalFrame.getContentPane().setLayout(receiptInternalFrameLayout);
+        receiptInternalFrameLayout.setHorizontalGroup(
+            receiptInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(receiptInternalFrameLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(receiptInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel66)
+                    .addComponent(jLabel65)
+                    .addComponent(jLabel64))
+                .addContainerGap(288, Short.MAX_VALUE))
+        );
+        receiptInternalFrameLayout.setVerticalGroup(
+            receiptInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(receiptInternalFrameLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jLabel64)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel65)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel66)
+                .addContainerGap(363, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1276,6 +1443,128 @@ public class UserFrame extends javax.swing.JFrame {
         jTabbedPanel.addTab("tab1", tab2);
 
         tab3.setBackground(new java.awt.Color(239, 233, 233));
+        tab3.setLayout(null);
+
+        billingPanel.setLayout(null);
+
+        jLabel56.setText("Full Name");
+        billingPanel.add(jLabel56);
+        jLabel56.setBounds(32, 89, 54, 16);
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jTextArea2.setText("text area\n");
+        jScrollPane3.setViewportView(jTextArea2);
+
+        billingPanel.add(jScrollPane3);
+        jScrollPane3.setBounds(32, 203, 137, 28);
+
+        jLabel57.setText("Address");
+        billingPanel.add(jLabel57);
+        jLabel57.setBounds(32, 175, 42, 16);
+
+        jLabel58.setText("City");
+        billingPanel.add(jLabel58);
+        jLabel58.setBounds(32, 261, 21, 16);
+
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setText("Pickup");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        billingPanel.add(jRadioButton2);
+        jRadioButton2.setBounds(67, 406, 59, 21);
+
+        buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setText("Delivery");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
+        billingPanel.add(jRadioButton3);
+        jRadioButton3.setBounds(144, 406, 65, 21);
+
+        jLabel59.setText("Phone Number");
+        billingPanel.add(jLabel59);
+        jLabel59.setBounds(32, 337, 234, 16);
+
+        jTextField1.setText("jTextField1");
+        billingPanel.add(jTextField1);
+        jTextField1.setBounds(32, 363, 234, 22);
+
+        jTextField2.setText("jTextField1");
+        billingPanel.add(jTextField2);
+        jTextField2.setBounds(32, 283, 234, 22);
+
+        jTextField3.setText("jTextField1");
+        billingPanel.add(jTextField3);
+        jTextField3.setBounds(32, 117, 234, 22);
+
+        adw.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        adw.setText("Payment");
+        billingPanel.add(adw);
+        adw.setBounds(380, 30, 137, 48);
+
+        jLabel61.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel61.setText("Billing");
+        billingPanel.add(jLabel61);
+        jLabel61.setBounds(92, 35, 129, 48);
+
+        jButton7.setText("Gcash");
+        billingPanel.add(jButton7);
+        jButton7.setBounds(359, 89, 72, 23);
+
+        jButton8.setText("Cash");
+        billingPanel.add(jButton8);
+        jButton8.setBounds(500, 90, 72, 23);
+
+        jButton9.setText("Proceed to Checkout");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        billingPanel.add(jButton9);
+        jButton9.setBounds(360, 400, 243, 23);
+
+        jButton10.setText("close");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        billingPanel.add(jButton10);
+        jButton10.setBounds(543, 6, 72, 23);
+
+        jLabel62.setText("Amount to Pay");
+        billingPanel.add(jLabel62);
+        jLabel62.setBounds(400, 350, 80, 16);
+
+        jLabel63.setText("Total");
+        billingPanel.add(jLabel63);
+        jLabel63.setBounds(520, 350, 27, 16);
+
+        currentOrderTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Order", "Size", "Quantity", "Price"
+            }
+        ));
+        jScrollPane2.setViewportView(currentOrderTable);
+
+        billingPanel.add(jScrollPane2);
+        jScrollPane2.setBounds(360, 130, 230, 210);
+
+        tab3.add(billingPanel);
+        billingPanel.setBounds(0, 0, 640, 461);
 
         cartTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1290,21 +1579,32 @@ public class UserFrame extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(cartTable);
 
+        tab3.add(jScrollPane1);
+        jScrollPane1.setBounds(148, 148, 340, 321);
+
         jButton3.setText("Proceed to Billing");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        tab3.add(jButton3);
+        jButton3.setBounds(257, 523, 123, 23);
 
         jLabel9.setFont(new java.awt.Font("Poppins Light", 1, 36)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Your Orders");
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        tab3.add(jLabel9);
+        jLabel9.setBounds(204, 24, 261, 47);
 
         jLabel18.setText("Total");
+        tab3.add(jLabel18);
+        jLabel18.setBounds(306, 487, 39, 16);
 
         lblTotal.setText("jLabel19");
+        tab3.add(lblTotal);
+        lblTotal.setBounds(389, 487, 43, 16);
 
         clearAll.setText("Clear All");
         clearAll.addActionListener(new java.awt.event.ActionListener() {
@@ -1312,51 +1612,8 @@ public class UserFrame extends javax.swing.JFrame {
                 clearAllActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout tab3Layout = new javax.swing.GroupLayout(tab3);
-        tab3.setLayout(tab3Layout);
-        tab3Layout.setHorizontalGroup(
-            tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tab3Layout.createSequentialGroup()
-                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tab3Layout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(clearAll))
-                    .addGroup(tab3Layout.createSequentialGroup()
-                        .addGap(204, 204, 204)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(tab3Layout.createSequentialGroup()
-                        .addGap(257, 257, 257)
-                        .addComponent(jButton3))
-                    .addGroup(tab3Layout.createSequentialGroup()
-                        .addGap(306, 306, 306)
-                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(lblTotal)))
-                .addContainerGap(160, Short.MAX_VALUE))
-        );
-        tab3Layout.setVerticalGroup(
-            tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tab3Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel9)
-                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tab3Layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(tab3Layout.createSequentialGroup()
-                        .addGap(366, 366, 366)
-                        .addComponent(clearAll)))
-                .addGap(18, 18, 18)
-                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(lblTotal))
-                .addGap(20, 20, 20)
-                .addComponent(jButton3)
-                .addContainerGap(69, Short.MAX_VALUE))
-        );
+        tab3.add(clearAll);
+        clearAll.setBounds(526, 437, 74, 23);
 
         jTabbedPanel.addTab("tab3", tab3);
 
@@ -1608,7 +1865,31 @@ public class UserFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
     }//GEN-LAST:event_jButton1ActionPerformed
+    
+    private void saveOrderToDatabase(int userId, List<OrderItem> orderItems) {
+        try {
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/java_user_database", "root", "");
 
+            String sql = "INSERT INTO orders (user_id, item_name, size, quantity, price) VALUES (?, ?, ?, ?, ?)";
+            PreparedStatement stmt = con.prepareStatement(sql);
+
+            for (OrderItem item : orderItems) {
+                stmt.setInt(1, userId);
+                stmt.setString(2, item.name);
+                stmt.setString(3, item.size);
+                stmt.setInt(4, item.quantity);
+                stmt.setDouble(5, item.price);
+                stmt.executeUpdate();
+            }
+            
+            stmt.close();
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error saving order: " + e.getMessage());
+        }
+    }
     private void rightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rightButtonActionPerformed
         currentIndex++;
         if (currentIndex >= imageNames.length) currentIndex = 0;
@@ -1693,10 +1974,44 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        BillingFrame billingFrame = new BillingFrame();
-        billingFrame.setVisible(true);
-        billingFrame.pack();
-        billingFrame.setLocationRelativeTo(null); 
+        billingPanel.setVisible(true);
+        saveOrderToDatabase(currentUserId, cart);
+        try {
+        Connection con = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/java_user_database", "root", ""
+        );
+
+        String sql = "SELECT item_name, size, quantity, price FROM orders WHERE user_id = ?";
+        PreparedStatement pst = con.prepareStatement(sql);
+        pst.setInt(1, currentUserId); // Uses stored user ID
+        ResultSet rs = pst.executeQuery();
+
+        DefaultTableModel model = (DefaultTableModel) currentOrderTable.getModel();
+        model.setRowCount(0); // Clear table
+
+        boolean hasOrders = false;
+        while (rs.next()) {
+            model.addRow(new Object[]{
+                rs.getString("item_name"),
+                rs.getString("size"),
+                rs.getInt("quantity"),
+                rs.getDouble("price")
+            });
+            hasOrders = true;
+        }
+
+        if (!hasOrders) {
+            JOptionPane.showMessageDialog(this, "No orders found for your account.");
+        }
+
+        rs.close();
+        pst.close();
+        con.close();
+
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "Error loading orders: " + ex.getMessage());
+    }
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void categoryBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBackActionPerformed
@@ -1715,7 +2030,7 @@ public class UserFrame extends javax.swing.JFrame {
         americanoPanel.setVisible(true);
     }//GEN-LAST:event_americanoButtonActionPerformed
     
-    
+
     
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         String size = sizeComboBox.getSelectedItem().toString();
@@ -1729,8 +2044,8 @@ public class UserFrame extends javax.swing.JFrame {
         cartModel.addRow(item.toTableRow());
         updateTotal();
         
-        String message = String.format("Americano (%s, x%d) - ₱%.2f added successfully!", size, quantity, finalPrice);
-        javax.swing.JOptionPane.showMessageDialog(this, message, "Item Added", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        String addedMessage = String.format("Americano (%s, x%d) - ₱%.2f added successfully!", size, quantity, finalPrice);
+        javax.swing.JOptionPane.showMessageDialog(this, addedMessage, "Item Added", javax.swing.JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void clearAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllActionPerformed
@@ -1854,6 +2169,22 @@ public class UserFrame extends javax.swing.JFrame {
     private void hotCaramelMacchiatoButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hotCaramelMacchiatoButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_hotCaramelMacchiatoButton1ActionPerformed
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        billingPanel.setVisible(false);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
     
     private void updateTotal() {
         double total = 0;
@@ -1890,14 +2221,17 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JButton LogoutBtn;
     private javax.swing.JButton Pastries;
     private javax.swing.JButton aboutBtn;
+    private javax.swing.JLabel adw;
     private javax.swing.JButton americanoButton;
     private javax.swing.JButton americanoButton1;
     private javax.swing.JPanel americanoPanel;
     private javax.swing.JLabel americanoPrice;
+    private javax.swing.JPanel billingPanel;
     private javax.swing.JButton blueberryMuffinButton;
     private javax.swing.JButton blueberryMuffinButton1;
     private javax.swing.JButton brewedCoffeeButton;
     private javax.swing.JButton brewedCoffeeButton1;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton cappuccinoButton;
     private javax.swing.JButton cappuccinoButton1;
     private javax.swing.JButton cartBtn;
@@ -1916,6 +2250,7 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JPanel coldCoffeePanel1;
     private javax.swing.JButton croissantButton;
     private javax.swing.JButton croissantButton1;
+    private javax.swing.JTable currentOrderTable;
     private javax.swing.JButton homeBtn;
     private javax.swing.JButton hotCaramelMacchiatoButton;
     private javax.swing.JButton hotCaramelMacchiatoButton1;
@@ -1930,9 +2265,15 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JButton icedWhiteMochaButton;
     private javax.swing.JButton icedWhiteMochaButton1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1979,12 +2320,37 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPanel;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JButton latteButton;
     private javax.swing.JButton latteButton1;
     private javax.swing.JLabel lblTotal;
@@ -1998,6 +2364,7 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel productImage;
     private javax.swing.JLabel productName;
     private javax.swing.JSpinner quantitySpinner;
+    private javax.swing.JInternalFrame receiptInternalFrame;
     private javax.swing.JButton rightButton;
     private javax.swing.JPanel roundedPanel;
     private javax.swing.JComboBox<String> sizeComboBox;
