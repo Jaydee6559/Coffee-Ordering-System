@@ -1564,7 +1564,7 @@ public class UserFrame extends javax.swing.JFrame {
         jScrollPane2.setBounds(360, 130, 230, 210);
 
         tab3.add(billingPanel);
-        billingPanel.setBounds(0, 0, 640, 461);
+        billingPanel.setBounds(0, 0, 0, 0);
 
         cartTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
