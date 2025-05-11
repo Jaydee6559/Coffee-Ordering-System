@@ -3145,7 +3145,7 @@
                                   <Component id="americanoPic" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Component id="americanoDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="americanoIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3373,7 +3373,7 @@
                                   <Component id="HCMacchiatoPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="HCMacchiatoDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="HCMacchiatoIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3601,7 +3601,7 @@
                                   <Component id="LattePic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="LatteDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="LatteIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3829,7 +3829,7 @@
                                   <Component id="CappuccinoPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CappuccinoDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="CappuccinoIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4057,7 +4057,7 @@
                                   <Component id="BrewedCoffeePic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="BrewedCoffeeDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="BrewedCoffeeIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4285,7 +4285,7 @@
                                   <Component id="IWMochaPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="IWMochaDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="IWMochaIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4513,7 +4513,7 @@
                                   <Component id="IcedHazelnutPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="IcedHazelnutDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="IcedHazelnutIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4741,7 +4741,7 @@
                                   <Component id="SpanishLattePic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="SpanishLatteDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="SpanishLatteIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4969,7 +4969,7 @@
                                   <Component id="MatchaPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="MatchaDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="MatchaIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5197,7 +5197,7 @@
                                   <Component id="CoffeeJellyPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CoffeeJellyDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="CoffeeJellyIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5423,7 +5423,7 @@
                                   <Component id="CroissantPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CroissantDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="CroissantIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5620,7 +5620,7 @@
                                   <Component id="CheeseRollPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CheeseRollDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <EmptySpace pref="60" max="32767" attributes="0"/>
                                       <Component id="CheeseRollIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>

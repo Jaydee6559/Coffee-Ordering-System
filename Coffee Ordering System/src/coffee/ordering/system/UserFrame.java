@@ -4893,11 +4893,12 @@ public class UserFrame extends javax.swing.JFrame {
         hotCoffeePanel.setVisible(false);
         coldCoffeePanel.setVisible(false);
         pastriesPanel.setVisible(false);
-        categoryBack.setVisible(false);       // TODO add your handling code here:
+        categoryBack.setVisible(false);       
     }//GEN-LAST:event_categoryBack2ActionPerformed
 
     private void categoryBack3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack3ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        hotCoffeePanel.setVisible(true);
     }//GEN-LAST:event_categoryBack3ActionPerformed
 
     private void sizeComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sizeComboBox1ActionPerformed
@@ -4921,7 +4922,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void categoryBack4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack4ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        hotCoffeePanel.setVisible(true);
     }//GEN-LAST:event_categoryBack4ActionPerformed
 
     private void sizeComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sizeComboBox2ActionPerformed
@@ -4945,7 +4947,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void categoryBack5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack5ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        hotCoffeePanel.setVisible(true);
     }//GEN-LAST:event_categoryBack5ActionPerformed
 
     private void sizeComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sizeComboBox3ActionPerformed
@@ -4969,7 +4972,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void categoryBack6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack6ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        hotCoffeePanel.setVisible(true);
     }//GEN-LAST:event_categoryBack6ActionPerformed
 
     private void sizeComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sizeComboBox4ActionPerformed
@@ -4993,7 +4997,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void categoryBack7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack7ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        hotCoffeePanel.setVisible(true);
     }//GEN-LAST:event_categoryBack7ActionPerformed
 
     private void sizeComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sizeComboBox5ActionPerformed
@@ -5017,7 +5022,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void categoryBack8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack8ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        coldCoffeePanel.setVisible(true);
     }//GEN-LAST:event_categoryBack8ActionPerformed
 
     private void sizeComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sizeComboBox6ActionPerformed
@@ -5041,7 +5047,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void categoryBack9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack9ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        coldCoffeePanel.setVisible(true);
     }//GEN-LAST:event_categoryBack9ActionPerformed
 
     private void sizeComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sizeComboBox7ActionPerformed
@@ -5065,7 +5072,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void categoryBack10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack10ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        coldCoffeePanel.setVisible(true);
     }//GEN-LAST:event_categoryBack10ActionPerformed
 
     private void sizeComboBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sizeComboBox8ActionPerformed
@@ -5089,7 +5097,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void categoryBack11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack11ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        coldCoffeePanel.setVisible(true);
     }//GEN-LAST:event_categoryBack11ActionPerformed
 
     private void sizeComboBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sizeComboBox9ActionPerformed
@@ -5113,7 +5122,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void categoryBack12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack12ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        coldCoffeePanel.setVisible(true);
     }//GEN-LAST:event_categoryBack12ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
@@ -5132,7 +5142,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void categoryBack13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack13ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        pastriesPanel.setVisible(true);
     }//GEN-LAST:event_categoryBack13ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
@@ -5151,7 +5162,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void categoryBack14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack14ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        pastriesPanel.setVisible(true);
     }//GEN-LAST:event_categoryBack14ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
@@ -5170,7 +5182,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void categoryBack15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack15ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        pastriesPanel.setVisible(true);
     }//GEN-LAST:event_categoryBack15ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
@@ -5189,7 +5202,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void categoryBack16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack16ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        pastriesPanel.setVisible(true);
     }//GEN-LAST:event_categoryBack16ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
@@ -5208,7 +5222,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void categoryBack17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack17ActionPerformed
-        // TODO add your handling code here:
+        jTabbedPanel.setSelectedIndex(1);
+        pastriesPanel.setVisible(true);
     }//GEN-LAST:event_categoryBack17ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
