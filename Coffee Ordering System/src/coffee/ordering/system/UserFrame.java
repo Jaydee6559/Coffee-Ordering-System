@@ -4452,11 +4452,20 @@ public class UserFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void LogoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutBtnActionPerformed
-        Login LoginFrame = new Login();
-        LoginFrame.setVisible(true);
-        LoginFrame.pack();
-        LoginFrame.setLocationRelativeTo(null); 
-        this.dispose();
+        int choice = JOptionPane.showConfirmDialog(
+        this,
+        "Are you sure you want to logout?",
+        "Logout Confirmation",
+        JOptionPane.YES_NO_OPTION
+        );
+
+        if (choice == JOptionPane.YES_OPTION) {
+            Login loginFrame = new Login();
+            loginFrame.setVisible(true);
+            loginFrame.pack();
+            loginFrame.setLocationRelativeTo(null);
+            this.dispose();
+        }
     }//GEN-LAST:event_LogoutBtnActionPerformed
     private void updateDisplay() {
         // Load image from the "images" folder
@@ -4496,7 +4505,11 @@ public class UserFrame extends javax.swing.JFrame {
     return new ImageIcon(img);
 }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        jTabbedPanel.setSelectedIndex(1);
+        hotCoffeePanel.setVisible(false);
+        coldCoffeePanel.setVisible(false);
+        pastriesPanel.setVisible(false);
+        categoryBack.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
     
     private void saveOrderToDatabase(int userId, List<OrderItem> orderItems) {

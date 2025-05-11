@@ -8,7 +8,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.sql.SQLException;
 
 /**
  *
@@ -22,6 +24,7 @@ public class AdminFrame extends javax.swing.JFrame {
         initComponents();
         usersInternalFrame.setVisible(false);
         orderInternalFrame.setVisible(false);
+        
         String url="jdbc:MySQL://localhost:3306/java_user_database";
         String user="root";
         String pass="";
@@ -30,6 +33,8 @@ public class AdminFrame extends javax.swing.JFrame {
         }catch(Exception ex){
             System.out.println("Error : " + ex.getMessage());
         }
+        loadOrderSummary();
+        loadAdminStats();
     }
 
     /**
@@ -41,70 +46,28 @@ public class AdminFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        LogoutBtn = new javax.swing.JButton();
-        user = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        orderSearch = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        order_status = new javax.swing.JTable();
         usersInternalFrame = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblUsers = new javax.swing.JTable();
         orderInternalFrame = new javax.swing.JInternalFrame();
         jScrollPane2 = new javax.swing.JScrollPane();
         orderTable = new javax.swing.JTable();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("ADMIN");
-        setPreferredSize(new java.awt.Dimension(1100, 700));
-        getContentPane().setLayout(null);
-
-        LogoutBtn.setText("LOGOUT");
-        LogoutBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogoutBtnActionPerformed(evt);
-            }
-        });
-        getContentPane().add(LogoutBtn);
-        LogoutBtn.setBounds(32, 549, 77, 23);
-
-        user.setText("jLabel1");
-        getContentPane().add(user);
-        user.setBounds(50, 50, 157, 99);
-
-        jButton1.setText("usersButton");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(50, 270, 110, 23);
-
-        orderSearch.setText("orderSearchButton");
-        orderSearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                orderSearchActionPerformed(evt);
-            }
-        });
-        getContentPane().add(orderSearch);
-        orderSearch.setBounds(50, 330, 130, 23);
-
-        order_status.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "user_id", "full name", "payment type", "status"
-            }
-        ));
-        jScrollPane3.setViewportView(order_status);
-
-        getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(260, 160, 410, 270);
+        LogoutBtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        orderSearch = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        order_status = new javax.swing.JTable();
+        completeOrder = new javax.swing.JButton();
+        deleteCompletedOrder = new javax.swing.JButton();
+        cancelOrder = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        showTotalAccounts = new javax.swing.JLabel();
+        showTotalOrders = new javax.swing.JLabel();
+        showTotalSales = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        user = new javax.swing.JLabel();
 
         usersInternalFrame.setTitle("USERS");
         usersInternalFrame.setVisible(true);
@@ -138,9 +101,6 @@ public class AdminFrame extends javax.swing.JFrame {
                 .addGap(0, 7, Short.MAX_VALUE))
         );
 
-        getContentPane().add(usersInternalFrame);
-        usersInternalFrame.setBounds(0, 0, 630, 370);
-
         orderInternalFrame.setTitle("Order Summary");
         orderInternalFrame.setVisible(true);
 
@@ -168,18 +128,131 @@ public class AdminFrame extends javax.swing.JFrame {
             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
         );
 
-        getContentPane().add(orderInternalFrame);
-        orderInternalFrame.setBounds(0, 0, 590, 420);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("ADMIN");
+        setPreferredSize(new java.awt.Dimension(1100, 700));
+        getContentPane().setLayout(null);
+
+        LogoutBtn.setText("LOGOUT");
+        LogoutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogoutBtnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(LogoutBtn);
+        LogoutBtn.setBounds(32, 549, 77, 23);
+
+        jButton1.setText("usersButton");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(60, 270, 110, 23);
+
+        orderSearch.setText("orderSearchButton");
+        orderSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orderSearchActionPerformed(evt);
+            }
+        });
+        getContentPane().add(orderSearch);
+        orderSearch.setBounds(50, 330, 130, 23);
+
+        order_status.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "user_id", "full name", "payment type", "payment method", "address", "total", "city", "number", "status"
+            }
+        ));
+        jScrollPane3.setViewportView(order_status);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(190, 170, 610, 270);
+
+        completeOrder.setText("completeOrder");
+        completeOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                completeOrderActionPerformed(evt);
+            }
+        });
+        getContentPane().add(completeOrder);
+        completeOrder.setBounds(240, 490, 110, 23);
+
+        deleteCompletedOrder.setText("deleteCompletedOrder");
+        deleteCompletedOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteCompletedOrderActionPerformed(evt);
+            }
+        });
+        getContentPane().add(deleteCompletedOrder);
+        deleteCompletedOrder.setBounds(400, 490, 180, 23);
+
+        cancelOrder.setText("cancelOrder");
+        cancelOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelOrderActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cancelOrder);
+        cancelOrder.setBounds(630, 490, 100, 23);
+
+        jLabel1.setText("Total Orders");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(420, 50, 110, 16);
+
+        jLabel2.setText("Total Accounts");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(270, 50, 110, 16);
+
+        jLabel3.setText("Total Sales");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(560, 50, 100, 16);
+
+        showTotalAccounts.setText("total");
+        getContentPane().add(showTotalAccounts);
+        showTotalAccounts.setBounds(280, 90, 70, 16);
+
+        showTotalOrders.setText("total");
+        getContentPane().add(showTotalOrders);
+        showTotalOrders.setBounds(430, 90, 90, 16);
+
+        showTotalSales.setText("total");
+        getContentPane().add(showTotalSales);
+        showTotalSales.setBounds(570, 90, 90, 16);
+
+        jLabel4.setText("Welcome Admin!");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(30, 60, 100, 16);
+
+        user.setText("full name ");
+        getContentPane().add(user);
+        user.setBounds(70, 100, 90, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void LogoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutBtnActionPerformed
-        Login LoginFrame = new Login();
-        LoginFrame.setVisible(true);
-        LoginFrame.pack();
-        LoginFrame.setLocationRelativeTo(null);
-        this.dispose();
+        int choice = JOptionPane.showConfirmDialog(
+        this,
+        "Are you sure you want to logout?",
+        "Logout Confirmation",
+        JOptionPane.YES_NO_OPTION
+        );
+
+        if (choice == JOptionPane.YES_OPTION) {
+            Login loginFrame = new Login();
+            loginFrame.setVisible(true);
+            loginFrame.pack();
+            loginFrame.setLocationRelativeTo(null);
+            this.dispose();
+        }
     }//GEN-LAST:event_LogoutBtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -198,9 +271,81 @@ public class AdminFrame extends javax.swing.JFrame {
         }
    
     }//GEN-LAST:event_jButton1ActionPerformed
+    private void loadAdminStats() {
+        try {
+            // TOTAL ACCOUNTS
+            String sqlAccounts = "SELECT COUNT(*) AS total_accounts FROM user";
+            PreparedStatement pstAccounts = con.prepareStatement(sqlAccounts);
+            ResultSet rsAccounts = pstAccounts.executeQuery();
+            if (rsAccounts.next()) {
+                int totalAccounts = rsAccounts.getInt("total_accounts");
+                showTotalAccounts.setText(String.valueOf(totalAccounts)); // <== your label
+            }
+            rsAccounts.close();
+            pstAccounts.close();
 
+            // TOTAL ORDERS (count DISTINCT user_ids in orders)
+            String sqlOrders = "SELECT COUNT(DISTINCT user_id) AS total_orders FROM orders";
+            PreparedStatement pstOrders = con.prepareStatement(sqlOrders);
+            ResultSet rsOrders = pstOrders.executeQuery();
+            if (rsOrders.next()) {
+                int totalOrders = rsOrders.getInt("total_orders");
+                showTotalOrders.setText(String.valueOf(totalOrders)); // <== your label
+            }
+            rsOrders.close();
+            pstOrders.close();
+
+            // TOTAL SALES
+            String sqlSales = "SELECT SUM(total_amount) AS total_sales FROM order_summary";
+            PreparedStatement pstSales = con.prepareStatement(sqlSales);
+            ResultSet rsSales = pstSales.executeQuery();
+            if (rsSales.next()) {
+                double totalSales = rsSales.getDouble("total_sales");
+                showTotalSales.setText("₱" + String.format("%.2f", totalSales)); // <== your label
+            }
+            rsSales.close();
+            pstSales.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Error loading dashboard stats: " + e.getMessage());
+        }
+    }
+    
+
+
+    private void loadOrderSummary() {
+        DefaultTableModel model = (DefaultTableModel) order_status.getModel();
+        model.setRowCount(0); // clear existing rows
+
+        String sql = "SELECT user_id, full_name, payment_method, payment_type, address, total_amount, city, phone_number, status FROM order_summary";
+
+        try {
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                Object[] row = {
+                    rs.getInt("user_id"),
+                    rs.getString("full_name"),
+                    rs.getString("payment_method"),
+                    rs.getString("payment_type"),
+                    rs.getString("address"),
+                    "₱" + String.format("%.2f", rs.getDouble("total_amount")),
+                    rs.getString("city"),
+                    rs.getString("phone_number"),
+                    rs.getString("status")
+                };
+                model.addRow(row);
+            }
+
+            rs.close();
+            pst.close();
+        } catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error loading order summary: " + e.getMessage());
+        }
+    }
     private void orderSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderSearchActionPerformed
-        orderInternalFrame.setVisible(!orderInternalFrame.isVisible());
+
         String input = javax.swing.JOptionPane.showInputDialog(this, "Enter User ID:");
         if (input != null && !input.trim().isEmpty()) {
             try {
@@ -209,10 +354,12 @@ public class AdminFrame extends javax.swing.JFrame {
                 PreparedStatement pst = con.prepareStatement(sql);
                 pst.setInt(1, userId);
                 ResultSet rs = pst.executeQuery();
-
+                
+                orderInternalFrame.setVisible(true);
                 DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
                 model.setRowCount(0);
-
+                
+                
                 boolean hasData = false;
                 while (rs.next()) {
                     model.addRow(new Object[]{
@@ -237,6 +384,175 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_orderSearchActionPerformed
+
+    private void completeOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_completeOrderActionPerformed
+        String input = JOptionPane.showInputDialog(this, "Enter the User ID for completed orders:");
+        if (input == null || input.trim().isEmpty()) {
+            return; // user cancelled or left it blank
+        }
+
+        int userId;
+
+        try {
+            userId = Integer.parseInt(input.trim());
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Invalid user ID. Please enter a number.");
+            return;
+        }
+
+        int confirm = JOptionPane.showConfirmDialog(
+            this,
+            "Have you completed the order for User ID: " + userId + "?",
+            "Confirm Completion",
+            JOptionPane.YES_NO_OPTION
+        );
+
+        if (confirm != JOptionPane.YES_OPTION) {
+            return;
+        }
+
+        try {
+            String sql = "UPDATE order_summary SET status = 'Completed' WHERE user_id = ?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setInt(1, userId);
+            int updatedRows = pst.executeUpdate();
+
+            if (updatedRows > 0) {
+                JOptionPane.showMessageDialog(this, "Order(s) marked as completed.");
+                loadOrderSummary(); // ✅ Refresh the table
+            } else {
+                JOptionPane.showMessageDialog(this, "No orders found for that user.");
+            }
+
+            pst.close();
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Database error: " + e.getMessage());
+        }
+    }//GEN-LAST:event_completeOrderActionPerformed
+
+    private void deleteCompletedOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCompletedOrderActionPerformed
+        String input = JOptionPane.showInputDialog(this, "Enter the User ID to delete completed order:");
+
+        if (input == null || input.trim().isEmpty()) {
+            return; // User cancelled or empty input
+        }
+
+        int userId;
+        try {
+            userId = Integer.parseInt(input.trim());
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Invalid user ID. Please enter a number.");
+            return;
+        }
+
+        int confirm = JOptionPane.showConfirmDialog(
+            this,
+            "Do you want to delete the completed order for User ID: " + userId + "?",
+            "Confirm Deletion",
+            JOptionPane.YES_NO_OPTION
+        );
+
+        if (confirm != JOptionPane.YES_OPTION) {
+            return;
+        }
+
+        try {
+            // First check if the order exists and is completed
+            String checkSql = "SELECT status FROM order_summary WHERE user_id = ?";
+            PreparedStatement checkPst = con.prepareStatement(checkSql);
+            checkPst.setInt(1, userId);
+            ResultSet rs = checkPst.executeQuery();
+
+            if (rs.next()) {
+                String status = rs.getString("status");
+                if ("Completed".equalsIgnoreCase(status)) {
+                    // Delete the order
+                    String deleteSql = "DELETE FROM order_summary WHERE user_id = ?";
+                    PreparedStatement deletePst = con.prepareStatement(deleteSql);
+                    deletePst.setInt(1, userId);
+                    deletePst.executeUpdate();
+                    deletePst.close();
+
+                    JOptionPane.showMessageDialog(this, "Completed order for user ID " + userId + " has been deleted.");
+                    loadOrderSummary(); // Refresh table
+                } else {
+                    JOptionPane.showMessageDialog(this, "Order status is not 'Completed'. Cannot delete.");
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "No order found for that user ID.");
+            }
+
+            rs.close();
+            checkPst.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Database error: " + e.getMessage());
+        }
+    }//GEN-LAST:event_deleteCompletedOrderActionPerformed
+
+    private void cancelOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelOrderActionPerformed
+        String input = JOptionPane.showInputDialog(this, "Enter the User ID to cancel the order:");
+
+        if (input == null || input.trim().isEmpty()) {
+            return; // User cancelled or empty input
+        }
+
+        int userId;
+        try {
+            userId = Integer.parseInt(input.trim());
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Invalid user ID. Please enter a number.");
+            return;
+        }
+
+        int confirm = JOptionPane.showConfirmDialog(
+            this,
+            "Are you sure you want to cancel the order for User ID: " + userId + "?",
+            "Confirm Cancellation",
+            JOptionPane.YES_NO_OPTION
+        );
+
+        if (confirm != JOptionPane.YES_OPTION) {
+            return;
+        }
+
+        try {
+            // First check if an order exists
+            String checkSql = "SELECT * FROM order_summary WHERE user_id = ?";
+            PreparedStatement checkPst = con.prepareStatement(checkSql);
+            checkPst.setInt(1, userId);
+            ResultSet rs = checkPst.executeQuery();
+
+            if (rs.next()) {
+                // Delete from order_summary
+                String deleteSummarySql = "DELETE FROM order_summary WHERE user_id = ?";
+                PreparedStatement deleteSummaryPst = con.prepareStatement(deleteSummarySql);
+                deleteSummaryPst.setInt(1, userId);
+                deleteSummaryPst.executeUpdate();
+                deleteSummaryPst.close();
+
+                // Optional: Also delete from orders table
+                String deleteOrdersSql = "DELETE FROM orders WHERE user_id = ?";
+                PreparedStatement deleteOrdersPst = con.prepareStatement(deleteOrdersSql);
+                deleteOrdersPst.setInt(1, userId);
+                deleteOrdersPst.executeUpdate();
+                deleteOrdersPst.close();
+
+                JOptionPane.showMessageDialog(this, "Order for user ID " + userId + " has been cancelled.");
+                loadOrderSummary(); // Refresh table
+
+            } else {
+                JOptionPane.showMessageDialog(this, "No order found for that user ID.");
+            }
+
+            rs.close();
+            checkPst.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Database error: " + e.getMessage());
+        }
+    }//GEN-LAST:event_cancelOrderActionPerformed
+    
     
     public void setUser(String name){
         user.setText(name);
@@ -278,7 +594,14 @@ public class AdminFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LogoutBtn;
+    private javax.swing.JButton cancelOrder;
+    private javax.swing.JButton completeOrder;
+    private javax.swing.JButton deleteCompletedOrder;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -286,6 +609,9 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JButton orderSearch;
     private javax.swing.JTable orderTable;
     private javax.swing.JTable order_status;
+    private javax.swing.JLabel showTotalAccounts;
+    private javax.swing.JLabel showTotalOrders;
+    private javax.swing.JLabel showTotalSales;
     private javax.swing.JTable tblUsers;
     private javax.swing.JLabel user;
     private javax.swing.JInternalFrame usersInternalFrame;
