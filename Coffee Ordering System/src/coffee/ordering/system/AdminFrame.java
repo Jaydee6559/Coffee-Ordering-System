@@ -47,9 +47,11 @@ public class AdminFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         usersInternalFrame = new javax.swing.JInternalFrame();
+        jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblUsers = new javax.swing.JTable();
         orderInternalFrame = new javax.swing.JInternalFrame();
+        jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         orderTable = new javax.swing.JTable();
         LogoutBtn = new javax.swing.JButton();
@@ -69,8 +71,23 @@ public class AdminFrame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         user = new javax.swing.JLabel();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("ADMIN");
+        setPreferredSize(new java.awt.Dimension(1100, 700));
+        getContentPane().setLayout(null);
+
         usersInternalFrame.setTitle("USERS");
         usersInternalFrame.setVisible(true);
+        usersInternalFrame.getContentPane().setLayout(null);
+
+        jButton3.setText("close");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        usersInternalFrame.getContentPane().add(jButton3);
+        jButton3.setBounds(260, 310, 72, 23);
 
         tblUsers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -85,24 +102,24 @@ public class AdminFrame extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblUsers);
 
-        javax.swing.GroupLayout usersInternalFrameLayout = new javax.swing.GroupLayout(usersInternalFrame.getContentPane());
-        usersInternalFrame.getContentPane().setLayout(usersInternalFrameLayout);
-        usersInternalFrameLayout.setHorizontalGroup(
-            usersInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, usersInternalFrameLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        usersInternalFrameLayout.setVerticalGroup(
-            usersInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(usersInternalFrameLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 7, Short.MAX_VALUE))
-        );
+        usersInternalFrame.getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(6, 7, 600, 280);
+
+        getContentPane().add(usersInternalFrame);
+        usersInternalFrame.setBounds(80, 70, 620, 380);
 
         orderInternalFrame.setTitle("Order Summary");
         orderInternalFrame.setVisible(true);
+        orderInternalFrame.getContentPane().setLayout(null);
+
+        jButton2.setText("close");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        orderInternalFrame.getContentPane().add(jButton2);
+        jButton2.setBounds(270, 400, 72, 23);
 
         orderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -117,21 +134,11 @@ public class AdminFrame extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(orderTable);
 
-        javax.swing.GroupLayout orderInternalFrameLayout = new javax.swing.GroupLayout(orderInternalFrame.getContentPane());
-        orderInternalFrame.getContentPane().setLayout(orderInternalFrameLayout);
-        orderInternalFrameLayout.setHorizontalGroup(
-            orderInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 578, Short.MAX_VALUE)
-        );
-        orderInternalFrameLayout.setVerticalGroup(
-            orderInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
-        );
+        orderInternalFrame.getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(0, 24, 578, 360);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("ADMIN");
-        setPreferredSize(new java.awt.Dimension(1100, 700));
-        getContentPane().setLayout(null);
+        getContentPane().add(orderInternalFrame);
+        orderInternalFrame.setBounds(80, 70, 590, 480);
 
         LogoutBtn.setText("LOGOUT");
         LogoutBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -264,7 +271,7 @@ public class AdminFrame extends javax.swing.JFrame {
             DefaultTableModel model = (DefaultTableModel)tblUsers.getModel();
             model.setRowCount(0);
             while(rs.next()) {
-                model.addRow(new String[]{rs.getString(1),rs.getString(6), rs.getString(7), rs.getString(2), rs.getString(8), rs.getString(3), rs.getString(4)});
+                model.addRow(new String[]{rs.getString(1),rs.getString(6), rs.getString(5), rs.getString(2), rs.getString(8), rs.getString(3), rs.getString(4)});
             }
         }catch(Exception e){
             System.out.println("Error : " +e.getMessage());
@@ -552,6 +559,14 @@ public class AdminFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Database error: " + e.getMessage());
         }
     }//GEN-LAST:event_cancelOrderActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        orderInternalFrame.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        usersInternalFrame.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
     
     
     public void setUser(String name){
@@ -598,6 +613,8 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JButton completeOrder;
     private javax.swing.JButton deleteCompletedOrder;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
