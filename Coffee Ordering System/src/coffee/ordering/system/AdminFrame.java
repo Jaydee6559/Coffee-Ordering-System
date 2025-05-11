@@ -45,6 +45,8 @@ public class AdminFrame extends javax.swing.JFrame {
         user = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         orderSearch = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        order_status = new javax.swing.JTable();
         usersInternalFrame = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblUsers = new javax.swing.JTable();
@@ -88,6 +90,22 @@ public class AdminFrame extends javax.swing.JFrame {
         getContentPane().add(orderSearch);
         orderSearch.setBounds(50, 330, 130, 23);
 
+        order_status.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "user_id", "full name", "payment type", "status"
+            }
+        ));
+        jScrollPane3.setViewportView(order_status);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(260, 160, 410, 270);
+
         usersInternalFrame.setTitle("USERS");
         usersInternalFrame.setVisible(true);
 
@@ -121,7 +139,7 @@ public class AdminFrame extends javax.swing.JFrame {
         );
 
         getContentPane().add(usersInternalFrame);
-        usersInternalFrame.setBounds(200, 120, 630, 370);
+        usersInternalFrame.setBounds(0, 0, 630, 370);
 
         orderInternalFrame.setTitle("Order Summary");
         orderInternalFrame.setVisible(true);
@@ -151,7 +169,7 @@ public class AdminFrame extends javax.swing.JFrame {
         );
 
         getContentPane().add(orderInternalFrame);
-        orderInternalFrame.setBounds(210, 90, 590, 420);
+        orderInternalFrame.setBounds(0, 0, 590, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -263,9 +281,11 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JInternalFrame orderInternalFrame;
     private javax.swing.JButton orderSearch;
     private javax.swing.JTable orderTable;
+    private javax.swing.JTable order_status;
     private javax.swing.JTable tblUsers;
     private javax.swing.JLabel user;
     private javax.swing.JInternalFrame usersInternalFrame;
