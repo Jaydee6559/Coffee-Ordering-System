@@ -4,6 +4,7 @@
  */
 package coffee.ordering.system;
 
+import java.awt.Image;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -11,6 +12,8 @@ import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.sql.SQLException;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -22,8 +25,38 @@ public class AdminFrame extends javax.swing.JFrame {
     
     public AdminFrame() {
         initComponents();
+           
         usersInternalFrame.setVisible(false);
         orderInternalFrame.setVisible(false);
+        
+        int homeIconSize = 16; // Or any size that fits well
+        totalAccounts.setIcon(getScaledIcon("/images/people.png", homeIconSize));
+        totalAccounts.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT); // Optional: text to the right of icon
+        totalAccounts.setIconTextGap(10); // Optional: spacing between icon and text
+        totalSales.setIcon(getScaledIcon("/images/sales.png", homeIconSize));
+        totalSales.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT); // Optional: text to the right of icon
+        totalSales.setIconTextGap(10); // Optional: spacing between icon and text        
+        totalOrders.setIcon(getScaledIcon("/images/order.png", homeIconSize));
+        totalOrders.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT); // Optional: text to the right of icon
+        totalOrders.setIconTextGap(10); // Optional: spacing between icon and text       
+        LogoutBtn.setIcon(getScaledIcon("/images/logout.png", homeIconSize));
+        LogoutBtn.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT); // Optional: text to the right of icon
+        LogoutBtn.setIconTextGap(1); // Optional: spacing between icon and text  
+        jButton1.setIcon(getScaledIcon("/images/search-user.png", homeIconSize));
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT); // Optional: text to the right of icon
+        jButton1.setIconTextGap(1); // Optional: spacing between icon and text  
+        orderSearch.setIcon(getScaledIcon("/images/tracking.png", homeIconSize));
+        orderSearch.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT); // Optional: text to the right of icon
+        orderSearch.setIconTextGap(1); // Optional: spacing between icon and text  
+        completeOrder.setIcon(getScaledIcon("/images/complete.png", homeIconSize));
+        completeOrder.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT); // Optional: text to the right of icon
+        completeOrder.setIconTextGap(1); // Optional: spacing between icon and text  
+        deleteCompletedOrder.setIcon(getScaledIcon("/images/delete-product.png", homeIconSize));
+        deleteCompletedOrder.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT); // Optional: text to the right of icon
+        deleteCompletedOrder.setIconTextGap(1); // Optional: spacing between icon and text    
+        cancelOrder.setIcon(getScaledIcon("/images/cancel.png", homeIconSize));
+        cancelOrder.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT); // Optional: text to the right of icon
+        cancelOrder.setIconTextGap(1); // Optional: spacing between icon and text          
         
         String url="jdbc:MySQL://localhost:3306/java_user_database";
         String user="root";
@@ -37,6 +70,12 @@ public class AdminFrame extends javax.swing.JFrame {
         loadAdminStats();
     }
 
+    private ImageIcon getScaledIcon(String path, int size) {
+    ImageIcon icon = new ImageIcon(getClass().getResource(path));
+    Image img = icon.getImage().getScaledInstance(size, size, Image.SCALE_SMOOTH);
+    return new ImageIcon(img);
+}
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -62,33 +101,41 @@ public class AdminFrame extends javax.swing.JFrame {
         completeOrder = new javax.swing.JButton();
         deleteCompletedOrder = new javax.swing.JButton();
         cancelOrder = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        showTotalAccounts = new javax.swing.JLabel();
-        showTotalOrders = new javax.swing.JLabel();
-        showTotalSales = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         user = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        totalSales = new javax.swing.JLabel();
+        showTotalSales = new javax.swing.JLabel();
+        showTotalOrders = new javax.swing.JLabel();
+        totalOrders = new javax.swing.JLabel();
+        showTotalAccounts = new javax.swing.JLabel();
+        totalAccounts = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ADMIN");
-        setPreferredSize(new java.awt.Dimension(1100, 700));
+        setBackground(new java.awt.Color(239, 233, 233));
+        setMaximumSize(new java.awt.Dimension(920, 610));
+        setMinimumSize(new java.awt.Dimension(920, 610));
+        setPreferredSize(new java.awt.Dimension(920, 610));
+        setResizable(false);
         getContentPane().setLayout(null);
 
+        usersInternalFrame.setBackground(new java.awt.Color(239, 233, 233));
         usersInternalFrame.setTitle("USERS");
         usersInternalFrame.setVisible(true);
         usersInternalFrame.getContentPane().setLayout(null);
 
-        jButton3.setText("close");
+        jButton3.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        jButton3.setText("Close");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         usersInternalFrame.getContentPane().add(jButton3);
-        jButton3.setBounds(260, 310, 72, 23);
+        jButton3.setBounds(250, 300, 80, 26);
 
+        tblUsers.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         tblUsers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -103,24 +150,27 @@ public class AdminFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblUsers);
 
         usersInternalFrame.getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(6, 7, 600, 280);
+        jScrollPane1.setBounds(6, 7, 570, 280);
 
         getContentPane().add(usersInternalFrame);
-        usersInternalFrame.setBounds(80, 70, 620, 380);
+        usersInternalFrame.setBounds(140, 70, 600, 380);
 
+        orderInternalFrame.setBackground(new java.awt.Color(239, 233, 233));
         orderInternalFrame.setTitle("Order Summary");
         orderInternalFrame.setVisible(true);
         orderInternalFrame.getContentPane().setLayout(null);
 
-        jButton2.setText("close");
+        jButton2.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        jButton2.setText("Close");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         orderInternalFrame.getContentPane().add(jButton2);
-        jButton2.setBounds(270, 400, 72, 23);
+        jButton2.setBounds(250, 400, 80, 26);
 
+        orderTable.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         orderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -135,11 +185,12 @@ public class AdminFrame extends javax.swing.JFrame {
         jScrollPane2.setViewportView(orderTable);
 
         orderInternalFrame.getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(0, 24, 578, 360);
+        jScrollPane2.setBounds(8, 24, 570, 360);
 
         getContentPane().add(orderInternalFrame);
-        orderInternalFrame.setBounds(80, 70, 590, 480);
+        orderInternalFrame.setBounds(140, 40, 600, 480);
 
+        LogoutBtn.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         LogoutBtn.setText("LOGOUT");
         LogoutBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,25 +198,28 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(LogoutBtn);
-        LogoutBtn.setBounds(32, 549, 77, 23);
+        LogoutBtn.setBounds(20, 520, 100, 26);
 
-        jButton1.setText("usersButton");
+        jButton1.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        jButton1.setText("Search Users");
+        jButton1.setActionCommand("Users List");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(60, 270, 110, 23);
+        jButton1.setBounds(130, 520, 130, 26);
 
-        orderSearch.setText("orderSearchButton");
+        orderSearch.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        orderSearch.setText("Search Orders");
         orderSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 orderSearchActionPerformed(evt);
             }
         });
         getContentPane().add(orderSearch);
-        orderSearch.setBounds(50, 330, 130, 23);
+        orderSearch.setBounds(270, 520, 130, 26);
 
         order_status.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -175,72 +229,97 @@ public class AdminFrame extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "user_id", "full name", "payment type", "payment method", "address", "total", "city", "number", "status"
+                "user_id", "Full Name", "Payment Type", "Payment Method", "Total", "City", "Address", "Number", "Status"
             }
         ));
         jScrollPane3.setViewportView(order_status);
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(190, 170, 610, 270);
+        jScrollPane3.setBounds(20, 150, 870, 350);
 
-        completeOrder.setText("completeOrder");
+        completeOrder.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        completeOrder.setText("Complete Order");
         completeOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 completeOrderActionPerformed(evt);
             }
         });
         getContentPane().add(completeOrder);
-        completeOrder.setBounds(240, 490, 110, 23);
+        completeOrder.setBounds(410, 520, 140, 26);
 
-        deleteCompletedOrder.setText("deleteCompletedOrder");
+        deleteCompletedOrder.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        deleteCompletedOrder.setText("Delete Completed Order");
         deleteCompletedOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteCompletedOrderActionPerformed(evt);
             }
         });
         getContentPane().add(deleteCompletedOrder);
-        deleteCompletedOrder.setBounds(400, 490, 180, 23);
+        deleteCompletedOrder.setBounds(560, 520, 190, 26);
 
-        cancelOrder.setText("cancelOrder");
+        cancelOrder.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        cancelOrder.setText("Cancel Order");
         cancelOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelOrderActionPerformed(evt);
             }
         });
         getContentPane().add(cancelOrder);
-        cancelOrder.setBounds(630, 490, 100, 23);
+        cancelOrder.setBounds(760, 520, 130, 26);
 
-        jLabel1.setText("Total Orders");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(420, 50, 110, 16);
-
-        jLabel2.setText("Total Accounts");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(270, 50, 110, 16);
-
-        jLabel3.setText("Total Sales");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(560, 50, 100, 16);
-
-        showTotalAccounts.setText("total");
-        getContentPane().add(showTotalAccounts);
-        showTotalAccounts.setBounds(280, 90, 70, 16);
-
-        showTotalOrders.setText("total");
-        getContentPane().add(showTotalOrders);
-        showTotalOrders.setBounds(430, 90, 90, 16);
-
-        showTotalSales.setText("total");
-        getContentPane().add(showTotalSales);
-        showTotalSales.setBounds(570, 90, 90, 16);
-
+        jLabel4.setFont(new java.awt.Font("Poppins", 0, 24)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Welcome Admin!");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 60, 100, 16);
+        jLabel4.setBounds(20, 20, 205, 37);
 
+        user.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
+        user.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         user.setText("full name ");
         getContentPane().add(user);
-        user.setBounds(70, 100, 90, 16);
+        user.setBounds(20, 60, 200, 22);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
+
+        totalSales.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
+        totalSales.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        totalSales.setText("Total Sales");
+        jPanel1.add(totalSales);
+        totalSales.setBounds(390, 20, 150, 19);
+
+        showTotalSales.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
+        showTotalSales.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        showTotalSales.setText("total");
+        jPanel1.add(showTotalSales);
+        showTotalSales.setBounds(430, 50, 90, 19);
+
+        showTotalOrders.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
+        showTotalOrders.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        showTotalOrders.setText("total");
+        jPanel1.add(showTotalOrders);
+        showTotalOrders.setBounds(230, 50, 90, 19);
+
+        totalOrders.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
+        totalOrders.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        totalOrders.setText("Total Orders");
+        jPanel1.add(totalOrders);
+        totalOrders.setBounds(200, 20, 150, 19);
+
+        showTotalAccounts.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
+        showTotalAccounts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        showTotalAccounts.setText("total");
+        jPanel1.add(showTotalAccounts);
+        showTotalAccounts.setBounds(40, 50, 70, 19);
+
+        totalAccounts.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
+        totalAccounts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        totalAccounts.setText("Total Accounts");
+        jPanel1.add(totalAccounts);
+        totalAccounts.setBounds(10, 20, 150, 19);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(340, 20, 550, 110);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -615,10 +694,8 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -630,7 +707,11 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JLabel showTotalOrders;
     private javax.swing.JLabel showTotalSales;
     private javax.swing.JTable tblUsers;
+    private javax.swing.JLabel totalAccounts;
+    private javax.swing.JLabel totalOrders;
+    private javax.swing.JLabel totalSales;
     private javax.swing.JLabel user;
     private javax.swing.JInternalFrame usersInternalFrame;
     // End of variables declaration//GEN-END:variables
+
 }
