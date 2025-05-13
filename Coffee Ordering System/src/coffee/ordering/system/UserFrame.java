@@ -389,32 +389,6 @@ public class UserFrame extends javax.swing.JFrame {
         rightButton = new javax.swing.JButton();
         leftButton = new javax.swing.JButton();
         tab2 = new javax.swing.JPanel();
-        hotCoffeePanel = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        americanoButton = new javax.swing.JButton();
-        latteButton = new javax.swing.JButton();
-        cappuccinoButton = new javax.swing.JButton();
-        brewedCoffeeButton = new javax.swing.JButton();
-        hotCaramelMacchiatoButton = new javax.swing.JButton();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        categoryBack = new javax.swing.JButton();
-        coldCoffeePanel = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        icedWhiteMochaButton = new javax.swing.JButton();
-        icedHazelnutCoffee = new javax.swing.JButton();
-        spanishLatteButton = new javax.swing.JButton();
-        icedMatchaEspressoButton = new javax.swing.JButton();
-        icedCoffeeJellyButton = new javax.swing.JButton();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        categoryBack1 = new javax.swing.JButton();
         pastriesPanel = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         croissantButton = new javax.swing.JButton();
@@ -428,6 +402,47 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         categoryBack2 = new javax.swing.JButton();
+        jLabel177 = new javax.swing.JLabel();
+        jLabel179 = new javax.swing.JLabel();
+        jLabel181 = new javax.swing.JLabel();
+        jLabel183 = new javax.swing.JLabel();
+        jLabel185 = new javax.swing.JLabel();
+        coldCoffeePanel = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        icedWhiteMochaButton = new javax.swing.JButton();
+        icedHazelnutCoffee = new javax.swing.JButton();
+        spanishLatteButton = new javax.swing.JButton();
+        icedMatchaEspressoButton = new javax.swing.JButton();
+        icedCoffeeJellyButton = new javax.swing.JButton();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        categoryBack1 = new javax.swing.JButton();
+        jLabel162 = new javax.swing.JLabel();
+        jLabel167 = new javax.swing.JLabel();
+        jLabel172 = new javax.swing.JLabel();
+        jLabel175 = new javax.swing.JLabel();
+        jLabel176 = new javax.swing.JLabel();
+        hotCoffeePanel = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        americanoButton = new javax.swing.JButton();
+        latteButton = new javax.swing.JButton();
+        cappuccinoButton = new javax.swing.JButton();
+        brewedCoffeeButton = new javax.swing.JButton();
+        hotCaramelMacchiatoButton = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        categoryBack = new javax.swing.JButton();
+        jLabel122 = new javax.swing.JLabel();
+        jLabel128 = new javax.swing.JLabel();
+        jLabel133 = new javax.swing.JLabel();
+        jLabel141 = new javax.swing.JLabel();
+        jLabel147 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -443,8 +458,12 @@ public class UserFrame extends javax.swing.JFrame {
         popular4 = new javax.swing.JButton();
         jLabel125 = new javax.swing.JLabel();
         jLabel153 = new javax.swing.JLabel();
+        jLabel186 = new javax.swing.JLabel();
         jLabel154 = new javax.swing.JLabel();
         jLabel155 = new javax.swing.JLabel();
+        jLabel188 = new javax.swing.JLabel();
+        jLabel189 = new javax.swing.JLabel();
+        jLabel190 = new javax.swing.JLabel();
         tab3 = new javax.swing.JPanel();
         cartLayeredPanel = new javax.swing.JLayeredPane();
         jLabel9 = new javax.swing.JLabel();
@@ -457,7 +476,6 @@ public class UserFrame extends javax.swing.JFrame {
         lblTotal = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         orderPreferenceTextArea = new javax.swing.JTextArea();
-        lblTotal1 = new javax.swing.JLabel();
         pickupCheckoutPanel = new javax.swing.JPanel();
         jButton33 = new javax.swing.JButton();
         jLabel208 = new javax.swing.JLabel();
@@ -1367,6 +1385,328 @@ public class UserFrame extends javax.swing.JFrame {
         tab2.setBackground(new java.awt.Color(239, 233, 233));
         tab2.setLayout(null);
 
+        pastriesPanel.setBackground(new java.awt.Color(239, 233, 233));
+        pastriesPanel.setMaximumSize(null);
+        pastriesPanel.setRequestFocusEnabled(false);
+
+        jLabel13.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel13.setText("Pastries");
+
+        croissantButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                croissantButtonActionPerformed(evt);
+            }
+        });
+
+        cheeseRollButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cheeseRollButtonActionPerformed(evt);
+            }
+        });
+
+        chocolateChipCookieButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chocolateChipCookieButtonActionPerformed(evt);
+            }
+        });
+
+        cinnamonRollButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cinnamonRollButtonActionPerformed(evt);
+            }
+        });
+
+        blueberryMuffinButton.setMargin(null);
+        blueberryMuffinButton.setMaximumSize(null);
+        blueberryMuffinButton.setMinimumSize(null);
+        blueberryMuffinButton.setPreferredSize(null);
+        blueberryMuffinButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                blueberryMuffinButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel28.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setText("Blueberry Muffin");
+
+        jLabel29.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setText("Croissant");
+
+        jLabel30.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel30.setText("Cheese Roll");
+
+        jLabel31.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel31.setText("Chocolate Chip Cookie ");
+
+        jLabel32.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel32.setText("Cinnamon Roll");
+
+        categoryBack2.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        categoryBack2.setText("Back");
+        categoryBack2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                categoryBack2ActionPerformed(evt);
+            }
+        });
+
+        jLabel177.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel177.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel177.setText("P120");
+
+        jLabel179.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel179.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel179.setText("P120");
+
+        jLabel181.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel181.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel181.setText("P105");
+
+        jLabel183.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel183.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel183.setText("P95");
+
+        jLabel185.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel185.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel185.setText("P85");
+
+        javax.swing.GroupLayout pastriesPanelLayout = new javax.swing.GroupLayout(pastriesPanel);
+        pastriesPanel.setLayout(pastriesPanelLayout);
+        pastriesPanelLayout.setHorizontalGroup(
+            pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pastriesPanelLayout.createSequentialGroup()
+                .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pastriesPanelLayout.createSequentialGroup()
+                        .addComponent(blueberryMuffinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(croissantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(cinnamonRollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(cheeseRollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(categoryBack2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13)
+                    .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(chocolateChipCookieButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pastriesPanelLayout.createSequentialGroup()
+                        .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel177, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
+                        .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(pastriesPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel181, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel179, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pastriesPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(25, 25, 25)
+                                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel183, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pastriesPanelLayout.createSequentialGroup()
+                .addComponent(jLabel185, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pastriesPanelLayout.setVerticalGroup(
+            pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pastriesPanelLayout.createSequentialGroup()
+                .addComponent(jLabel13)
+                .addGap(10, 10, 10)
+                .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cheeseRollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(croissantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(blueberryMuffinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cinnamonRollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(jLabel29)
+                    .addComponent(jLabel30)
+                    .addComponent(jLabel32))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel177)
+                    .addComponent(jLabel179)
+                    .addComponent(jLabel181)
+                    .addComponent(jLabel183))
+                .addGap(15, 15, 15)
+                .addComponent(chocolateChipCookieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel31)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel185)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(categoryBack2)
+                .addGap(48, 48, 48))
+        );
+
+        tab2.add(pastriesPanel);
+        pastriesPanel.setBounds(8, 110, 600, 490);
+
+        coldCoffeePanel.setBackground(new java.awt.Color(239, 233, 233));
+        coldCoffeePanel.setMaximumSize(null);
+
+        jLabel12.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
+        jLabel12.setText("Cold Coffees");
+
+        icedWhiteMochaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                icedWhiteMochaButtonActionPerformed(evt);
+            }
+        });
+
+        icedHazelnutCoffee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                icedHazelnutCoffeeActionPerformed(evt);
+            }
+        });
+
+        spanishLatteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                spanishLatteButtonActionPerformed(evt);
+            }
+        });
+
+        icedMatchaEspressoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                icedMatchaEspressoButtonActionPerformed(evt);
+            }
+        });
+
+        icedCoffeeJellyButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                icedCoffeeJellyButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel23.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setText("Iced Coffee Jelly");
+
+        jLabel24.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setText("Iced White Mocha");
+
+        jLabel25.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel25.setText("Iced Hazelnut Coffee");
+
+        jLabel26.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setText("Spanish Latte");
+
+        jLabel27.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setText("Iced Matcha Espresso");
+
+        categoryBack1.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        categoryBack1.setText("Back");
+        categoryBack1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                categoryBack1ActionPerformed(evt);
+            }
+        });
+
+        jLabel162.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel162.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel162.setText("P165 - P180");
+
+        jLabel167.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel167.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel167.setText("P160 - P185");
+
+        jLabel172.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel172.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel172.setText("P160 - P185");
+
+        jLabel175.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel175.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel175.setText("P125 - P150");
+
+        jLabel176.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel176.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel176.setText("P135 - P160");
+
+        javax.swing.GroupLayout coldCoffeePanelLayout = new javax.swing.GroupLayout(coldCoffeePanel);
+        coldCoffeePanel.setLayout(coldCoffeePanelLayout);
+        coldCoffeePanelLayout.setHorizontalGroup(
+            coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(spanishLatteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(categoryBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel12)
+                .addGroup(coldCoffeePanelLayout.createSequentialGroup()
+                    .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel162, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(icedCoffeeJellyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGap(26, 26, 26)
+                    .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(icedWhiteMochaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel167, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(26, 26, 26)
+                    .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(icedMatchaEspressoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel172, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(26, 26, 26)
+                    .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel175, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(icedHazelnutCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+            .addComponent(jLabel176, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        coldCoffeePanelLayout.setVerticalGroup(
+            coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(coldCoffeePanelLayout.createSequentialGroup()
+                .addComponent(jLabel12)
+                .addGap(10, 10, 10)
+                .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(icedCoffeeJellyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(icedWhiteMochaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(icedHazelnutCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(icedMatchaEspressoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel23)
+                        .addComponent(jLabel24)
+                        .addComponent(jLabel27))
+                    .addComponent(jLabel25))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel162)
+                    .addComponent(jLabel167)
+                    .addComponent(jLabel172)
+                    .addComponent(jLabel175))
+                .addGap(15, 15, 15)
+                .addComponent(spanishLatteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel176)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(categoryBack1)
+                .addGap(50, 50, 50))
+        );
+
+        tab2.add(coldCoffeePanel);
+        coldCoffeePanel.setBounds(8, 110, 620, 490);
+
         hotCoffeePanel.setBackground(new java.awt.Color(239, 233, 233));
         hotCoffeePanel.setMaximumSize(null);
 
@@ -1439,34 +1779,62 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel122.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel122.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel122.setText("P160 - P185");
+
+        jLabel128.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel128.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel128.setText("P125 - P150");
+
+        jLabel133.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel133.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel133.setText("P145 - P170");
+
+        jLabel141.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel141.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel141.setText("P135 - P160");
+
+        jLabel147.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel147.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel147.setText("P145 - P170");
+
         javax.swing.GroupLayout hotCoffeePanelLayout = new javax.swing.GroupLayout(hotCoffeePanel);
         hotCoffeePanel.setLayout(hotCoffeePanelLayout);
         hotCoffeePanelLayout.setHorizontalGroup(
             hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(hotCoffeePanelLayout.createSequentialGroup()
-                    .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(americanoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(26, 26, 26)
-                    .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(hotCaramelMacchiatoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGap(26, 26, 26)
-                    .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(brewedCoffeeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(26, 26, 26)
-                    .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(latteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(hotCoffeePanelLayout.createSequentialGroup()
-                    .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(categoryBack, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(cappuccinoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(hotCoffeePanelLayout.createSequentialGroup()
+                .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(americanoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel141, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(hotCoffeePanelLayout.createSequentialGroup()
+                        .addComponent(jLabel122, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel128, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(hotCoffeePanelLayout.createSequentialGroup()
+                        .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hotCaramelMacchiatoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(26, 26, 26)
+                        .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(brewedCoffeeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(26, 26, 26)
+                .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(latteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel133, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(hotCoffeePanelLayout.createSequentialGroup()
+                .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(categoryBack, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cappuccinoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel147, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         hotCoffeePanelLayout.setVerticalGroup(
             hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1487,265 +1855,25 @@ public class UserFrame extends javax.swing.JFrame {
                                 .addComponent(jLabel19)
                                 .addComponent(jLabel22)
                                 .addComponent(jLabel20)))
-                        .addGap(38, 38, 38)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(hotCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel122)
+                            .addComponent(jLabel128)
+                            .addComponent(jLabel133)
+                            .addComponent(jLabel141))
+                        .addGap(15, 15, 15)
                         .addComponent(cappuccinoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel21)
-                        .addGap(33, 33, 33)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel147)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(categoryBack)))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         tab2.add(hotCoffeePanel);
         hotCoffeePanel.setBounds(8, 110, 600, 490);
-
-        coldCoffeePanel.setBackground(new java.awt.Color(239, 233, 233));
-        coldCoffeePanel.setMaximumSize(null);
-
-        jLabel12.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        jLabel12.setText("Cold Coffees");
-
-        icedWhiteMochaButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                icedWhiteMochaButtonActionPerformed(evt);
-            }
-        });
-
-        icedHazelnutCoffee.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                icedHazelnutCoffeeActionPerformed(evt);
-            }
-        });
-
-        spanishLatteButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                spanishLatteButtonActionPerformed(evt);
-            }
-        });
-
-        icedMatchaEspressoButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                icedMatchaEspressoButtonActionPerformed(evt);
-            }
-        });
-
-        icedCoffeeJellyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                icedCoffeeJellyButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel23.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel23.setText("Iced Coffee Jelly");
-
-        jLabel24.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel24.setText("Iced White Mocha");
-
-        jLabel25.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel25.setText("Iced Hazelnut Coffee");
-
-        jLabel26.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setText("Spanish Latte");
-
-        jLabel27.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("Iced Matcha Espresso");
-
-        categoryBack1.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        categoryBack1.setText("Back");
-        categoryBack1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                categoryBack1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout coldCoffeePanelLayout = new javax.swing.GroupLayout(coldCoffeePanel);
-        coldCoffeePanel.setLayout(coldCoffeePanelLayout);
-        coldCoffeePanelLayout.setHorizontalGroup(
-            coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(coldCoffeePanelLayout.createSequentialGroup()
-                .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(spanishLatteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(categoryBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(coldCoffeePanelLayout.createSequentialGroup()
-                        .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(icedCoffeeJellyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(26, 26, 26)
-                        .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(icedWhiteMochaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(icedMatchaEspressoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(icedHazelnutCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jLabel12))
-                .addGap(0, 0, 0))
-        );
-        coldCoffeePanelLayout.setVerticalGroup(
-            coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(coldCoffeePanelLayout.createSequentialGroup()
-                .addComponent(jLabel12)
-                .addGap(10, 10, 10)
-                .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(icedCoffeeJellyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(icedWhiteMochaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(icedHazelnutCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(icedMatchaEspressoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(coldCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel23)
-                        .addComponent(jLabel24)
-                        .addComponent(jLabel27))
-                    .addComponent(jLabel25))
-                .addGap(38, 38, 38)
-                .addComponent(spanishLatteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(categoryBack1)
-                .addGap(50, 50, 50))
-        );
-
-        tab2.add(coldCoffeePanel);
-        coldCoffeePanel.setBounds(8, 110, 620, 490);
-
-        pastriesPanel.setBackground(new java.awt.Color(239, 233, 233));
-        pastriesPanel.setMaximumSize(null);
-        pastriesPanel.setRequestFocusEnabled(false);
-
-        jLabel13.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
-        jLabel13.setText("Pastries");
-
-        croissantButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                croissantButtonActionPerformed(evt);
-            }
-        });
-
-        cheeseRollButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cheeseRollButtonActionPerformed(evt);
-            }
-        });
-
-        chocolateChipCookieButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chocolateChipCookieButtonActionPerformed(evt);
-            }
-        });
-
-        cinnamonRollButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cinnamonRollButtonActionPerformed(evt);
-            }
-        });
-
-        blueberryMuffinButton.setMargin(null);
-        blueberryMuffinButton.setMaximumSize(null);
-        blueberryMuffinButton.setMinimumSize(null);
-        blueberryMuffinButton.setPreferredSize(null);
-        blueberryMuffinButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blueberryMuffinButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel28.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setText("Blueberry Muffin");
-
-        jLabel29.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel29.setText("Croissant");
-
-        jLabel30.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel30.setText("Cheese Roll");
-
-        jLabel31.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel31.setText("Chocolate Chip Cookie ");
-
-        jLabel32.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel32.setText("Cinnamon Roll");
-
-        categoryBack2.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
-        categoryBack2.setText("Back");
-        categoryBack2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                categoryBack2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pastriesPanelLayout = new javax.swing.GroupLayout(pastriesPanel);
-        pastriesPanel.setLayout(pastriesPanelLayout);
-        pastriesPanelLayout.setHorizontalGroup(
-            pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pastriesPanelLayout.createSequentialGroup()
-                .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pastriesPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pastriesPanelLayout.createSequentialGroup()
-                        .addComponent(blueberryMuffinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(croissantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(cinnamonRollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(cheeseRollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(categoryBack2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13)
-                    .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chocolateChipCookieButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pastriesPanelLayout.setVerticalGroup(
-            pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pastriesPanelLayout.createSequentialGroup()
-                .addComponent(jLabel13)
-                .addGap(10, 10, 10)
-                .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cheeseRollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(croissantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(blueberryMuffinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cinnamonRollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pastriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel28)
-                    .addComponent(jLabel29)
-                    .addComponent(jLabel30)
-                    .addComponent(jLabel32))
-                .addGap(38, 38, 38)
-                .addComponent(chocolateChipCookieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel31)
-                .addGap(36, 36, 36)
-                .addComponent(categoryBack2)
-                .addGap(48, 48, 48))
-        );
-
-        tab2.add(pastriesPanel);
-        pastriesPanel.setBounds(8, 110, 600, 490);
 
         jLabel7.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         jLabel7.setText("Categories");
@@ -1757,25 +1885,25 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel3.setText("Best Products");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         tab2.add(jLabel3);
-        jLabel3.setBounds(160, 20, 261, 47);
+        jLabel3.setBounds(160, 20, 261, 55);
 
         jLabel6.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Pastries");
         tab2.add(jLabel6);
-        jLabel6.setBounds(228, 240, 90, 16);
+        jLabel6.setBounds(228, 240, 90, 19);
 
         jLabel5.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Hot Coffee");
         tab2.add(jLabel5);
-        jLabel5.setBounds(119, 240, 90, 16);
+        jLabel5.setBounds(119, 240, 90, 19);
 
         jLabel4.setFont(new java.awt.Font("Poppins Medium", 0, 13)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Blueberry Muffin");
         tab2.add(jLabel4);
-        jLabel4.setBounds(478, 470, 130, 18);
+        jLabel4.setBounds(478, 470, 130, 20);
 
         Pastries.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         Pastries.setToolTipText("");
@@ -1816,7 +1944,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         jLabel8.setText("Popular Picks");
         tab2.add(jLabel8);
-        jLabel8.setBounds(10, 300, 120, 26);
+        jLabel8.setBounds(10, 300, 135, 30);
 
         popular1.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         popular1.setToolTipText("");
@@ -1870,25 +1998,49 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel125.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel125.setText("Iced Coffee");
         tab2.add(jLabel125);
-        jLabel125.setBounds(8, 240, 90, 16);
+        jLabel125.setBounds(8, 240, 90, 19);
 
         jLabel153.setFont(new java.awt.Font("Poppins Medium", 0, 13)); // NOI18N
         jLabel153.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel153.setText("Spanish Latte");
         tab2.add(jLabel153);
-        jLabel153.setBounds(8, 470, 130, 18);
+        jLabel153.setBounds(8, 470, 130, 20);
+
+        jLabel186.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel186.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel186.setText("P160 - P185");
+        tab2.add(jLabel186);
+        jLabel186.setBounds(160, 490, 130, 17);
 
         jLabel154.setFont(new java.awt.Font("Poppins Medium", 0, 13)); // NOI18N
         jLabel154.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel154.setText("Iced White Mocha");
         tab2.add(jLabel154);
-        jLabel154.setBounds(163, 470, 130, 18);
+        jLabel154.setBounds(163, 470, 130, 20);
 
         jLabel155.setFont(new java.awt.Font("Poppins Medium", 0, 13)); // NOI18N
         jLabel155.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel155.setText("Latte");
         tab2.add(jLabel155);
-        jLabel155.setBounds(320, 470, 130, 18);
+        jLabel155.setBounds(320, 470, 130, 20);
+
+        jLabel188.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel188.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel188.setText("P120");
+        tab2.add(jLabel188);
+        jLabel188.setBounds(480, 490, 130, 17);
+
+        jLabel189.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel189.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel189.setText("P135 - P160");
+        tab2.add(jLabel189);
+        jLabel189.setBounds(10, 490, 130, 17);
+
+        jLabel190.setFont(new java.awt.Font("Poppins Medium", 0, 11)); // NOI18N
+        jLabel190.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel190.setText("P145 - P170");
+        tab2.add(jLabel190);
+        jLabel190.setBounds(321, 490, 130, 17);
 
         jTabbedPanel.addTab("tab1", tab2);
 
@@ -1900,7 +2052,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel9.setText("Your Orders");
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         cartLayeredPanel.add(jLabel9);
-        jLabel9.setBounds(3, 20, 640, 47);
+        jLabel9.setBounds(3, 20, 640, 55);
 
         cartPanell.setBackground(new java.awt.Color(239, 233, 233));
         cartPanell.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
@@ -1943,16 +2095,13 @@ public class UserFrame extends javax.swing.JFrame {
 
         lblTotal.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         lblTotal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblTotal.setText("jLabel19");
 
         orderPreferenceTextArea.setColumns(20);
+        orderPreferenceTextArea.setFont(new java.awt.Font("Poppins Light", 0, 11)); // NOI18N
+        orderPreferenceTextArea.setForeground(new java.awt.Color(153, 153, 153));
         orderPreferenceTextArea.setRows(5);
-        orderPreferenceTextArea.setText("....");
+        orderPreferenceTextArea.setText("add special instructions (e.g. less sugar, no ice, extra syrup)");
         jScrollPane3.setViewportView(orderPreferenceTextArea);
-
-        lblTotal1.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
-        lblTotal1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblTotal1.setText("Add special instructions (e.g. less sugar, no ice, extra syrup):");
 
         javax.swing.GroupLayout cartPanellLayout = new javax.swing.GroupLayout(cartPanell);
         cartPanell.setLayout(cartPanellLayout);
@@ -1960,21 +2109,17 @@ public class UserFrame extends javax.swing.JFrame {
             cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cartPanellLayout.createSequentialGroup()
                 .addGap(150, 150, 150)
-                .addGroup(cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
                     .addGroup(cartPanellLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(lblTotal1))
-                    .addGroup(cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
-                        .addGroup(cartPanellLayout.createSequentialGroup()
-                            .addComponent(clearAll)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(cartPanellLayout.createSequentialGroup()
-                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(jScrollPane3)))
+                        .addComponent(clearAll)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(cartPanellLayout.createSequentialGroup()
+                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3))
                 .addContainerGap(150, Short.MAX_VALUE))
         );
         cartPanellLayout.setVerticalGroup(
@@ -1986,11 +2131,9 @@ public class UserFrame extends javax.swing.JFrame {
                 .addGroup(cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addComponent(lblTotal1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
                 .addGroup(cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(clearAll))
@@ -2012,14 +2155,14 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         pickupCheckoutPanel.add(jButton33);
-        jButton33.setBounds(280, 380, 72, 23);
+        jButton33.setBounds(280, 380, 72, 26);
 
         jLabel208.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jLabel208.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel208.setText("Your order is ready for pickup in 15-20 minutes.");
         jLabel208.setName(""); // NOI18N
         pickupCheckoutPanel.add(jLabel208);
-        jLabel208.setBounds(0, 320, 640, 16);
+        jLabel208.setBounds(0, 320, 640, 19);
 
         jLabel209.setFont(new java.awt.Font("Poppins SemiBold", 0, 24)); // NOI18N
         jLabel209.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2028,7 +2171,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel209.setMinimumSize(null);
         jLabel209.setPreferredSize(null);
         pickupCheckoutPanel.add(jLabel209);
-        jLabel209.setBounds(0, 270, 640, 32);
+        jLabel209.setBounds(0, 270, 640, 37);
 
         check2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         check2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/check.gif"))); // NOI18N
@@ -2050,13 +2193,13 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         deliveryCheckoutPanel.add(jButton32);
-        jButton32.setBounds(280, 380, 72, 23);
+        jButton32.setBounds(280, 380, 72, 26);
 
         jLabel206.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jLabel206.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel206.setText("Your Order willl arrive in 15-20 minutes");
         deliveryCheckoutPanel.add(jLabel206);
-        jLabel206.setBounds(0, 320, 640, 16);
+        jLabel206.setBounds(0, 320, 640, 19);
 
         jLabel207.setFont(new java.awt.Font("Poppins SemiBold", 0, 24)); // NOI18N
         jLabel207.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2065,7 +2208,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel207.setMinimumSize(null);
         jLabel207.setPreferredSize(null);
         deliveryCheckoutPanel.add(jLabel207);
-        jLabel207.setBounds(0, 270, 640, 32);
+        jLabel207.setBounds(0, 270, 640, 37);
 
         check1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         check1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/check.gif"))); // NOI18N
@@ -2084,7 +2227,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel156.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel156.setText("Full Name");
         billingDeliveryPanel.add(jLabel156);
-        jLabel156.setBounds(350, 120, 80, 19);
+        jLabel156.setBounds(350, 120, 80, 22);
 
         deliveryAddress.setColumns(20);
         deliveryAddress.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
@@ -2098,17 +2241,17 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel157.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel157.setText("Address:");
         billingDeliveryPanel.add(jLabel157);
-        jLabel157.setBounds(350, 150, 80, 19);
+        jLabel157.setBounds(350, 150, 80, 22);
 
         jLabel158.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel158.setText("City:");
         billingDeliveryPanel.add(jLabel158);
-        jLabel158.setBounds(350, 180, 80, 19);
+        jLabel158.setBounds(350, 180, 80, 22);
 
         jLabel159.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel159.setText("Phone Number:");
         billingDeliveryPanel.add(jLabel159);
-        jLabel159.setBounds(350, 210, 110, 19);
+        jLabel159.setBounds(350, 210, 110, 22);
 
         deliveryNumber.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         deliveryNumber.setText(".");
@@ -2118,24 +2261,24 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(deliveryNumber);
-        deliveryNumber.setBounds(50, 370, 240, 22);
+        deliveryNumber.setBounds(50, 370, 240, 25);
 
         deliveryCity.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         deliveryCity.setText(".");
         billingDeliveryPanel.add(deliveryCity);
-        deliveryCity.setBounds(50, 290, 240, 22);
+        deliveryCity.setBounds(50, 290, 240, 25);
 
         adw1.setFont(new java.awt.Font("Poppins Medium", 0, 33)); // NOI18N
         adw1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         adw1.setText("Order Summary");
         billingDeliveryPanel.add(adw1);
-        adw1.setBounds(320, 50, 300, 43);
+        adw1.setBounds(320, 50, 300, 50);
 
         jLabel160.setFont(new java.awt.Font("Poppins Medium", 0, 33)); // NOI18N
         jLabel160.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel160.setText("Billing");
         billingDeliveryPanel.add(jLabel160);
-        jLabel160.setBounds(20, 50, 300, 43);
+        jLabel160.setBounds(20, 50, 300, 50);
 
         jButton25.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton25.setText("Gcash");
@@ -2145,12 +2288,12 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(jButton25);
-        jButton25.setBounds(80, 480, 80, 26);
+        jButton25.setBounds(80, 480, 80, 29);
 
         jButton26.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton26.setText("Cash");
         billingDeliveryPanel.add(jButton26);
-        jButton26.setBounds(180, 480, 80, 26);
+        jButton26.setBounds(180, 480, 80, 29);
 
         jButton27.setBackground(new java.awt.Color(89, 51, 20));
         jButton27.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -2162,7 +2305,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(jButton27);
-        jButton27.setBounds(350, 520, 240, 26);
+        jButton27.setBounds(350, 520, 240, 29);
 
         jButton28.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         jButton28.setText("Close");
@@ -2172,17 +2315,17 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(jButton28);
-        jButton28.setBounds(30, 20, 72, 23);
+        jButton28.setBounds(30, 20, 72, 26);
 
         jLabel161.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel161.setText("Amount to Pay");
         billingDeliveryPanel.add(jLabel161);
-        jLabel161.setBounds(350, 390, 110, 19);
+        jLabel161.setBounds(350, 390, 110, 22);
 
         showDeliveryTotal.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryTotal.setText(".");
         billingDeliveryPanel.add(showDeliveryTotal);
-        showDeliveryTotal.setBounds(480, 392, 120, 16);
+        showDeliveryTotal.setBounds(480, 392, 120, 19);
 
         jScrollPane5.setMaximumSize(null);
         jScrollPane5.setMinimumSize(null);
@@ -2210,13 +2353,13 @@ public class UserFrame extends javax.swing.JFrame {
         deliveryFullName.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         deliveryFullName.setText(".");
         billingDeliveryPanel.add(deliveryFullName);
-        deliveryFullName.setBounds(480, 120, 120, 16);
+        deliveryFullName.setBounds(480, 120, 120, 19);
 
         jLabel168.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
         jLabel168.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel168.setText("Payment Method");
         billingDeliveryPanel.add(jLabel168);
-        jLabel168.setBounds(20, 450, 300, 24);
+        jLabel168.setBounds(20, 450, 300, 28);
 
         jLabel169.setBackground(new java.awt.Color(0, 0, 0));
         jLabel169.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -2226,58 +2369,58 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel170.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel170.setText("Payment Method");
         billingDeliveryPanel.add(jLabel170);
-        jLabel170.setBounds(350, 420, 130, 19);
+        jLabel170.setBounds(350, 420, 130, 22);
 
         showDeliveryPaymentMethod.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryPaymentMethod.setText(".");
         billingDeliveryPanel.add(showDeliveryPaymentMethod);
-        showDeliveryPaymentMethod.setBounds(480, 422, 120, 16);
+        showDeliveryPaymentMethod.setBounds(480, 422, 120, 19);
 
         showDeliveryDiscountType.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryDiscountType.setText(".");
         showDeliveryDiscountType.setToolTipText("");
         billingDeliveryPanel.add(showDeliveryDiscountType);
-        showDeliveryDiscountType.setBounds(482, 482, 120, 16);
+        showDeliveryDiscountType.setBounds(482, 482, 120, 19);
 
         jLabel173.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel173.setText("Payment Type");
         billingDeliveryPanel.add(jLabel173);
-        jLabel173.setBounds(350, 450, 110, 19);
+        jLabel173.setBounds(350, 450, 110, 22);
 
         jLabel180.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel180.setText("Full Name");
         billingDeliveryPanel.add(jLabel180);
-        jLabel180.setBounds(50, 120, 80, 19);
+        jLabel180.setBounds(50, 120, 80, 22);
 
         deliveryName.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         deliveryName.setText(".");
         billingDeliveryPanel.add(deliveryName);
-        deliveryName.setBounds(50, 150, 240, 16);
+        deliveryName.setBounds(50, 150, 240, 19);
 
         jLabel182.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel182.setText("Address");
         billingDeliveryPanel.add(jLabel182);
-        jLabel182.setBounds(50, 180, 60, 19);
+        jLabel182.setBounds(50, 180, 60, 22);
 
         showDeliveryCity.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryCity.setText(".");
         billingDeliveryPanel.add(showDeliveryCity);
-        showDeliveryCity.setBounds(480, 180, 120, 16);
+        showDeliveryCity.setBounds(480, 180, 120, 19);
 
         jLabel184.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel184.setText("City");
         billingDeliveryPanel.add(jLabel184);
-        jLabel184.setBounds(50, 260, 40, 19);
+        jLabel184.setBounds(50, 260, 40, 22);
 
         showDeliveryAddress.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryAddress.setText(".");
         billingDeliveryPanel.add(showDeliveryAddress);
-        showDeliveryAddress.setBounds(480, 150, 120, 16);
+        showDeliveryAddress.setBounds(480, 150, 120, 19);
 
         showDeliveryNumber.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryNumber.setText(".");
         billingDeliveryPanel.add(showDeliveryNumber);
-        showDeliveryNumber.setBounds(480, 210, 120, 16);
+        showDeliveryNumber.setBounds(480, 210, 120, 19);
 
         jButton30.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton30.setText("Submit");
@@ -2287,17 +2430,17 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(jButton30);
-        jButton30.setBounds(130, 520, 80, 26);
+        jButton30.setBounds(180, 520, 80, 29);
 
         jLabel187.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel187.setText("Phone Number");
         billingDeliveryPanel.add(jLabel187);
-        jLabel187.setBounds(50, 340, 230, 19);
+        jLabel187.setBounds(50, 340, 230, 22);
 
         jLabel191.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel191.setText("Specialty Discount:");
         billingDeliveryPanel.add(jLabel191);
-        jLabel191.setBounds(350, 480, 140, 19);
+        jLabel191.setBounds(350, 480, 140, 22);
 
         discountTypeDeliveryComboBox.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         discountTypeDeliveryComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Student", "Senior Citizen", "PWD" }));
@@ -2307,17 +2450,17 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(discountTypeDeliveryComboBox);
-        discountTypeDeliveryComboBox.setBounds(190, 410, 100, 22);
+        discountTypeDeliveryComboBox.setBounds(190, 410, 100, 25);
 
         jLabel192.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel192.setText("Specialty Discount:");
         billingDeliveryPanel.add(jLabel192);
-        jLabel192.setBounds(50, 410, 140, 19);
+        jLabel192.setBounds(50, 410, 140, 22);
 
         showDeliveryPaymentType.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryPaymentType.setText(".");
         billingDeliveryPanel.add(showDeliveryPaymentType);
-        showDeliveryPaymentType.setBounds(480, 452, 120, 16);
+        showDeliveryPaymentType.setBounds(480, 452, 120, 19);
 
         jButton34.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton34.setText("Cancel");
@@ -2327,7 +2470,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(jButton34);
-        jButton34.setBounds(20, 520, 80, 30);
+        jButton34.setBounds(80, 520, 80, 30);
 
         cartLayeredPanel.add(billingDeliveryPanel);
         billingDeliveryPanel.setBounds(30, 0, 620, 560);
@@ -2338,23 +2481,23 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel56.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel56.setText("Full Name");
         billingPickUpPanel.add(jLabel56);
-        jLabel56.setBounds(60, 120, 63, 19);
+        jLabel56.setBounds(60, 120, 68, 22);
 
         jLabel59.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel59.setText("Phone Number:");
         billingPickUpPanel.add(jLabel59);
-        jLabel59.setBounds(360, 150, 110, 19);
+        jLabel59.setBounds(360, 150, 110, 22);
 
         pickupNumber.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         pickupNumber.setText(".");
         billingPickUpPanel.add(pickupNumber);
-        pickupNumber.setBounds(60, 210, 240, 22);
+        pickupNumber.setBounds(60, 210, 240, 25);
 
         jLabel61.setFont(new java.awt.Font("Poppins Medium", 0, 33)); // NOI18N
         jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel61.setText("Order Summary");
         billingPickUpPanel.add(jLabel61);
-        jLabel61.setBounds(340, 50, 300, 43);
+        jLabel61.setBounds(340, 50, 300, 50);
 
         jButton7.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton7.setText("Gcash");
@@ -2364,7 +2507,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingPickUpPanel.add(jButton7);
-        jButton7.setBounds(80, 440, 80, 26);
+        jButton7.setBounds(80, 460, 80, 29);
 
         jButton8.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton8.setText("Cash");
@@ -2374,7 +2517,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingPickUpPanel.add(jButton8);
-        jButton8.setBounds(180, 440, 80, 26);
+        jButton8.setBounds(180, 460, 80, 29);
 
         jButton9.setBackground(new java.awt.Color(89, 51, 20));
         jButton9.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -2386,7 +2529,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingPickUpPanel.add(jButton9);
-        jButton9.setBounds(360, 520, 240, 26);
+        jButton9.setBounds(360, 520, 240, 29);
 
         jButton10.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         jButton10.setText("Close");
@@ -2396,7 +2539,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingPickUpPanel.add(jButton10);
-        jButton10.setBounds(30, 20, 72, 23);
+        jButton10.setBounds(30, 20, 72, 26);
 
         jLabel62.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel62.setText("Payment Type:");
@@ -2406,7 +2549,7 @@ public class UserFrame extends javax.swing.JFrame {
         showPickupTotal.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showPickupTotal.setText(".");
         billingPickUpPanel.add(showPickupTotal);
-        showPickupTotal.setBounds(485, 362, 120, 16);
+        showPickupTotal.setBounds(485, 362, 120, 19);
 
         jScrollPane2.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         jScrollPane2.setMaximumSize(null);
@@ -2436,58 +2579,58 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel163.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel163.setText("Payment Method");
         billingPickUpPanel.add(jLabel163);
-        jLabel163.setBounds(20, 400, 300, 24);
+        jLabel163.setBounds(20, 420, 300, 28);
 
         jLabel164.setFont(new java.awt.Font("Poppins Medium", 0, 33)); // NOI18N
         jLabel164.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel164.setText("Billing");
         billingPickUpPanel.add(jLabel164);
-        jLabel164.setBounds(30, 50, 300, 43);
+        jLabel164.setBounds(30, 50, 300, 50);
 
         pickupName.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         pickupName.setText(".");
         billingPickUpPanel.add(pickupName);
-        pickupName.setBounds(60, 150, 240, 16);
+        pickupName.setBounds(60, 150, 240, 19);
 
         jLabel165.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel165.setText("Amount to Pay:");
         billingPickUpPanel.add(jLabel165);
-        jLabel165.setBounds(360, 360, 110, 19);
+        jLabel165.setBounds(360, 360, 110, 22);
 
         jLabel174.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel174.setText("Payment Method:");
         billingPickUpPanel.add(jLabel174);
-        jLabel174.setBounds(360, 390, 130, 19);
+        jLabel174.setBounds(360, 390, 130, 22);
 
         showPickupPaymentMethod.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showPickupPaymentMethod.setText(".");
         billingPickUpPanel.add(showPickupPaymentMethod);
-        showPickupPaymentMethod.setBounds(485, 392, 120, 16);
+        showPickupPaymentMethod.setBounds(485, 392, 120, 19);
 
         showPickupDiscountType.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showPickupDiscountType.setText(".");
         billingPickUpPanel.add(showPickupDiscountType);
-        showPickupDiscountType.setBounds(500, 452, 120, 16);
+        showPickupDiscountType.setBounds(500, 452, 120, 19);
 
         jLabel166.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel166.setText("Full Name:");
         billingPickUpPanel.add(jLabel166);
-        jLabel166.setBounds(360, 120, 90, 19);
+        jLabel166.setBounds(360, 120, 90, 22);
 
         showPickupFullName.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showPickupFullName.setText(".");
         billingPickUpPanel.add(showPickupFullName);
-        showPickupFullName.setBounds(480, 120, 120, 16);
+        showPickupFullName.setBounds(480, 120, 120, 19);
 
         jLabel178.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel178.setText("Phone Number");
         billingPickUpPanel.add(jLabel178);
-        jLabel178.setBounds(60, 180, 234, 19);
+        jLabel178.setBounds(60, 180, 234, 22);
 
         showPickupNumber.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showPickupNumber.setText(".");
         billingPickUpPanel.add(showPickupNumber);
-        showPickupNumber.setBounds(480, 150, 120, 16);
+        showPickupNumber.setBounds(480, 150, 120, 19);
 
         jButton29.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton29.setText("Cancel");
@@ -2497,7 +2640,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingPickUpPanel.add(jButton29);
-        jButton29.setBounds(10, 500, 80, 26);
+        jButton29.setBounds(80, 500, 80, 29);
 
         jLabel171.setBackground(new java.awt.Color(0, 0, 0));
         jLabel171.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -2507,7 +2650,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel193.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel193.setText("Specialty Discount:");
         billingPickUpPanel.add(jLabel193);
-        jLabel193.setBounds(60, 250, 140, 19);
+        jLabel193.setBounds(60, 250, 140, 22);
 
         discountPickupTypeComboBox.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         discountPickupTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Student", "Senior Citizen", "PWD" }));
@@ -2517,18 +2660,18 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingPickUpPanel.add(discountPickupTypeComboBox);
-        discountPickupTypeComboBox.setBounds(200, 250, 100, 22);
+        discountPickupTypeComboBox.setBounds(200, 250, 100, 25);
 
         jLabel194.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel194.setText("Specialty Discount:");
         billingPickUpPanel.add(jLabel194);
-        jLabel194.setBounds(360, 450, 140, 19);
+        jLabel194.setBounds(360, 450, 140, 22);
 
         showPickupPaymentType.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showPickupPaymentType.setText(". ");
         showPickupPaymentType.setToolTipText("");
         billingPickUpPanel.add(showPickupPaymentType);
-        showPickupPaymentType.setBounds(485, 422, 120, 16);
+        showPickupPaymentType.setBounds(485, 422, 120, 19);
 
         jButton31.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton31.setText("Submit");
@@ -2538,7 +2681,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingPickUpPanel.add(jButton31);
-        jButton31.setBounds(120, 500, 80, 26);
+        jButton31.setBounds(180, 500, 80, 29);
 
         cartLayeredPanel.add(billingPickUpPanel);
         billingPickUpPanel.setBounds(20, 20, 580, 530);
@@ -2562,7 +2705,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel58.setText("About us");
         jLabel58.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         tab4.add(jLabel58);
-        jLabel58.setBounds(-10, 20, 640, 47);
+        jLabel58.setBounds(-10, 20, 640, 55);
 
         abtusdesc.setFont(new java.awt.Font("Poppins Light", 0, 16)); // NOI18N
         abtusdesc.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2709,7 +2852,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(americanoPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(americanoPanelLayout.createSequentialGroup()
                         .addComponent(americanoDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(americanoIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2845,7 +2988,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(HCMacchiatoPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(HCMacchiatoPanelLayout.createSequentialGroup()
                         .addComponent(HCMacchiatoDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(HCMacchiatoIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(HCMacchiatoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2981,7 +3124,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(LattePic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(LattePanelLayout.createSequentialGroup()
                         .addComponent(LatteDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(LatteIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(LattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3117,7 +3260,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CappuccinoPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CappuccinoPanelLayout.createSequentialGroup()
                         .addComponent(CappuccinoDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(CappuccinoIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CappuccinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3253,7 +3396,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(BrewedCoffeePic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(BrewedCoffeePanelLayout.createSequentialGroup()
                         .addComponent(BrewedCoffeeDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(BrewedCoffeeIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(BrewedCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3389,7 +3532,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(IWMochaPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(IWMochaPanelLayout.createSequentialGroup()
                         .addComponent(IWMochaDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(IWMochaIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(IWMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3525,7 +3668,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(IcedHazelnutPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(IcedHazelnutPanelLayout.createSequentialGroup()
                         .addComponent(IcedHazelnutDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(IcedHazelnutIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(IcedHazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3661,7 +3804,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(SpanishLattePic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(SpanishLattePanelLayout.createSequentialGroup()
                         .addComponent(SpanishLatteDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(SpanishLatteIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(SpanishLattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3797,7 +3940,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(MatchaPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MatchaPanelLayout.createSequentialGroup()
                         .addComponent(MatchaDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(MatchaIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MatchaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3933,7 +4076,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CoffeeJellyPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CoffeeJellyPanelLayout.createSequentialGroup()
                         .addComponent(CoffeeJellyDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(CoffeeJellyIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CoffeeJellyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4056,7 +4199,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CroissantPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CroissantPanelLayout.createSequentialGroup()
                         .addComponent(CroissantDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                         .addComponent(CroissantIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CroissantPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4177,7 +4320,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CheeseRollPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CheeseRollPanelLayout.createSequentialGroup()
                         .addComponent(CheeseRollDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                         .addComponent(CheeseRollIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CheeseRollPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4298,7 +4441,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CookiePic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CookiePanelLayout.createSequentialGroup()
                         .addComponent(CookieDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                         .addComponent(CookieIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CookiePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4419,7 +4562,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CinnamonPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CinnamonPanelLayout.createSequentialGroup()
                         .addComponent(CinnamonDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                         .addComponent(CinnamonIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CinnamonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4540,7 +4683,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(BMuffinPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(BMuffinPanelLayout.createSequentialGroup()
                         .addComponent(BMuffinDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                         .addComponent(BMuffinIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(BMuffinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -6114,16 +6257,19 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
+    private javax.swing.JLabel jLabel122;
     private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel124;
     private javax.swing.JLabel jLabel125;
     private javax.swing.JLabel jLabel126;
     private javax.swing.JLabel jLabel127;
+    private javax.swing.JLabel jLabel128;
     private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel130;
     private javax.swing.JLabel jLabel131;
     private javax.swing.JLabel jLabel132;
+    private javax.swing.JLabel jLabel133;
     private javax.swing.JLabel jLabel134;
     private javax.swing.JLabel jLabel135;
     private javax.swing.JLabel jLabel136;
@@ -6132,11 +6278,13 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel139;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel140;
+    private javax.swing.JLabel jLabel141;
     private javax.swing.JLabel jLabel142;
     private javax.swing.JLabel jLabel143;
     private javax.swing.JLabel jLabel144;
     private javax.swing.JLabel jLabel145;
     private javax.swing.JLabel jLabel146;
+    private javax.swing.JLabel jLabel147;
     private javax.swing.JLabel jLabel148;
     private javax.swing.JLabel jLabel149;
     private javax.swing.JLabel jLabel15;
@@ -6153,24 +6301,38 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel160;
     private javax.swing.JLabel jLabel161;
+    private javax.swing.JLabel jLabel162;
     private javax.swing.JLabel jLabel163;
     private javax.swing.JLabel jLabel164;
     private javax.swing.JLabel jLabel165;
     private javax.swing.JLabel jLabel166;
+    private javax.swing.JLabel jLabel167;
     private javax.swing.JLabel jLabel168;
     private javax.swing.JLabel jLabel169;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel170;
     private javax.swing.JLabel jLabel171;
+    private javax.swing.JLabel jLabel172;
     private javax.swing.JLabel jLabel173;
     private javax.swing.JLabel jLabel174;
+    private javax.swing.JLabel jLabel175;
+    private javax.swing.JLabel jLabel176;
+    private javax.swing.JLabel jLabel177;
     private javax.swing.JLabel jLabel178;
+    private javax.swing.JLabel jLabel179;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel180;
+    private javax.swing.JLabel jLabel181;
     private javax.swing.JLabel jLabel182;
+    private javax.swing.JLabel jLabel183;
     private javax.swing.JLabel jLabel184;
+    private javax.swing.JLabel jLabel185;
+    private javax.swing.JLabel jLabel186;
     private javax.swing.JLabel jLabel187;
+    private javax.swing.JLabel jLabel188;
+    private javax.swing.JLabel jLabel189;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel190;
     private javax.swing.JLabel jLabel191;
     private javax.swing.JLabel jLabel192;
     private javax.swing.JLabel jLabel193;
@@ -6278,7 +6440,6 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JButton latteButton;
     private javax.swing.JButton latteButton1;
     private javax.swing.JLabel lblTotal;
-    private javax.swing.JLabel lblTotal1;
     private javax.swing.JButton leftButton;
     private javax.swing.JPanel longLine;
     private javax.swing.JTextArea orderPreferenceTextArea;

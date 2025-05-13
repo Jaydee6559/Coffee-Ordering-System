@@ -114,7 +114,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setAlignmentY(0.0F);
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Left.add(jLabel1);
-        jLabel1.setBounds(160, 30, 86, 47);
+        jLabel1.setBounds(160, 30, 93, 55);
         jLabel1.getAccessibleContext().setAccessibleDescription("");
 
         jLabel5.setFont(new java.awt.Font("Poppins Light", 0, 18)); // NOI18N
@@ -122,13 +122,13 @@ public class Login extends javax.swing.JFrame {
         jLabel5.setAlignmentY(0.0F);
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Left.add(jLabel5);
-        jLabel5.setBounds(105, 80, 174, 24);
+        jLabel5.setBounds(105, 80, 189, 28);
 
         jLabel8.setBackground(new java.awt.Color(153, 153, 153));
         jLabel8.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel8.setText("Email");
         Left.add(jLabel8);
-        jLabel8.setBounds(35, 150, 74, 19);
+        jLabel8.setBounds(35, 150, 74, 22);
 
         username.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
         username.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -141,7 +141,7 @@ public class Login extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel11.setText("Login As");
         Left.add(jLabel11);
-        jLabel11.setBounds(60, 320, 74, 19);
+        jLabel11.setBounds(60, 320, 74, 22);
 
         jTextPane6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
         jTextPane6.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -164,7 +164,7 @@ public class Login extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel13.setText("Password");
         Left.add(jLabel13);
-        jLabel13.setBounds(35, 235, 74, 19);
+        jLabel13.setBounds(35, 235, 74, 22);
 
         LoginBtn.setBackground(new java.awt.Color(89, 51, 20));
         LoginBtn.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -179,9 +179,10 @@ public class Login extends javax.swing.JFrame {
         LoginBtn.setBounds(265, 318, 72, 27);
 
         jLabel4.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Don't have an account?");
         Left.add(jLabel4);
-        jLabel4.setBounds(65, 510, 150, 19);
+        jLabel4.setBounds(51, 510, 190, 22);
 
         SignUpBtn.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         SignUpBtn.setForeground(new java.awt.Color(102, 0, 0));
@@ -194,7 +195,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         Left.add(SignUpBtn);
-        SignUpBtn.setBounds(247, 506, 90, 26);
+        SignUpBtn.setBounds(247, 506, 90, 29);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

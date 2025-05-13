@@ -105,7 +105,7 @@ private ImageIcon getScaledIcon(String path, int width, int height) {
         jLabel1.setAlignmentY(0.0F);
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Left.add(jLabel1);
-        jLabel1.setBounds(135, 30, 126, 47);
+        jLabel1.setBounds(135, 30, 134, 55);
         jLabel1.getAccessibleContext().setAccessibleDescription("");
 
         jLabel2.setBackground(new java.awt.Color(153, 153, 153));
@@ -129,7 +129,7 @@ private ImageIcon getScaledIcon(String path, int width, int height) {
         jLabel4.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel4.setText("I already have an account?");
         Left.add(jLabel4);
-        jLabel4.setBounds(65, 510, 171, 19);
+        jLabel4.setBounds(65, 510, 190, 22);
 
         jButton2.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(102, 0, 0));
@@ -142,20 +142,20 @@ private ImageIcon getScaledIcon(String path, int width, int height) {
             }
         });
         Left.add(jButton2);
-        jButton2.setBounds(265, 506, 72, 26);
+        jButton2.setBounds(265, 506, 72, 29);
 
         jLabel5.setFont(new java.awt.Font("Poppins Light", 0, 18)); // NOI18N
         jLabel5.setText("Hello! let’s get started");
         jLabel5.setAlignmentY(0.0F);
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Left.add(jLabel5);
-        jLabel5.setBounds(105, 80, 174, 24);
+        jLabel5.setBounds(105, 80, 189, 28);
 
         jLabel8.setBackground(new java.awt.Color(153, 153, 153));
         jLabel8.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel8.setText("Username");
         Left.add(jLabel8);
-        jLabel8.setBounds(35, 190, 74, 19);
+        jLabel8.setBounds(35, 190, 74, 22);
 
         Username.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
         Username.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -168,7 +168,7 @@ private ImageIcon getScaledIcon(String path, int width, int height) {
         jLabel9.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel9.setText("Last Name");
         Left.add(jLabel9);
-        jLabel9.setBounds(35, 125, 67, 19);
+        jLabel9.setBounds(35, 125, 73, 22);
 
         LastName.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
         LastName.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -188,7 +188,7 @@ private ImageIcon getScaledIcon(String path, int width, int height) {
         jLabel10.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel10.setText("Email");
         Left.add(jLabel10);
-        jLabel10.setBounds(35, 255, 74, 19);
+        jLabel10.setBounds(35, 255, 74, 22);
 
         Email.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
         Email.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -201,7 +201,7 @@ private ImageIcon getScaledIcon(String path, int width, int height) {
         jLabel11.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel11.setText("Password");
         Left.add(jLabel11);
-        jLabel11.setBounds(35, 320, 74, 19);
+        jLabel11.setBounds(35, 320, 74, 22);
 
         Password.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
         Password.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -221,7 +221,7 @@ private ImageIcon getScaledIcon(String path, int width, int height) {
         jLabel12.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel12.setText("Confirm Password");
         Left.add(jLabel12);
-        jLabel12.setBounds(35, 385, 150, 19);
+        jLabel12.setBounds(35, 385, 150, 22);
 
         user_type.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         user_type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Admin" }));
@@ -238,7 +238,7 @@ private ImageIcon getScaledIcon(String path, int width, int height) {
         jLabel13.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel13.setText("Sign Up as");
         Left.add(jLabel13);
-        jLabel13.setBounds(35, 455, 74, 19);
+        jLabel13.setBounds(35, 455, 74, 22);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
