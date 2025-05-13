@@ -489,7 +489,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel169 = new javax.swing.JLabel();
         jLabel170 = new javax.swing.JLabel();
         showDeliveryPaymentMethod = new javax.swing.JLabel();
-        showDiscountType = new javax.swing.JLabel();
+        showDeliveryDiscountType = new javax.swing.JLabel();
         jLabel173 = new javax.swing.JLabel();
         jLabel180 = new javax.swing.JLabel();
         deliveryName = new javax.swing.JLabel();
@@ -501,9 +501,10 @@ public class UserFrame extends javax.swing.JFrame {
         jButton30 = new javax.swing.JButton();
         jLabel187 = new javax.swing.JLabel();
         jLabel191 = new javax.swing.JLabel();
-        DiscountTypeComboBox = new javax.swing.JComboBox<>();
+        discountTypeDeliveryComboBox = new javax.swing.JComboBox<>();
         jLabel192 = new javax.swing.JLabel();
         showDeliveryPaymentType = new javax.swing.JLabel();
+        jButton34 = new javax.swing.JButton();
         billingPickUpPanel = new javax.swing.JPanel();
         jLabel56 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
@@ -523,7 +524,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel165 = new javax.swing.JLabel();
         jLabel174 = new javax.swing.JLabel();
         showPickupPaymentMethod = new javax.swing.JLabel();
-        showDiscountPickupType = new javax.swing.JLabel();
+        showPickupDiscountType = new javax.swing.JLabel();
         jLabel166 = new javax.swing.JLabel();
         showPickupFullName = new javax.swing.JLabel();
         jLabel178 = new javax.swing.JLabel();
@@ -531,9 +532,10 @@ public class UserFrame extends javax.swing.JFrame {
         jButton29 = new javax.swing.JButton();
         jLabel171 = new javax.swing.JLabel();
         jLabel193 = new javax.swing.JLabel();
-        DiscountPickupTypeComboBox = new javax.swing.JComboBox<>();
+        discountPickupTypeComboBox = new javax.swing.JComboBox<>();
         jLabel194 = new javax.swing.JLabel();
         showPickupPaymentType = new javax.swing.JLabel();
+        jButton31 = new javax.swing.JButton();
         tab4 = new javax.swing.JPanel();
         jLabel57 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
@@ -1752,25 +1754,25 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel3.setText("Best Products");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         tab2.add(jLabel3);
-        jLabel3.setBounds(160, 20, 261, 55);
+        jLabel3.setBounds(160, 20, 261, 47);
 
         jLabel6.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Pastries");
         tab2.add(jLabel6);
-        jLabel6.setBounds(228, 240, 90, 19);
+        jLabel6.setBounds(228, 240, 90, 16);
 
         jLabel5.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Hot Coffee");
         tab2.add(jLabel5);
-        jLabel5.setBounds(119, 240, 90, 19);
+        jLabel5.setBounds(119, 240, 90, 16);
 
         jLabel4.setFont(new java.awt.Font("Poppins Medium", 0, 13)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Blueberry Muffin");
         tab2.add(jLabel4);
-        jLabel4.setBounds(478, 470, 130, 20);
+        jLabel4.setBounds(478, 470, 130, 18);
 
         Pastries.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         Pastries.setToolTipText("");
@@ -1811,7 +1813,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Poppins Medium", 0, 20)); // NOI18N
         jLabel8.setText("Popular Picks");
         tab2.add(jLabel8);
-        jLabel8.setBounds(10, 300, 135, 30);
+        jLabel8.setBounds(10, 300, 120, 26);
 
         popular1.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         popular1.setToolTipText("");
@@ -1865,25 +1867,25 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel125.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel125.setText("Iced Coffee");
         tab2.add(jLabel125);
-        jLabel125.setBounds(8, 240, 90, 19);
+        jLabel125.setBounds(8, 240, 90, 16);
 
         jLabel153.setFont(new java.awt.Font("Poppins Medium", 0, 13)); // NOI18N
         jLabel153.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel153.setText("Spanish Latte");
         tab2.add(jLabel153);
-        jLabel153.setBounds(8, 470, 130, 20);
+        jLabel153.setBounds(8, 470, 130, 18);
 
         jLabel154.setFont(new java.awt.Font("Poppins Medium", 0, 13)); // NOI18N
         jLabel154.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel154.setText("Iced White Mocha");
         tab2.add(jLabel154);
-        jLabel154.setBounds(163, 470, 130, 20);
+        jLabel154.setBounds(163, 470, 130, 18);
 
         jLabel155.setFont(new java.awt.Font("Poppins Medium", 0, 13)); // NOI18N
         jLabel155.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel155.setText("Latte");
         tab2.add(jLabel155);
-        jLabel155.setBounds(320, 470, 130, 20);
+        jLabel155.setBounds(320, 470, 130, 18);
 
         jTabbedPanel.addTab("tab1", tab2);
 
@@ -1895,7 +1897,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel9.setText("Your Orders");
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         cartLayeredPanel.add(jLabel9);
-        jLabel9.setBounds(3, 20, 640, 55);
+        jLabel9.setBounds(3, 20, 640, 47);
 
         cartPanell.setBackground(new java.awt.Color(239, 233, 233));
         cartPanell.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
@@ -1991,14 +1993,14 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         pickupCheckoutPanel.add(jButton33);
-        jButton33.setBounds(280, 380, 72, 26);
+        jButton33.setBounds(280, 380, 72, 23);
 
         jLabel208.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jLabel208.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel208.setText("Your order is ready for pickup in 15-20 minutes.");
         jLabel208.setName(""); // NOI18N
         pickupCheckoutPanel.add(jLabel208);
-        jLabel208.setBounds(0, 320, 640, 19);
+        jLabel208.setBounds(0, 320, 640, 16);
 
         jLabel209.setFont(new java.awt.Font("Poppins SemiBold", 0, 24)); // NOI18N
         jLabel209.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2007,7 +2009,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel209.setMinimumSize(null);
         jLabel209.setPreferredSize(null);
         pickupCheckoutPanel.add(jLabel209);
-        jLabel209.setBounds(0, 270, 640, 37);
+        jLabel209.setBounds(0, 270, 640, 32);
 
         check2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         check2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/check.gif"))); // NOI18N
@@ -2029,13 +2031,13 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         deliveryCheckoutPanel.add(jButton32);
-        jButton32.setBounds(280, 380, 72, 26);
+        jButton32.setBounds(280, 380, 72, 23);
 
         jLabel206.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jLabel206.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel206.setText("Your Order willl arrive in 15-20 minutes");
         deliveryCheckoutPanel.add(jLabel206);
-        jLabel206.setBounds(0, 320, 640, 19);
+        jLabel206.setBounds(0, 320, 640, 16);
 
         jLabel207.setFont(new java.awt.Font("Poppins SemiBold", 0, 24)); // NOI18N
         jLabel207.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2044,7 +2046,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel207.setMinimumSize(null);
         jLabel207.setPreferredSize(null);
         deliveryCheckoutPanel.add(jLabel207);
-        jLabel207.setBounds(0, 270, 640, 37);
+        jLabel207.setBounds(0, 270, 640, 32);
 
         check1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         check1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/check.gif"))); // NOI18N
@@ -2063,7 +2065,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel156.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel156.setText("Full Name");
         billingDeliveryPanel.add(jLabel156);
-        jLabel156.setBounds(350, 120, 80, 22);
+        jLabel156.setBounds(350, 120, 80, 19);
 
         deliveryAddress.setColumns(20);
         deliveryAddress.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
@@ -2077,17 +2079,17 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel157.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel157.setText("Address:");
         billingDeliveryPanel.add(jLabel157);
-        jLabel157.setBounds(350, 150, 80, 22);
+        jLabel157.setBounds(350, 150, 80, 19);
 
         jLabel158.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel158.setText("City:");
         billingDeliveryPanel.add(jLabel158);
-        jLabel158.setBounds(350, 180, 80, 22);
+        jLabel158.setBounds(350, 180, 80, 19);
 
         jLabel159.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel159.setText("Phone Number:");
         billingDeliveryPanel.add(jLabel159);
-        jLabel159.setBounds(350, 210, 110, 22);
+        jLabel159.setBounds(350, 210, 110, 19);
 
         deliveryNumber.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         deliveryNumber.setText(".");
@@ -2097,24 +2099,24 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(deliveryNumber);
-        deliveryNumber.setBounds(50, 370, 240, 25);
+        deliveryNumber.setBounds(50, 370, 240, 22);
 
         deliveryCity.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         deliveryCity.setText(".");
         billingDeliveryPanel.add(deliveryCity);
-        deliveryCity.setBounds(50, 290, 240, 25);
+        deliveryCity.setBounds(50, 290, 240, 22);
 
         adw1.setFont(new java.awt.Font("Poppins Medium", 0, 33)); // NOI18N
         adw1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         adw1.setText("Order Summary");
         billingDeliveryPanel.add(adw1);
-        adw1.setBounds(320, 50, 300, 50);
+        adw1.setBounds(320, 50, 300, 43);
 
         jLabel160.setFont(new java.awt.Font("Poppins Medium", 0, 33)); // NOI18N
         jLabel160.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel160.setText("Billing");
         billingDeliveryPanel.add(jLabel160);
-        jLabel160.setBounds(20, 50, 300, 50);
+        jLabel160.setBounds(20, 50, 300, 43);
 
         jButton25.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton25.setText("Gcash");
@@ -2124,12 +2126,12 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(jButton25);
-        jButton25.setBounds(80, 480, 80, 29);
+        jButton25.setBounds(80, 480, 80, 26);
 
         jButton26.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton26.setText("Cash");
         billingDeliveryPanel.add(jButton26);
-        jButton26.setBounds(180, 480, 80, 29);
+        jButton26.setBounds(180, 480, 80, 26);
 
         jButton27.setBackground(new java.awt.Color(89, 51, 20));
         jButton27.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -2141,7 +2143,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(jButton27);
-        jButton27.setBounds(350, 520, 240, 29);
+        jButton27.setBounds(350, 520, 240, 26);
 
         jButton28.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         jButton28.setText("Close");
@@ -2151,17 +2153,17 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(jButton28);
-        jButton28.setBounds(30, 20, 72, 26);
+        jButton28.setBounds(30, 20, 72, 23);
 
         jLabel161.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel161.setText("Amount to Pay");
         billingDeliveryPanel.add(jLabel161);
-        jLabel161.setBounds(350, 390, 110, 22);
+        jLabel161.setBounds(350, 390, 110, 19);
 
         showDeliveryTotal.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryTotal.setText(".");
         billingDeliveryPanel.add(showDeliveryTotal);
-        showDeliveryTotal.setBounds(480, 392, 120, 19);
+        showDeliveryTotal.setBounds(480, 392, 120, 16);
 
         jScrollPane5.setMaximumSize(null);
         jScrollPane5.setMinimumSize(null);
@@ -2189,13 +2191,13 @@ public class UserFrame extends javax.swing.JFrame {
         deliveryFullName.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         deliveryFullName.setText(".");
         billingDeliveryPanel.add(deliveryFullName);
-        deliveryFullName.setBounds(480, 120, 120, 19);
+        deliveryFullName.setBounds(480, 120, 120, 16);
 
         jLabel168.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
         jLabel168.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel168.setText("Payment Method");
         billingDeliveryPanel.add(jLabel168);
-        jLabel168.setBounds(20, 450, 300, 28);
+        jLabel168.setBounds(20, 450, 300, 24);
 
         jLabel169.setBackground(new java.awt.Color(0, 0, 0));
         jLabel169.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -2205,58 +2207,58 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel170.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel170.setText("Payment Method");
         billingDeliveryPanel.add(jLabel170);
-        jLabel170.setBounds(350, 420, 130, 22);
+        jLabel170.setBounds(350, 420, 130, 19);
 
         showDeliveryPaymentMethod.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryPaymentMethod.setText(".");
         billingDeliveryPanel.add(showDeliveryPaymentMethod);
-        showDeliveryPaymentMethod.setBounds(480, 422, 120, 19);
+        showDeliveryPaymentMethod.setBounds(480, 422, 120, 16);
 
-        showDiscountType.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
-        showDiscountType.setText(". (edit mo)");
-        showDiscountType.setToolTipText("");
-        billingDeliveryPanel.add(showDiscountType);
-        showDiscountType.setBounds(482, 482, 120, 19);
+        showDeliveryDiscountType.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        showDeliveryDiscountType.setText(".");
+        showDeliveryDiscountType.setToolTipText("");
+        billingDeliveryPanel.add(showDeliveryDiscountType);
+        showDeliveryDiscountType.setBounds(482, 482, 120, 16);
 
         jLabel173.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel173.setText("Payment Type");
         billingDeliveryPanel.add(jLabel173);
-        jLabel173.setBounds(350, 450, 110, 22);
+        jLabel173.setBounds(350, 450, 110, 19);
 
         jLabel180.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel180.setText("Full Name");
         billingDeliveryPanel.add(jLabel180);
-        jLabel180.setBounds(50, 120, 80, 22);
+        jLabel180.setBounds(50, 120, 80, 19);
 
         deliveryName.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         deliveryName.setText(".");
         billingDeliveryPanel.add(deliveryName);
-        deliveryName.setBounds(50, 150, 240, 19);
+        deliveryName.setBounds(50, 150, 240, 16);
 
         jLabel182.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel182.setText("Address");
         billingDeliveryPanel.add(jLabel182);
-        jLabel182.setBounds(50, 180, 60, 22);
+        jLabel182.setBounds(50, 180, 60, 19);
 
         showDeliveryCity.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryCity.setText(".");
         billingDeliveryPanel.add(showDeliveryCity);
-        showDeliveryCity.setBounds(480, 180, 120, 19);
+        showDeliveryCity.setBounds(480, 180, 120, 16);
 
         jLabel184.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel184.setText("City");
         billingDeliveryPanel.add(jLabel184);
-        jLabel184.setBounds(50, 260, 40, 22);
+        jLabel184.setBounds(50, 260, 40, 19);
 
         showDeliveryAddress.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryAddress.setText(".");
         billingDeliveryPanel.add(showDeliveryAddress);
-        showDeliveryAddress.setBounds(480, 150, 120, 19);
+        showDeliveryAddress.setBounds(480, 150, 120, 16);
 
         showDeliveryNumber.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryNumber.setText(".");
         billingDeliveryPanel.add(showDeliveryNumber);
-        showDeliveryNumber.setBounds(480, 210, 120, 19);
+        showDeliveryNumber.setBounds(480, 210, 120, 16);
 
         jButton30.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton30.setText("Submit");
@@ -2266,32 +2268,47 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(jButton30);
-        jButton30.setBounds(130, 520, 80, 29);
+        jButton30.setBounds(130, 520, 80, 26);
 
         jLabel187.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel187.setText("Phone Number");
         billingDeliveryPanel.add(jLabel187);
-        jLabel187.setBounds(50, 340, 230, 22);
+        jLabel187.setBounds(50, 340, 230, 19);
 
         jLabel191.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel191.setText("Specialty Discount:");
         billingDeliveryPanel.add(jLabel191);
-        jLabel191.setBounds(350, 480, 140, 22);
+        jLabel191.setBounds(350, 480, 140, 19);
 
-        DiscountTypeComboBox.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
-        DiscountTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Senior Citizen", "PWD" }));
-        billingDeliveryPanel.add(DiscountTypeComboBox);
-        DiscountTypeComboBox.setBounds(190, 410, 100, 25);
+        discountTypeDeliveryComboBox.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        discountTypeDeliveryComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Student", "Senior Citizen", "PWD" }));
+        discountTypeDeliveryComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                discountTypeDeliveryComboBoxActionPerformed(evt);
+            }
+        });
+        billingDeliveryPanel.add(discountTypeDeliveryComboBox);
+        discountTypeDeliveryComboBox.setBounds(190, 410, 100, 22);
 
         jLabel192.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel192.setText("Specialty Discount:");
         billingDeliveryPanel.add(jLabel192);
-        jLabel192.setBounds(50, 410, 140, 22);
+        jLabel192.setBounds(50, 410, 140, 19);
 
         showDeliveryPaymentType.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showDeliveryPaymentType.setText(".");
         billingDeliveryPanel.add(showDeliveryPaymentType);
-        showDeliveryPaymentType.setBounds(480, 452, 120, 19);
+        showDeliveryPaymentType.setBounds(480, 452, 120, 16);
+
+        jButton34.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
+        jButton34.setText("Cancel");
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton34ActionPerformed(evt);
+            }
+        });
+        billingDeliveryPanel.add(jButton34);
+        jButton34.setBounds(20, 580, 80, 30);
 
         cartLayeredPanel.add(billingDeliveryPanel);
         billingDeliveryPanel.setBounds(30, 0, 620, 560);
@@ -2302,23 +2319,23 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel56.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel56.setText("Full Name");
         billingPickUpPanel.add(jLabel56);
-        jLabel56.setBounds(60, 120, 68, 22);
+        jLabel56.setBounds(60, 120, 63, 19);
 
         jLabel59.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel59.setText("Phone Number:");
         billingPickUpPanel.add(jLabel59);
-        jLabel59.setBounds(360, 150, 110, 22);
+        jLabel59.setBounds(360, 150, 110, 19);
 
         pickupNumber.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         pickupNumber.setText(".");
         billingPickUpPanel.add(pickupNumber);
-        pickupNumber.setBounds(60, 210, 240, 25);
+        pickupNumber.setBounds(60, 210, 240, 22);
 
         jLabel61.setFont(new java.awt.Font("Poppins Medium", 0, 33)); // NOI18N
         jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel61.setText("Order Summary");
         billingPickUpPanel.add(jLabel61);
-        jLabel61.setBounds(340, 50, 300, 50);
+        jLabel61.setBounds(340, 50, 300, 43);
 
         jButton7.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton7.setText("Gcash");
@@ -2328,7 +2345,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingPickUpPanel.add(jButton7);
-        jButton7.setBounds(80, 440, 80, 29);
+        jButton7.setBounds(80, 440, 80, 26);
 
         jButton8.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jButton8.setText("Cash");
@@ -2338,7 +2355,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingPickUpPanel.add(jButton8);
-        jButton8.setBounds(180, 440, 80, 29);
+        jButton8.setBounds(180, 440, 80, 26);
 
         jButton9.setBackground(new java.awt.Color(89, 51, 20));
         jButton9.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -2350,7 +2367,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingPickUpPanel.add(jButton9);
-        jButton9.setBounds(360, 520, 240, 29);
+        jButton9.setBounds(360, 520, 240, 26);
 
         jButton10.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         jButton10.setText("Close");
@@ -2360,7 +2377,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingPickUpPanel.add(jButton10);
-        jButton10.setBounds(30, 20, 72, 26);
+        jButton10.setBounds(30, 20, 72, 23);
 
         jLabel62.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel62.setText("Payment Type:");
@@ -2370,7 +2387,7 @@ public class UserFrame extends javax.swing.JFrame {
         showPickupTotal.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showPickupTotal.setText(".");
         billingPickUpPanel.add(showPickupTotal);
-        showPickupTotal.setBounds(485, 362, 120, 19);
+        showPickupTotal.setBounds(485, 362, 120, 16);
 
         jScrollPane2.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         jScrollPane2.setMaximumSize(null);
@@ -2400,68 +2417,68 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel163.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel163.setText("Payment Method");
         billingPickUpPanel.add(jLabel163);
-        jLabel163.setBounds(20, 400, 300, 28);
+        jLabel163.setBounds(20, 400, 300, 24);
 
         jLabel164.setFont(new java.awt.Font("Poppins Medium", 0, 33)); // NOI18N
         jLabel164.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel164.setText("Billing");
         billingPickUpPanel.add(jLabel164);
-        jLabel164.setBounds(30, 50, 300, 50);
+        jLabel164.setBounds(30, 50, 300, 43);
 
         pickupName.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         pickupName.setText(".");
         billingPickUpPanel.add(pickupName);
-        pickupName.setBounds(60, 150, 240, 19);
+        pickupName.setBounds(60, 150, 240, 16);
 
         jLabel165.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel165.setText("Amount to Pay:");
         billingPickUpPanel.add(jLabel165);
-        jLabel165.setBounds(360, 360, 110, 22);
+        jLabel165.setBounds(360, 360, 110, 19);
 
         jLabel174.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel174.setText("Payment Method:");
         billingPickUpPanel.add(jLabel174);
-        jLabel174.setBounds(360, 390, 130, 22);
+        jLabel174.setBounds(360, 390, 130, 19);
 
         showPickupPaymentMethod.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showPickupPaymentMethod.setText(".");
         billingPickUpPanel.add(showPickupPaymentMethod);
-        showPickupPaymentMethod.setBounds(485, 392, 120, 19);
+        showPickupPaymentMethod.setBounds(485, 392, 120, 16);
 
-        showDiscountPickupType.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
-        showDiscountPickupType.setText(".(edit mo)");
-        billingPickUpPanel.add(showDiscountPickupType);
-        showDiscountPickupType.setBounds(500, 452, 120, 19);
+        showPickupDiscountType.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        showPickupDiscountType.setText(".");
+        billingPickUpPanel.add(showPickupDiscountType);
+        showPickupDiscountType.setBounds(500, 452, 120, 16);
 
         jLabel166.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel166.setText("Full Name:");
         billingPickUpPanel.add(jLabel166);
-        jLabel166.setBounds(360, 120, 90, 22);
+        jLabel166.setBounds(360, 120, 90, 19);
 
         showPickupFullName.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showPickupFullName.setText(".");
         billingPickUpPanel.add(showPickupFullName);
-        showPickupFullName.setBounds(480, 120, 120, 19);
+        showPickupFullName.setBounds(480, 120, 120, 16);
 
         jLabel178.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel178.setText("Phone Number");
         billingPickUpPanel.add(jLabel178);
-        jLabel178.setBounds(60, 180, 234, 22);
+        jLabel178.setBounds(60, 180, 234, 19);
 
         showPickupNumber.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showPickupNumber.setText(".");
         billingPickUpPanel.add(showPickupNumber);
-        showPickupNumber.setBounds(480, 150, 120, 19);
+        showPickupNumber.setBounds(480, 150, 120, 16);
 
         jButton29.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
-        jButton29.setText("Submit");
+        jButton29.setText("Cancel");
         jButton29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton29ActionPerformed(evt);
             }
         });
         billingPickUpPanel.add(jButton29);
-        jButton29.setBounds(120, 500, 80, 29);
+        jButton29.setBounds(10, 500, 80, 26);
 
         jLabel171.setBackground(new java.awt.Color(0, 0, 0));
         jLabel171.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -2471,23 +2488,38 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel193.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel193.setText("Specialty Discount:");
         billingPickUpPanel.add(jLabel193);
-        jLabel193.setBounds(60, 250, 140, 22);
+        jLabel193.setBounds(60, 250, 140, 19);
 
-        DiscountPickupTypeComboBox.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
-        DiscountPickupTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Senior Citizen", "PWD" }));
-        billingPickUpPanel.add(DiscountPickupTypeComboBox);
-        DiscountPickupTypeComboBox.setBounds(200, 250, 100, 25);
+        discountPickupTypeComboBox.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        discountPickupTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Student", "Senior Citizen", "PWD" }));
+        discountPickupTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                discountPickupTypeComboBoxActionPerformed(evt);
+            }
+        });
+        billingPickUpPanel.add(discountPickupTypeComboBox);
+        discountPickupTypeComboBox.setBounds(200, 250, 100, 22);
 
         jLabel194.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel194.setText("Specialty Discount:");
         billingPickUpPanel.add(jLabel194);
-        jLabel194.setBounds(360, 450, 140, 22);
+        jLabel194.setBounds(360, 450, 140, 19);
 
         showPickupPaymentType.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         showPickupPaymentType.setText(". ");
         showPickupPaymentType.setToolTipText("");
         billingPickUpPanel.add(showPickupPaymentType);
-        showPickupPaymentType.setBounds(485, 422, 120, 19);
+        showPickupPaymentType.setBounds(485, 422, 120, 16);
+
+        jButton31.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
+        jButton31.setText("Submit");
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
+        billingPickUpPanel.add(jButton31);
+        jButton31.setBounds(120, 500, 80, 26);
 
         cartLayeredPanel.add(billingPickUpPanel);
         billingPickUpPanel.setBounds(20, 20, 580, 530);
@@ -2511,7 +2543,7 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel58.setText("About us");
         jLabel58.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         tab4.add(jLabel58);
-        jLabel58.setBounds(-10, 20, 640, 55);
+        jLabel58.setBounds(-10, 20, 640, 47);
 
         abtusdesc.setFont(new java.awt.Font("Poppins Light", 0, 16)); // NOI18N
         abtusdesc.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2656,7 +2688,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(americanoPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(americanoPanelLayout.createSequentialGroup()
                         .addComponent(americanoDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(americanoIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(americanoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2790,7 +2822,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(HCMacchiatoPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(HCMacchiatoPanelLayout.createSequentialGroup()
                         .addComponent(HCMacchiatoDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(HCMacchiatoIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(HCMacchiatoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2924,7 +2956,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(LattePic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(LattePanelLayout.createSequentialGroup()
                         .addComponent(LatteDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(LatteIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(LattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3058,7 +3090,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CappuccinoPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CappuccinoPanelLayout.createSequentialGroup()
                         .addComponent(CappuccinoDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(CappuccinoIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CappuccinoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3192,7 +3224,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(BrewedCoffeePic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(BrewedCoffeePanelLayout.createSequentialGroup()
                         .addComponent(BrewedCoffeeDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(BrewedCoffeeIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(BrewedCoffeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3326,7 +3358,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(IWMochaPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(IWMochaPanelLayout.createSequentialGroup()
                         .addComponent(IWMochaDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(IWMochaIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(IWMochaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3460,7 +3492,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(IcedHazelnutPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(IcedHazelnutPanelLayout.createSequentialGroup()
                         .addComponent(IcedHazelnutDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(IcedHazelnutIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(IcedHazelnutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3594,7 +3626,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(SpanishLattePic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(SpanishLattePanelLayout.createSequentialGroup()
                         .addComponent(SpanishLatteDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(SpanishLatteIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(SpanishLattePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3728,7 +3760,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(MatchaPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MatchaPanelLayout.createSequentialGroup()
                         .addComponent(MatchaDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(MatchaIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MatchaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3862,7 +3894,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CoffeeJellyPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CoffeeJellyPanelLayout.createSequentialGroup()
                         .addComponent(CoffeeJellyDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(CoffeeJellyIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CoffeeJellyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3983,7 +4015,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CroissantPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CroissantPanelLayout.createSequentialGroup()
                         .addComponent(CroissantDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(CroissantIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CroissantPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4102,7 +4134,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CheeseRollPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CheeseRollPanelLayout.createSequentialGroup()
                         .addComponent(CheeseRollDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(CheeseRollIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CheeseRollPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4221,7 +4253,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CookiePic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CookiePanelLayout.createSequentialGroup()
                         .addComponent(CookieDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(CookieIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CookiePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4340,7 +4372,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(CinnamonPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CinnamonPanelLayout.createSequentialGroup()
                         .addComponent(CinnamonDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(CinnamonIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CinnamonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4459,7 +4491,7 @@ public class UserFrame extends javax.swing.JFrame {
                     .addComponent(BMuffinPic, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(BMuffinPanelLayout.createSequentialGroup()
                         .addComponent(BMuffinDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(BMuffinIng, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(BMuffinPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5129,6 +5161,7 @@ public class UserFrame extends javax.swing.JFrame {
     private void categoryBack5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBack5ActionPerformed
         jTabbedPanel.setSelectedIndex(1);
         hotCoffeePanel.setVisible(true);
+        categoryBack.setVisible(true);
     }//GEN-LAST:event_categoryBack5ActionPerformed
 
     private void sizeComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sizeComboBox3ActionPerformed
@@ -5440,8 +5473,42 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_deliveryNumberActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
-        processPickupCheckout();
-        updateOrderSummaryLabels();
+        int confirm = JOptionPane.showConfirmDialog(this, 
+        "Are you sure you want to cancel your current order?", 
+        "Cancel Order", 
+        JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            try {
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_user_database", "root", "");
+
+                // Delete from both orders and order_summary for this user
+                String deleteOrdersSQL = "DELETE FROM orders WHERE user_id = ?";
+                String deleteSummarySQL = "DELETE FROM order_summary WHERE user_id = ?";
+
+                PreparedStatement pst1 = con.prepareStatement(deleteOrdersSQL);
+                pst1.setInt(1, currentUserId);
+                pst1.executeUpdate();
+
+                PreparedStatement pst2 = con.prepareStatement(deleteSummarySQL);
+                pst2.setInt(1, currentUserId);
+                pst2.executeUpdate();
+
+                pst1.close();
+                pst2.close();
+                con.close();
+
+                JOptionPane.showMessageDialog(this, "Order has been cancelled successfully.");
+
+                // Optionally clear the GUI table
+                ((DefaultTableModel) currentOrderTable.getModel()).setRowCount(0);
+                ((DefaultTableModel) currentOrderTable1.getModel()).setRowCount(0);
+                lblTotal.setText("₱0.00");
+
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(this, "Error canceling order: " + e.getMessage());
+            }
+        }
 
     }//GEN-LAST:event_jButton29ActionPerformed
 
@@ -5462,6 +5529,57 @@ public class UserFrame extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         selectedPaymentMethod = "Gcash";
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void discountPickupTypeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_discountPickupTypeComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_discountPickupTypeComboBoxActionPerformed
+
+    private void discountTypeDeliveryComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_discountTypeDeliveryComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_discountTypeDeliveryComboBoxActionPerformed
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton31ActionPerformed
+
+    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+        int confirm = JOptionPane.showConfirmDialog(this, 
+        "Are you sure you want to cancel your current order?", 
+        "Cancel Order", 
+        JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            try {
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_user_database", "root", "");
+
+                // Delete from both orders and order_summary for this user
+                String deleteOrdersSQL = "DELETE FROM orders WHERE user_id = ?";
+                String deleteSummarySQL = "DELETE FROM order_summary WHERE user_id = ?";
+
+                PreparedStatement pst1 = con.prepareStatement(deleteOrdersSQL);
+                pst1.setInt(1, currentUserId);
+                pst1.executeUpdate();
+
+                PreparedStatement pst2 = con.prepareStatement(deleteSummarySQL);
+                pst2.setInt(1, currentUserId);
+                pst2.executeUpdate();
+
+                pst1.close();
+                pst2.close();
+                con.close();
+
+                JOptionPane.showMessageDialog(this, "Order has been cancelled successfully.");
+
+                // Optionally clear the GUI table
+                ((DefaultTableModel) currentOrderTable.getModel()).setRowCount(0);
+                ((DefaultTableModel) currentOrderTable1.getModel()).setRowCount(0);
+                lblTotal.setText("₱0.00");
+
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(this, "Error canceling order: " + e.getMessage());
+            }
+        }
+    }//GEN-LAST:event_jButton34ActionPerformed
     
     private String getFullNameFromUserId(int userId) {
         String fullName = "";
@@ -5481,46 +5599,84 @@ public class UserFrame extends javax.swing.JFrame {
     }
     
     public double calculatePickupTotal() {
-    double total = 0.0;
-    DefaultTableModel model = (DefaultTableModel) currentOrderTable.getModel();
-    for (int i = 0; i < model.getRowCount(); i++) {
-        try {
-            int quantity = Integer.parseInt(model.getValueAt(i, 2).toString());
-            double price = Double.parseDouble(model.getValueAt(i, 3).toString());
-            total += quantity * price;
-        } catch (Exception e) {
-            System.out.println("Pickup row " + i + " error: " + e.getMessage());
+        double total = 0.0;
+        DefaultTableModel model = (DefaultTableModel) currentOrderTable.getModel();
+        for (int i = 0; i < model.getRowCount(); i++) {
+            try {
+                int quantity = Integer.parseInt(model.getValueAt(i, 2).toString());
+                double price = Double.parseDouble(model.getValueAt(i, 3).toString());
+                total += quantity * price;
+            } catch (Exception e) {
+                System.out.println("Pickup row " + i + " error: " + e.getMessage());
+            }
         }
+        return total;
     }
-    return total;
-}
+    private double applyDiscount(double total, String discountType) {
+        if ("Student".equalsIgnoreCase(discountType)) {
+            return total * 0.90; // 10% discount
+        } else if ("Senior Citizen".equalsIgnoreCase(discountType) || "PWD".equalsIgnoreCase(discountType)) {
+            return total * 0.80; // 20% discount
+        }
+        return total; // No discount
+    }
     
     public double calculateDeliveryTotal() {
-    double total = 0.0;
-    DefaultTableModel model = (DefaultTableModel) currentOrderTable1.getModel();
-    for (int i = 0; i < model.getRowCount(); i++) {
-        try {
-            int quantity = Integer.parseInt(model.getValueAt(i, 2).toString());
-            double price = Double.parseDouble(model.getValueAt(i, 3).toString());
-            total += quantity * price;
-        } catch (Exception e) {
-            System.out.println("Delivery row " + i + " error: " + e.getMessage());
+        double total = 0.0;
+        DefaultTableModel model = (DefaultTableModel) currentOrderTable1.getModel();
+        for (int i = 0; i < model.getRowCount(); i++) {
+            try {
+                int quantity = Integer.parseInt(model.getValueAt(i, 2).toString());
+                double price = Double.parseDouble(model.getValueAt(i, 3).toString());
+                total += quantity * price;
+            } catch (Exception e) {
+                System.out.println("Delivery row " + i + " error: " + e.getMessage());
+            }
         }
+        return total;
     }
-    return total;
-}
     
     private void processDeliveryCheckout() {
         String fullName = getFullNameFromUserId(currentUserId);
         String phone = deliveryNumber.getText().trim();     // from delivery panel
         String address = deliveryAddress.getText().trim();    // delivery-only
         String city = deliveryCity.getText().trim();      // delivery-only
+        String discountType = (String) discountTypeDeliveryComboBox.getSelectedItem();
         double totalAmount = calculatePickupTotal() + calculateDeliveryTotal();
         totalAmount = totalAmount / 2;
+        totalAmount = applyDiscount(totalAmount, discountType); // Apply discount
+        
+        int confirm = JOptionPane.showConfirmDialog(this, "Do you want to submit this order?", "Confirm", JOptionPane.YES_NO_OPTION);
+       if (confirm != JOptionPane.YES_OPTION) {
+           return; // Cancel if user clicks No
+       }
 
+
+       try {
+           Connection checkConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_user_database", "root", "");
+           String checkSql = "SELECT * FROM order_summary WHERE user_id = ?";
+           PreparedStatement checkPs = checkConn.prepareStatement(checkSql);
+           checkPs.setInt(1, currentUserId);
+           ResultSet rsCheck = checkPs.executeQuery();
+
+           if (rsCheck.next()) {
+               JOptionPane.showMessageDialog(this, "You already have an existing order.");
+               rsCheck.close();
+               checkPs.close();
+               checkConn.close();
+               return; // Do not proceed with order
+           }
+
+           rsCheck.close();
+           checkPs.close();
+           checkConn.close();
+       } catch (Exception ex) {
+           JOptionPane.showMessageDialog(this, "Error checking existing order: " + ex.getMessage());
+           return;
+       }
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_user_database", "root", "");
-            String sql = "INSERT INTO order_summary (user_id, full_name, address, city, phone_number, payment_method, payment_type, total_amount, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO order_summary (user_id, full_name, address, city, phone_number, payment_method, payment_type, discount, total_amount, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, currentUserId);
             ps.setString(2, fullName);
@@ -5529,8 +5685,9 @@ public class UserFrame extends javax.swing.JFrame {
             ps.setString(5, phone);
             ps.setString(6, selectedPaymentMethod);   // Gcash/Cash
             ps.setString(7, "Delivery");
-            ps.setDouble(8, totalAmount);
-            ps.setString(9, "Pending");
+            ps.setString(8, discountType);
+            ps.setDouble(9, totalAmount);
+            ps.setString(10, "Pending");
             ps.executeUpdate();
             JOptionPane.showMessageDialog(this, "Delivery order placed successfully!");
         } catch (Exception e) {
@@ -5542,12 +5699,44 @@ public class UserFrame extends javax.swing.JFrame {
     private void processPickupCheckout() {
         String fullName = getFullNameFromUserId(currentUserId);
         String phone = pickupNumber.getText().trim();     // from pickup panel
+        String discountType = (String) discountPickupTypeComboBox.getSelectedItem();
         double totalAmount = calculatePickupTotal() + calculateDeliveryTotal();
         totalAmount = totalAmount / 2;
+        totalAmount = applyDiscount(totalAmount, discountType); // Apply discount
         
+
+       int confirm = JOptionPane.showConfirmDialog(this, "Do you want to submit this order?", "Confirm", JOptionPane.YES_NO_OPTION);
+       if (confirm != JOptionPane.YES_OPTION) {
+           return; // Cancel if user clicks No
+       }
+
+
+       try {
+           Connection checkConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_user_database", "root", "");
+           String checkSql = "SELECT * FROM order_summary WHERE user_id = ?";
+           PreparedStatement checkPs = checkConn.prepareStatement(checkSql);
+           checkPs.setInt(1, currentUserId);
+           ResultSet rsCheck = checkPs.executeQuery();
+
+           if (rsCheck.next()) {
+               JOptionPane.showMessageDialog(this, "You already have an existing order.");
+               rsCheck.close();
+               checkPs.close();
+               checkConn.close();
+               return; // Do not proceed with order
+           }
+
+           rsCheck.close();
+           checkPs.close();
+           checkConn.close();
+       } catch (Exception ex) {
+           JOptionPane.showMessageDialog(this, "Error checking existing order: " + ex.getMessage());
+           return;
+       }
+       
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_user_database", "root", "");
-            String sql = "INSERT INTO order_summary (user_id, full_name, address, city, phone_number, payment_method, payment_type, total_amount, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO order_summary (user_id, full_name, address, city, phone_number, payment_method, payment_type, discount, total_amount, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, currentUserId);
             ps.setString(2, fullName);
@@ -5556,8 +5745,9 @@ public class UserFrame extends javax.swing.JFrame {
             ps.setString(5, phone);
             ps.setString(6, selectedPaymentMethod);   // Gcash/Cash
             ps.setString(7, "Pickup");
-            ps.setDouble(8, totalAmount);
-            ps.setString(9, "Pending");
+            ps.setString(8, discountType);
+            ps.setDouble(9, totalAmount);
+            ps.setString(10, "Pending");
             ps.executeUpdate();
             JOptionPane.showMessageDialog(this, "Pickup order placed successfully!");
         } catch (Exception e) {
@@ -5570,15 +5760,34 @@ public class UserFrame extends javax.swing.JFrame {
         String fullName = getFullNameFromUserId(currentUserId);
         deliveryFullName.setText(fullName);  // Full name
         showPickupFullName.setText(fullName);
-        double totalAmount = calculatePickupTotal() + calculateDeliveryTotal();
-        totalAmount = totalAmount / 2;
+        double totalAmount = 0.0;
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_user_database", "root", "");
+            String sql = "SELECT total_amount FROM order_summary WHERE user_id = ?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setInt(1, currentUserId);
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
+                totalAmount = rs.getDouble("total_amount");
+            }
+
+            rs.close();
+            pst.close();
+            con.close();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error retrieving total: " + e.getMessage());
+        }
  
                 
         if (selectedPaymentType.equals("Delivery")) {
             String address = deliveryAddress.getText().trim();
             String city = deliveryCity.getText().trim();
             String phone = deliveryNumber.getText().trim();
-
+            String discountType = (String) discountTypeDeliveryComboBox.getSelectedItem();
+               
             showDeliveryAddress.setText(address);  // Address
             // NOTE: You have 2 `jLabel183`s — give one a better name like jLabelCity if needed
             showDeliveryCity.setText(city);     // City (conflicts if same label!)
@@ -5586,15 +5795,18 @@ public class UserFrame extends javax.swing.JFrame {
             showDeliveryPaymentMethod.setText(selectedPaymentMethod);
             showDeliveryPaymentType.setText(selectedPaymentType);
             showDeliveryTotal.setText("₱" + String.format("%.2f", totalAmount));
+            showDeliveryDiscountType.setText(discountType);
             System.out.println("DEBUG: totalAmount = " + totalAmount);
             
         } else {
             String phone = pickupNumber.getText().trim();  // Pickup phone field
+            String discountType = (String) discountPickupTypeComboBox.getSelectedItem();
             
             showPickupNumber.setText(phone);
             showPickupTotal.setText("₱" + String.format("%.2f", totalAmount));
             showPickupPaymentMethod.setText(selectedPaymentMethod);
             showPickupPaymentType.setText(selectedPaymentType);
+            showPickupDiscountType.setText(discountType);
             System.out.println("DEBUG: totalAmount = " + totalAmount);
         }
     }
@@ -5656,8 +5868,6 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel CroissantIng;
     private javax.swing.JPanel CroissantPanel;
     private javax.swing.JLabel CroissantPic;
-    private javax.swing.JComboBox<String> DiscountPickupTypeComboBox;
-    private javax.swing.JComboBox<String> DiscountTypeComboBox;
     private javax.swing.JLabel HCMacchiatoDesc;
     private javax.swing.JLabel HCMacchiatoIng;
     private javax.swing.JPanel HCMacchiatoPanel;
@@ -5751,6 +5961,8 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel deliveryFullName;
     private javax.swing.JLabel deliveryName;
     private javax.swing.JTextField deliveryNumber;
+    private javax.swing.JComboBox<String> discountPickupTypeComboBox;
+    private javax.swing.JComboBox<String> discountTypeDeliveryComboBox;
     private javax.swing.JButton homeBtn;
     private javax.swing.JButton hotCaramelMacchiatoButton;
     private javax.swing.JButton hotCaramelMacchiatoButton1;
@@ -5787,8 +5999,10 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
+    private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton33;
+    private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -6020,12 +6234,12 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JPanel shortLine;
     private javax.swing.JLabel showDeliveryAddress;
     private javax.swing.JLabel showDeliveryCity;
+    private javax.swing.JLabel showDeliveryDiscountType;
     private javax.swing.JLabel showDeliveryNumber;
     private javax.swing.JLabel showDeliveryPaymentMethod;
     private javax.swing.JLabel showDeliveryPaymentType;
     private javax.swing.JLabel showDeliveryTotal;
-    private javax.swing.JLabel showDiscountPickupType;
-    private javax.swing.JLabel showDiscountType;
+    private javax.swing.JLabel showPickupDiscountType;
     private javax.swing.JLabel showPickupFullName;
     private javax.swing.JLabel showPickupNumber;
     private javax.swing.JLabel showPickupPaymentMethod;

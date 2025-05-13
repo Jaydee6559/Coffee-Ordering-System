@@ -111,15 +111,6 @@ public class AdminFrame extends javax.swing.JFrame {
         showTotalAccounts = new javax.swing.JLabel();
         totalAccounts = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("ADMIN");
-        setBackground(new java.awt.Color(239, 233, 233));
-        setMaximumSize(new java.awt.Dimension(920, 610));
-        setMinimumSize(new java.awt.Dimension(920, 610));
-        setPreferredSize(new java.awt.Dimension(920, 610));
-        setResizable(false);
-        getContentPane().setLayout(null);
-
         usersInternalFrame.setBackground(new java.awt.Color(239, 233, 233));
         usersInternalFrame.setTitle("USERS");
         usersInternalFrame.setVisible(true);
@@ -133,7 +124,7 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         usersInternalFrame.getContentPane().add(jButton3);
-        jButton3.setBounds(250, 300, 80, 26);
+        jButton3.setBounds(250, 300, 80, 23);
 
         tblUsers.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         tblUsers.setModel(new javax.swing.table.DefaultTableModel(
@@ -152,9 +143,6 @@ public class AdminFrame extends javax.swing.JFrame {
         usersInternalFrame.getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(6, 7, 570, 280);
 
-        getContentPane().add(usersInternalFrame);
-        usersInternalFrame.setBounds(140, 70, 600, 380);
-
         orderInternalFrame.setBackground(new java.awt.Color(239, 233, 233));
         orderInternalFrame.setTitle("Order Summary");
         orderInternalFrame.setVisible(true);
@@ -168,7 +156,7 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         orderInternalFrame.getContentPane().add(jButton2);
-        jButton2.setBounds(250, 400, 80, 26);
+        jButton2.setBounds(250, 400, 80, 23);
 
         orderTable.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         orderTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -187,8 +175,14 @@ public class AdminFrame extends javax.swing.JFrame {
         orderInternalFrame.getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(8, 24, 570, 360);
 
-        getContentPane().add(orderInternalFrame);
-        orderInternalFrame.setBounds(140, 40, 600, 480);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("ADMIN");
+        setBackground(new java.awt.Color(239, 233, 233));
+        setMaximumSize(new java.awt.Dimension(920, 610));
+        setMinimumSize(new java.awt.Dimension(920, 610));
+        setPreferredSize(new java.awt.Dimension(920, 610));
+        setResizable(false);
+        getContentPane().setLayout(null);
 
         LogoutBtn.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         LogoutBtn.setText("LOGOUT");
@@ -198,7 +192,7 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(LogoutBtn);
-        LogoutBtn.setBounds(20, 520, 100, 26);
+        LogoutBtn.setBounds(20, 520, 100, 23);
 
         jButton1.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         jButton1.setText("Search Users");
@@ -209,7 +203,7 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(130, 520, 130, 26);
+        jButton1.setBounds(130, 520, 130, 23);
 
         orderSearch.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         orderSearch.setText("Search Orders");
@@ -219,7 +213,7 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(orderSearch);
-        orderSearch.setBounds(270, 520, 130, 26);
+        orderSearch.setBounds(270, 520, 130, 23);
 
         order_status.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -245,7 +239,7 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(completeOrder);
-        completeOrder.setBounds(410, 520, 140, 26);
+        completeOrder.setBounds(410, 520, 140, 23);
 
         deleteCompletedOrder.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         deleteCompletedOrder.setText("Delete Completed Order");
@@ -255,7 +249,7 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(deleteCompletedOrder);
-        deleteCompletedOrder.setBounds(560, 520, 190, 26);
+        deleteCompletedOrder.setBounds(560, 520, 190, 23);
 
         cancelOrder.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         cancelOrder.setText("Cancel Order");
@@ -265,19 +259,19 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cancelOrder);
-        cancelOrder.setBounds(760, 520, 130, 26);
+        cancelOrder.setBounds(760, 520, 130, 23);
 
         jLabel4.setFont(new java.awt.Font("Poppins", 0, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Welcome Admin!");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(20, 20, 205, 37);
+        jLabel4.setBounds(20, 20, 183, 32);
 
         user.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         user.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         user.setText("full name ");
         getContentPane().add(user);
-        user.setBounds(20, 60, 200, 22);
+        user.setBounds(20, 60, 200, 19);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
@@ -286,37 +280,37 @@ public class AdminFrame extends javax.swing.JFrame {
         totalSales.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         totalSales.setText("Total Sales");
         jPanel1.add(totalSales);
-        totalSales.setBounds(390, 20, 150, 19);
+        totalSales.setBounds(390, 20, 150, 16);
 
         showTotalSales.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         showTotalSales.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         showTotalSales.setText("total");
         jPanel1.add(showTotalSales);
-        showTotalSales.setBounds(430, 50, 90, 19);
+        showTotalSales.setBounds(430, 50, 90, 16);
 
         showTotalOrders.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         showTotalOrders.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         showTotalOrders.setText("total");
         jPanel1.add(showTotalOrders);
-        showTotalOrders.setBounds(230, 50, 90, 19);
+        showTotalOrders.setBounds(230, 50, 90, 16);
 
         totalOrders.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         totalOrders.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         totalOrders.setText("Total Orders");
         jPanel1.add(totalOrders);
-        totalOrders.setBounds(200, 20, 150, 19);
+        totalOrders.setBounds(200, 20, 150, 16);
 
         showTotalAccounts.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         showTotalAccounts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         showTotalAccounts.setText("total");
         jPanel1.add(showTotalAccounts);
-        showTotalAccounts.setBounds(40, 50, 70, 19);
+        showTotalAccounts.setBounds(40, 50, 70, 16);
 
         totalAccounts.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         totalAccounts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         totalAccounts.setText("Total Accounts");
         jPanel1.add(totalAccounts);
-        totalAccounts.setBounds(10, 20, 150, 19);
+        totalAccounts.setBounds(10, 20, 150, 16);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(340, 20, 550, 110);

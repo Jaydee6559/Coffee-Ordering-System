@@ -2603,12 +2603,12 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="showDiscountType">
+                        <Component class="javax.swing.JLabel" name="showDeliveryDiscountType">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Poppins Light" size="12" style="0"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value=". (edit mo)"/>
+                            <Property name="text" type="java.lang.String" value="."/>
                             <Property name="toolTipText" type="java.lang.String" value=""/>
                           </Properties>
                           <Constraints>
@@ -2763,18 +2763,23 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="DiscountTypeComboBox">
+                        <Component class="javax.swing.JComboBox" name="discountTypeDeliveryComboBox">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Poppins Light" size="12" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="Senior Citizen"/>
-                                <StringItem index="1" value="PWD"/>
+                              <StringArray count="4">
+                                <StringItem index="0" value="None"/>
+                                <StringItem index="1" value="Student"/>
+                                <StringItem index="2" value="Senior Citizen"/>
+                                <StringItem index="3" value="PWD"/>
                               </StringArray>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="discountTypeDeliveryComboBoxActionPerformed"/>
+                          </Events>
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
@@ -2807,6 +2812,22 @@
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                               <AbsoluteConstraints x="480" y="452" width="120" height="-1"/>
+                            </Constraint>
+                          </Constraints>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton34">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Poppins" size="14" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Cancel"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton34ActionPerformed"/>
+                          </Events>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="20" y="580" width="80" height="30"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -3133,12 +3154,12 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="showDiscountPickupType">
+                        <Component class="javax.swing.JLabel" name="showPickupDiscountType">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Poppins Light" size="12" style="0"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value=".(edit mo)"/>
+                            <Property name="text" type="java.lang.String" value="."/>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -3203,14 +3224,14 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Poppins" size="14" style="0"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Submit"/>
+                            <Property name="text" type="java.lang.String" value="Cancel"/>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton29ActionPerformed"/>
                           </Events>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="120" y="500" width="80" height="-1"/>
+                              <AbsoluteConstraints x="10" y="500" width="80" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -3244,18 +3265,23 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="DiscountPickupTypeComboBox">
+                        <Component class="javax.swing.JComboBox" name="discountPickupTypeComboBox">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Poppins Light" size="12" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="Senior Citizen"/>
-                                <StringItem index="1" value="PWD"/>
+                              <StringArray count="4">
+                                <StringItem index="0" value="None"/>
+                                <StringItem index="1" value="Student"/>
+                                <StringItem index="2" value="Senior Citizen"/>
+                                <StringItem index="3" value="PWD"/>
                               </StringArray>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="discountPickupTypeComboBoxActionPerformed"/>
+                          </Events>
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
@@ -3289,6 +3315,22 @@
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                               <AbsoluteConstraints x="485" y="422" width="120" height="-1"/>
+                            </Constraint>
+                          </Constraints>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton31">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Poppins" size="14" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Submit"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton31ActionPerformed"/>
+                          </Events>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="120" y="500" width="80" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -3589,7 +3631,7 @@
                                   <Component id="americanoPic" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Component id="americanoDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="americanoIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3823,7 +3865,7 @@
                                   <Component id="HCMacchiatoPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="HCMacchiatoDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="HCMacchiatoIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4057,7 +4099,7 @@
                                   <Component id="LattePic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="LatteDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="LatteIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4291,7 +4333,7 @@
                                   <Component id="CappuccinoPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CappuccinoDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="CappuccinoIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4525,7 +4567,7 @@
                                   <Component id="BrewedCoffeePic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="BrewedCoffeeDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="BrewedCoffeeIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4759,7 +4801,7 @@
                                   <Component id="IWMochaPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="IWMochaDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="IWMochaIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4993,7 +5035,7 @@
                                   <Component id="IcedHazelnutPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="IcedHazelnutDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="IcedHazelnutIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5227,7 +5269,7 @@
                                   <Component id="SpanishLattePic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="SpanishLatteDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="SpanishLatteIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5461,7 +5503,7 @@
                                   <Component id="MatchaPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="MatchaDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="MatchaIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5695,7 +5737,7 @@
                                   <Component id="CoffeeJellyPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CoffeeJellyDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="CoffeeJellyIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5927,7 +5969,7 @@
                                   <Component id="CroissantPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CroissantDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="46" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="CroissantIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6130,7 +6172,7 @@
                                   <Component id="CheeseRollPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CheeseRollDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="46" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="CheeseRollIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6333,7 +6375,7 @@
                                   <Component id="CookiePic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CookieDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="46" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="CookieIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6536,7 +6578,7 @@
                                   <Component id="CinnamonPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CinnamonDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="46" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="CinnamonIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -6739,7 +6781,7 @@
                                   <Component id="BMuffinPic" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="BMuffinDesc" min="-2" pref="80" max="-2" attributes="0"/>
-                                      <EmptySpace pref="46" max="32767" attributes="0"/>
+                                      <EmptySpace pref="52" max="32767" attributes="0"/>
                                       <Component id="BMuffinIng" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
