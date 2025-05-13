@@ -28,6 +28,7 @@ public class AdminFrame extends javax.swing.JFrame {
            
         usersInternalFrame.setVisible(false);
         orderInternalFrame.setVisible(false);
+        orderPreferenceInternalFrame.setVisible(false);
         
         int homeIconSize = 16; // Or any size that fits well
         totalAccounts.setIcon(getScaledIcon("/images/people.png", homeIconSize));
@@ -85,6 +86,10 @@ public class AdminFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        orderPreferenceInternalFrame = new javax.swing.JInternalFrame();
+        jButton4 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        orderPreference = new javax.swing.JTable();
         usersInternalFrame = new javax.swing.JInternalFrame();
         jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -110,6 +115,64 @@ public class AdminFrame extends javax.swing.JFrame {
         totalOrders = new javax.swing.JLabel();
         showTotalAccounts = new javax.swing.JLabel();
         totalAccounts = new javax.swing.JLabel();
+        orderSearch1 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("ADMIN");
+        setBackground(new java.awt.Color(239, 233, 233));
+        setMaximumSize(new java.awt.Dimension(920, 610));
+        setMinimumSize(new java.awt.Dimension(920, 610));
+        setPreferredSize(new java.awt.Dimension(920, 610));
+        setResizable(false);
+        getContentPane().setLayout(null);
+
+        orderPreferenceInternalFrame.setVisible(true);
+
+        jButton4.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        jButton4.setText("Close");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        orderPreference.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "user_id", "order preference"
+            }
+        ));
+        jScrollPane4.setViewportView(orderPreference);
+        if (orderPreference.getColumnModel().getColumnCount() > 0) {
+            orderPreference.getColumnModel().getColumn(1).setResizable(false);
+        }
+
+        javax.swing.GroupLayout orderPreferenceInternalFrameLayout = new javax.swing.GroupLayout(orderPreferenceInternalFrame.getContentPane());
+        orderPreferenceInternalFrame.getContentPane().setLayout(orderPreferenceInternalFrameLayout);
+        orderPreferenceInternalFrameLayout.setHorizontalGroup(
+            orderPreferenceInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 578, Short.MAX_VALUE)
+            .addGroup(orderPreferenceInternalFrameLayout.createSequentialGroup()
+                .addGap(260, 260, 260)
+                .addComponent(jButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        orderPreferenceInternalFrameLayout.setVerticalGroup(
+            orderPreferenceInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(orderPreferenceInternalFrameLayout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(orderPreferenceInternalFrame);
+        orderPreferenceInternalFrame.setBounds(150, 96, 590, 420);
 
         usersInternalFrame.setBackground(new java.awt.Color(239, 233, 233));
         usersInternalFrame.setTitle("USERS");
@@ -143,6 +206,9 @@ public class AdminFrame extends javax.swing.JFrame {
         usersInternalFrame.getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(6, 7, 570, 280);
 
+        getContentPane().add(usersInternalFrame);
+        usersInternalFrame.setBounds(140, 70, 600, 380);
+
         orderInternalFrame.setBackground(new java.awt.Color(239, 233, 233));
         orderInternalFrame.setTitle("Order Summary");
         orderInternalFrame.setVisible(true);
@@ -175,14 +241,8 @@ public class AdminFrame extends javax.swing.JFrame {
         orderInternalFrame.getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(8, 24, 570, 360);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("ADMIN");
-        setBackground(new java.awt.Color(239, 233, 233));
-        setMaximumSize(new java.awt.Dimension(920, 610));
-        setMinimumSize(new java.awt.Dimension(920, 610));
-        setPreferredSize(new java.awt.Dimension(920, 610));
-        setResizable(false);
-        getContentPane().setLayout(null);
+        getContentPane().add(orderInternalFrame);
+        orderInternalFrame.setBounds(140, 40, 600, 480);
 
         LogoutBtn.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         LogoutBtn.setText("LOGOUT");
@@ -192,7 +252,7 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(LogoutBtn);
-        LogoutBtn.setBounds(20, 520, 100, 23);
+        LogoutBtn.setBounds(20, 100, 100, 23);
 
         jButton1.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         jButton1.setText("Search Users");
@@ -203,17 +263,17 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(130, 520, 130, 23);
+        jButton1.setBounds(20, 520, 130, 23);
 
         orderSearch.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
-        orderSearch.setText("Search Orders");
+        orderSearch.setText("Search Order Preference");
         orderSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 orderSearchActionPerformed(evt);
             }
         });
         getContentPane().add(orderSearch);
-        orderSearch.setBounds(270, 520, 130, 23);
+        orderSearch.setBounds(300, 520, 130, 23);
 
         order_status.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -239,7 +299,7 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(completeOrder);
-        completeOrder.setBounds(410, 520, 140, 23);
+        completeOrder.setBounds(440, 520, 140, 23);
 
         deleteCompletedOrder.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         deleteCompletedOrder.setText("Delete Completed Order");
@@ -249,7 +309,7 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(deleteCompletedOrder);
-        deleteCompletedOrder.setBounds(560, 520, 190, 23);
+        deleteCompletedOrder.setBounds(590, 520, 170, 23);
 
         cancelOrder.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
         cancelOrder.setText("Cancel Order");
@@ -259,7 +319,7 @@ public class AdminFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cancelOrder);
-        cancelOrder.setBounds(760, 520, 130, 23);
+        cancelOrder.setBounds(770, 520, 130, 23);
 
         jLabel4.setFont(new java.awt.Font("Poppins", 0, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -314,6 +374,16 @@ public class AdminFrame extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(340, 20, 550, 110);
+
+        orderSearch1.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        orderSearch1.setText("Search Orders");
+        orderSearch1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orderSearch1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(orderSearch1);
+        orderSearch1.setBounds(160, 520, 130, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -430,29 +500,27 @@ public class AdminFrame extends javax.swing.JFrame {
         if (input != null && !input.trim().isEmpty()) {
             try {
                 int userId = Integer.parseInt(input.trim());
-                String sql = "SELECT item_name, size, quantity, price FROM orders WHERE user_id = ?";
+                String sql = "SELECT * FROM order_preference WHERE user_id = ?";
                 PreparedStatement pst = con.prepareStatement(sql);
                 pst.setInt(1, userId);
                 ResultSet rs = pst.executeQuery();
                 
-                orderInternalFrame.setVisible(true);
-                DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+                orderPreferenceInternalFrame.setVisible(true);
+                DefaultTableModel model = (DefaultTableModel) orderPreference.getModel();
                 model.setRowCount(0);
                 
                 
                 boolean hasData = false;
                 while (rs.next()) {
                     model.addRow(new Object[]{
-                        rs.getString("item_name"),
-                        rs.getString("size"),
-                        rs.getInt("quantity"),
-                        rs.getDouble("price")
+                        rs.getString("user_id"),
+                        rs.getString("order_preference")
                     });
                     hasData = true;
                 }
 
                 if (!hasData) {
-                    javax.swing.JOptionPane.showMessageDialog(this, "No orders found for User ID: " + userId);
+                    javax.swing.JOptionPane.showMessageDialog(this, "No order preference found for User ID: " + userId);
                 }
 
                 rs.close();
@@ -460,7 +528,7 @@ public class AdminFrame extends javax.swing.JFrame {
             } catch (NumberFormatException ex) {
                 javax.swing.JOptionPane.showMessageDialog(this, "Invalid User ID format.");
             } catch (Exception ex) {
-                javax.swing.JOptionPane.showMessageDialog(this, "Error retrieving orders: " + ex.getMessage());
+                javax.swing.JOptionPane.showMessageDialog(this, "Error retrieving order preference: " + ex.getMessage());
             }
         }
     }//GEN-LAST:event_orderSearchActionPerformed
@@ -640,6 +708,50 @@ public class AdminFrame extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         usersInternalFrame.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void orderSearch1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderSearch1ActionPerformed
+        String input = javax.swing.JOptionPane.showInputDialog(this, "Enter User ID:");
+        if (input != null && !input.trim().isEmpty()) {
+            try {
+                int userId = Integer.parseInt(input.trim());
+                String sql = "SELECT * FROM orders WHERE user_id = ?";
+                PreparedStatement pst = con.prepareStatement(sql);
+                pst.setInt(1, userId);
+                ResultSet rs = pst.executeQuery();
+                
+                orderInternalFrame.setVisible(true);
+                DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+                model.setRowCount(0);
+                
+                
+                boolean hasData = false;
+                while (rs.next()) {
+                    model.addRow(new Object[]{
+                        rs.getString("item_name"),
+                        rs.getString("size"),
+                        rs.getInt("quantity"),
+                        rs.getDouble("price")
+                    });
+                    hasData = true;
+                }
+
+                if (!hasData) {
+                    javax.swing.JOptionPane.showMessageDialog(this, "No orders found for User ID: " + userId);
+                }
+
+                rs.close();
+                pst.close();
+            } catch (NumberFormatException ex) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Invalid User ID format.");
+            } catch (Exception ex) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Error retrieving orders: " + ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_orderSearch1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        orderPreferenceInternalFrame.setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
     
     
     public void setUser(String name){
@@ -688,13 +800,18 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JInternalFrame orderInternalFrame;
+    private javax.swing.JTable orderPreference;
+    private javax.swing.JInternalFrame orderPreferenceInternalFrame;
     private javax.swing.JButton orderSearch;
+    private javax.swing.JButton orderSearch1;
     private javax.swing.JTable orderTable;
     private javax.swing.JTable order_status;
     private javax.swing.JLabel showTotalAccounts;

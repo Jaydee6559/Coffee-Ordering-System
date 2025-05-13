@@ -455,6 +455,9 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         clearAll = new javax.swing.JButton();
         lblTotal = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        orderPreferenceTextArea = new javax.swing.JTextArea();
+        lblTotal1 = new javax.swing.JLabel();
         pickupCheckoutPanel = new javax.swing.JPanel();
         jButton33 = new javax.swing.JButton();
         jLabel208 = new javax.swing.JLabel();
@@ -1942,36 +1945,52 @@ public class UserFrame extends javax.swing.JFrame {
         lblTotal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblTotal.setText("jLabel19");
 
+        orderPreferenceTextArea.setColumns(20);
+        orderPreferenceTextArea.setRows(5);
+        orderPreferenceTextArea.setText("....");
+        jScrollPane3.setViewportView(orderPreferenceTextArea);
+
+        lblTotal1.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
+        lblTotal1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblTotal1.setText("Add special instructions (e.g. less sugar, no ice, extra syrup):");
+
         javax.swing.GroupLayout cartPanellLayout = new javax.swing.GroupLayout(cartPanell);
         cartPanell.setLayout(cartPanellLayout);
         cartPanellLayout.setHorizontalGroup(
             cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cartPanellLayout.createSequentialGroup()
                 .addGap(150, 150, 150)
-                .addGroup(cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cartPanellLayout.createSequentialGroup()
-                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(cartPanellLayout.createSequentialGroup()
-                        .addComponent(clearAll)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(6, 6, 6)
+                        .addComponent(lblTotal1))
+                    .addGroup(cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+                        .addGroup(cartPanellLayout.createSequentialGroup()
+                            .addComponent(clearAll)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(cartPanellLayout.createSequentialGroup()
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane3)))
                 .addContainerGap(150, Short.MAX_VALUE))
         );
         cartPanellLayout.setVerticalGroup(
             cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cartPanellLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addGroup(cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(cartPanellLayout.createSequentialGroup()
-                        .addComponent(lblTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)))
-                .addGap(35, 35, 35)
+                    .addComponent(lblTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(lblTotal1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(cartPanellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(clearAll))
@@ -2308,7 +2327,7 @@ public class UserFrame extends javax.swing.JFrame {
             }
         });
         billingDeliveryPanel.add(jButton34);
-        jButton34.setBounds(20, 580, 80, 30);
+        jButton34.setBounds(20, 520, 80, 30);
 
         cartLayeredPanel.add(billingDeliveryPanel);
         billingDeliveryPanel.setBounds(30, 0, 620, 560);
@@ -2590,6 +2609,8 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel10.setText("Size");
 
+        quantitySpinner.setValue(1);
+
         jLabel15.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel15.setText("Quantity");
 
@@ -2723,6 +2744,8 @@ public class UserFrame extends javax.swing.JFrame {
 
         jLabel68.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel68.setText("Size");
+
+        quantitySpinner1.setValue(1);
 
         jLabel69.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel69.setText("Quantity");
@@ -2858,6 +2881,8 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel74.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel74.setText("Size");
 
+        quantitySpinner2.setValue(1);
+
         jLabel75.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel75.setText("Quantity");
 
@@ -2991,6 +3016,8 @@ public class UserFrame extends javax.swing.JFrame {
 
         jLabel80.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel80.setText("Size");
+
+        quantitySpinner3.setValue(1);
 
         jLabel81.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel81.setText("Quantity");
@@ -3126,6 +3153,8 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel86.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel86.setText("Size");
 
+        quantitySpinner4.setValue(1);
+
         jLabel87.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel87.setText("Quantity");
 
@@ -3259,6 +3288,8 @@ public class UserFrame extends javax.swing.JFrame {
 
         jLabel92.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel92.setText("Size");
+
+        quantitySpinner5.setValue(1);
 
         jLabel93.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel93.setText("Quantity");
@@ -3394,6 +3425,8 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel98.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel98.setText("Size");
 
+        quantitySpinner6.setValue(1);
+
         jLabel99.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel99.setText("Quantity");
 
@@ -3527,6 +3560,8 @@ public class UserFrame extends javax.swing.JFrame {
 
         jLabel104.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel104.setText("Size");
+
+        quantitySpinner7.setValue(1);
 
         jLabel105.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel105.setText("Quantity");
@@ -3662,6 +3697,8 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel110.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel110.setText("Size");
 
+        quantitySpinner8.setValue(1);
+
         jLabel111.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel111.setText("Quantity");
 
@@ -3796,6 +3833,8 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel116.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel116.setText("Size");
 
+        quantitySpinner9.setValue(1);
+
         jLabel117.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel117.setText("Quantity");
 
@@ -3919,6 +3958,8 @@ public class UserFrame extends javax.swing.JFrame {
         CroissantPanel.setBackground(new java.awt.Color(239, 233, 233));
         CroissantPanel.setPreferredSize(new java.awt.Dimension(670, 480));
 
+        quantitySpinner10.setValue(1);
+
         jLabel123.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel123.setText("Quantity");
 
@@ -4037,6 +4078,8 @@ public class UserFrame extends javax.swing.JFrame {
 
         CheeseRollPanel.setBackground(new java.awt.Color(239, 233, 233));
         CheeseRollPanel.setPreferredSize(new java.awt.Dimension(670, 480));
+
+        quantitySpinner11.setValue(1);
 
         jLabel129.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel129.setText("Quantity");
@@ -4157,6 +4200,8 @@ public class UserFrame extends javax.swing.JFrame {
         CookiePanel.setBackground(new java.awt.Color(239, 233, 233));
         CookiePanel.setPreferredSize(new java.awt.Dimension(670, 480));
 
+        quantitySpinner12.setValue(1);
+
         jLabel136.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel136.setText("Quantity");
 
@@ -4276,6 +4321,8 @@ public class UserFrame extends javax.swing.JFrame {
         CinnamonPanel.setBackground(new java.awt.Color(239, 233, 233));
         CinnamonPanel.setPreferredSize(new java.awt.Dimension(670, 480));
 
+        quantitySpinner13.setValue(1);
+
         jLabel142.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel142.setText("Quantity");
 
@@ -4394,6 +4441,8 @@ public class UserFrame extends javax.swing.JFrame {
 
         BMuffinPanel.setBackground(new java.awt.Color(239, 233, 233));
         BMuffinPanel.setPreferredSize(new java.awt.Dimension(670, 480));
+
+        quantitySpinner14.setValue(1);
 
         jLabel148.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel148.setText("Quantity");
@@ -4857,6 +4906,25 @@ public class UserFrame extends javax.swing.JFrame {
 
         // Save order and load the current order table
         saveOrderToDatabase(currentUserId, cart);
+        
+        String preferenceText = orderPreferenceTextArea.getText().trim();
+        
+        try {
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/java_user_database", "root", ""
+            );
+
+            String insertPreference = "INSERT INTO order_preference (user_id, order_preference) VALUES (?, ?)";
+            PreparedStatement pstPref = con.prepareStatement(insertPreference);
+            pstPref.setInt(1, currentUserId);
+            pstPref.setString(2, preferenceText);
+            pstPref.executeUpdate();
+            pstPref.close();
+            con.close();
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Failed to save order preference: " + ex.getMessage());
+        }        
 
         try {
             Connection con = DriverManager.getConnection(
@@ -5485,7 +5553,7 @@ public class UserFrame extends javax.swing.JFrame {
                 // Delete from both orders and order_summary for this user
                 String deleteOrdersSQL = "DELETE FROM orders WHERE user_id = ?";
                 String deleteSummarySQL = "DELETE FROM order_summary WHERE user_id = ?";
-
+                String deletePreferenceSQL = "DELETE FROM order_preference WHERE user_id = ?";
                 PreparedStatement pst1 = con.prepareStatement(deleteOrdersSQL);
                 pst1.setInt(1, currentUserId);
                 pst1.executeUpdate();
@@ -5493,9 +5561,14 @@ public class UserFrame extends javax.swing.JFrame {
                 PreparedStatement pst2 = con.prepareStatement(deleteSummarySQL);
                 pst2.setInt(1, currentUserId);
                 pst2.executeUpdate();
+                
+                PreparedStatement pst3 = con.prepareStatement(deletePreferenceSQL);
+                pst3.setInt(1, currentUserId);
+                pst3.executeUpdate();
 
                 pst1.close();
                 pst2.close();
+                pst3.close();
                 con.close();
 
                 JOptionPane.showMessageDialog(this, "Order has been cancelled successfully.");
@@ -5539,7 +5612,8 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_discountTypeDeliveryComboBoxActionPerformed
 
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
-        // TODO add your handling code here:
+        processPickupCheckout();
+        updateOrderSummaryLabels();
     }//GEN-LAST:event_jButton31ActionPerformed
 
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
@@ -5555,7 +5629,7 @@ public class UserFrame extends javax.swing.JFrame {
                 // Delete from both orders and order_summary for this user
                 String deleteOrdersSQL = "DELETE FROM orders WHERE user_id = ?";
                 String deleteSummarySQL = "DELETE FROM order_summary WHERE user_id = ?";
-
+                String deletePreferenceSQL = "DELETE FROM order_preference WHERE user_id = ?";
                 PreparedStatement pst1 = con.prepareStatement(deleteOrdersSQL);
                 pst1.setInt(1, currentUserId);
                 pst1.executeUpdate();
@@ -5563,9 +5637,14 @@ public class UserFrame extends javax.swing.JFrame {
                 PreparedStatement pst2 = con.prepareStatement(deleteSummarySQL);
                 pst2.setInt(1, currentUserId);
                 pst2.executeUpdate();
+                
+                PreparedStatement pst3 = con.prepareStatement(deletePreferenceSQL);
+                pst3.setInt(1, currentUserId);
+                pst3.executeUpdate();
 
                 pst1.close();
                 pst2.close();
+                pst3.close();
                 con.close();
 
                 JOptionPane.showMessageDialog(this, "Order has been cancelled successfully.");
@@ -6192,14 +6271,17 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPanel;
     private javax.swing.JButton latteButton;
     private javax.swing.JButton latteButton1;
     private javax.swing.JLabel lblTotal;
+    private javax.swing.JLabel lblTotal1;
     private javax.swing.JButton leftButton;
     private javax.swing.JPanel longLine;
+    private javax.swing.JTextArea orderPreferenceTextArea;
     private javax.swing.JPanel panelHome;
     private javax.swing.JPanel pastriesPanel;
     private javax.swing.JPanel pastriesPanel1;
