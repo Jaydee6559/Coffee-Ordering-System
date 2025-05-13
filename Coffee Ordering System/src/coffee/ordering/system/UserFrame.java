@@ -12,6 +12,9 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.Insets;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -22,6 +25,8 @@ import java.sql.SQLException;
 import java.util.List;
 import javax.swing.SwingConstants;
 import java.sql.ResultSet;
+import javax.imageio.ImageIO;
+import javax.swing.JFileChooser;
 
 
 
@@ -303,17 +308,17 @@ public class UserFrame extends javax.swing.JFrame {
 
     
     private ImageIcon getScaledIcon(String path, int width, int height) {
-    java.net.URL imageUrl = getClass().getResource(path);
-    if (imageUrl == null) {
-        System.out.println("Image not found at: " + path);
-        return null;
+        java.net.URL imageUrl = getClass().getResource(path);
+        if (imageUrl == null) {
+            System.out.println("Image not found at: " + path);
+            return null;
+        }
+        ImageIcon icon = new ImageIcon(imageUrl);
+        Image img = icon.getImage();
+        Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+        return new ImageIcon(scaledImg);
+
     }
-    ImageIcon icon = new ImageIcon(imageUrl);
-    Image img = icon.getImage();
-    Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
-    return new ImageIcon(scaledImg);
-    
-}
     
     public void setCurrentUserId(int userId) {
         this.currentUserId = userId;
@@ -4895,10 +4900,11 @@ public class UserFrame extends javax.swing.JFrame {
     
     
     private ImageIcon getScaledIcon(String path, int size) {
-    ImageIcon icon = new ImageIcon(getClass().getResource(path));
-    Image img = icon.getImage().getScaledInstance(size, size, Image.SCALE_SMOOTH);
-    return new ImageIcon(img);
-}
+        ImageIcon icon = new ImageIcon(getClass().getResource(path));
+        Image img = icon.getImage().getScaledInstance(size, size, Image.SCALE_SMOOTH);
+        return new ImageIcon(img);
+    }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jTabbedPanel.setSelectedIndex(1);
         hotCoffeePanel.setVisible(false);
@@ -5002,22 +5008,22 @@ public class UserFrame extends javax.swing.JFrame {
         LattePanel.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_popular4ActionPerformed
     private void hideAllProductPanels() {
-    americanoPanel.setVisible(false);
-    HCMacchiatoPanel.setVisible(false);
-    LattePanel.setVisible(false);
-    CappuccinoPanel.setVisible(false);
-    BrewedCoffeePanel.setVisible(false);
-    IWMochaPanel.setVisible(false);
-    IcedHazelnutPanel.setVisible(false);
-    SpanishLattePanel.setVisible(false);
-    MatchaPanel.setVisible(false);
-    CoffeeJellyPanel.setVisible(false);
-    CroissantPanel.setVisible(false);
-    CheeseRollPanel.setVisible(false);
-    CookiePanel.setVisible(false);
-    CinnamonPanel.setVisible(false);
-    BMuffinPanel.setVisible(false);
-}
+        americanoPanel.setVisible(false);
+        HCMacchiatoPanel.setVisible(false);
+        LattePanel.setVisible(false);
+        CappuccinoPanel.setVisible(false);
+        BrewedCoffeePanel.setVisible(false);
+        IWMochaPanel.setVisible(false);
+        IcedHazelnutPanel.setVisible(false);
+        SpanishLattePanel.setVisible(false);
+        MatchaPanel.setVisible(false);
+        CoffeeJellyPanel.setVisible(false);
+        CroissantPanel.setVisible(false);
+        CheeseRollPanel.setVisible(false);
+        CookiePanel.setVisible(false);
+        CinnamonPanel.setVisible(false);
+        BMuffinPanel.setVisible(false);
+    }
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         String fullName = getFullNameFromUserId(currentUserId);
         longLine.setVisible(false);
@@ -5670,6 +5676,7 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton28ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        savePanelAsImage(billingDeliveryPanel);
         deliveryCheckoutPanel.setVisible(true);
         billingDeliveryPanel.setVisible(false);
     }//GEN-LAST:event_jButton27ActionPerformed
@@ -5733,6 +5740,7 @@ public class UserFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        savePanelAsImage(billingPickUpPanel);
         pickupCheckoutPanel.setVisible(true);
         billingPickUpPanel.setVisible(false);
     }//GEN-LAST:event_jButton9ActionPerformed
@@ -5868,19 +5876,19 @@ public class UserFrame extends javax.swing.JFrame {
         totalAmount = applyDiscount(totalAmount, discountType); // Apply discount
         
         int confirm = JOptionPane.showConfirmDialog(this, "Do you want to submit this order?", "Confirm", JOptionPane.YES_NO_OPTION);
-       if (confirm != JOptionPane.YES_OPTION) {
-           return; // Cancel if user clicks No
-       }
+        if (confirm != JOptionPane.YES_OPTION) {
+            return; // Cancel if user clicks No
+        }
 
 
        try {
-           Connection checkConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_user_database", "root", "");
-           String checkSql = "SELECT * FROM order_summary WHERE user_id = ?";
-           PreparedStatement checkPs = checkConn.prepareStatement(checkSql);
-           checkPs.setInt(1, currentUserId);
-           ResultSet rsCheck = checkPs.executeQuery();
+            Connection checkConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_user_database", "root", "");
+            String checkSql = "SELECT * FROM order_summary WHERE user_id = ?";
+            PreparedStatement checkPs = checkConn.prepareStatement(checkSql);
+            checkPs.setInt(1, currentUserId);
+            ResultSet rsCheck = checkPs.executeQuery();
 
-           if (rsCheck.next()) {
+            if (rsCheck.next()) {
                JOptionPane.showMessageDialog(this, "You already have an existing order.");
                rsCheck.close();
                checkPs.close();
@@ -5888,12 +5896,12 @@ public class UserFrame extends javax.swing.JFrame {
                return; // Do not proceed with order
            }
 
-           rsCheck.close();
-           checkPs.close();
-           checkConn.close();
+            rsCheck.close();
+            checkPs.close();
+            checkConn.close();
        } catch (Exception ex) {
-           JOptionPane.showMessageDialog(this, "Error checking existing order: " + ex.getMessage());
-           return;
+            JOptionPane.showMessageDialog(this, "Error checking existing order: " + ex.getMessage());
+            return;
        }
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_user_database", "root", "");
@@ -6042,7 +6050,31 @@ public class UserFrame extends javax.swing.JFrame {
     public void setUser(String name){
         user.setText(name);
     }
+    
+    public void savePanelAsImage(JPanel panel) {
+        try {
+            BufferedImage image = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_ARGB);
+            Graphics2D g2d = image.createGraphics();
+            panel.paint(g2d);
+            g2d.dispose();
 
+            // Let user pick location
+            JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setDialogTitle("Save Order Summary as Image");
+            fileChooser.setSelectedFile(new File("order_summary.png"));
+
+            int userSelection = fileChooser.showSaveDialog(this);
+            if (userSelection == JFileChooser.APPROVE_OPTION) {
+                File fileToSave = fileChooser.getSelectedFile();
+                ImageIO.write(image, "png", fileToSave);
+                JOptionPane.showMessageDialog(this, "Order summary saved as image!");
+            }
+
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this, "Error saving image: " + ex.getMessage());
+        }
+    }
+    
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
