@@ -59,12 +59,12 @@ public class Login extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         username = new javax.swing.JTextPane();
         jLabel11 = new javax.swing.JLabel();
-        jTextPane6 = new javax.swing.JTextPane();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
         LoginBtn = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         SignUpBtn = new javax.swing.JButton();
+        passwordField = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
@@ -114,7 +114,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setAlignmentY(0.0F);
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Left.add(jLabel1);
-        jLabel1.setBounds(160, 30, 93, 55);
+        jLabel1.setBounds(160, 30, 86, 47);
         jLabel1.getAccessibleContext().setAccessibleDescription("");
 
         jLabel5.setFont(new java.awt.Font("Poppins Light", 0, 18)); // NOI18N
@@ -122,33 +122,26 @@ public class Login extends javax.swing.JFrame {
         jLabel5.setAlignmentY(0.0F);
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Left.add(jLabel5);
-        jLabel5.setBounds(105, 80, 189, 28);
+        jLabel5.setBounds(105, 80, 174, 24);
 
         jLabel8.setBackground(new java.awt.Color(153, 153, 153));
         jLabel8.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel8.setText("Email");
         Left.add(jLabel8);
-        jLabel8.setBounds(35, 150, 74, 22);
+        jLabel8.setBounds(30, 150, 74, 19);
 
         username.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
         username.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         username.setAlignmentX(0.0F);
         username.setAlignmentY(0.0F);
         Left.add(username);
-        username.setBounds(35, 175, 330, 22);
+        username.setBounds(30, 180, 340, 22);
 
         jLabel11.setBackground(new java.awt.Color(153, 153, 153));
         jLabel11.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel11.setText("Login As");
         Left.add(jLabel11);
-        jLabel11.setBounds(60, 320, 74, 22);
-
-        jTextPane6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Poppins Light", 0, 14))); // NOI18N
-        jTextPane6.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        jTextPane6.setAlignmentX(0.0F);
-        jTextPane6.setAlignmentY(0.0F);
-        Left.add(jTextPane6);
-        jTextPane6.setBounds(35, 260, 330, 22);
+        jLabel11.setBounds(60, 320, 74, 19);
 
         jComboBox1.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Admin" }));
@@ -164,7 +157,7 @@ public class Login extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel13.setText("Password");
         Left.add(jLabel13);
-        jLabel13.setBounds(35, 235, 74, 22);
+        jLabel13.setBounds(30, 230, 74, 19);
 
         LoginBtn.setBackground(new java.awt.Color(89, 51, 20));
         LoginBtn.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
@@ -182,7 +175,7 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Don't have an account?");
         Left.add(jLabel4);
-        jLabel4.setBounds(51, 510, 190, 22);
+        jLabel4.setBounds(51, 510, 190, 19);
 
         SignUpBtn.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         SignUpBtn.setForeground(new java.awt.Color(102, 0, 0));
@@ -195,7 +188,15 @@ public class Login extends javax.swing.JFrame {
             }
         });
         Left.add(SignUpBtn);
-        SignUpBtn.setBounds(247, 506, 90, 29);
+        SignUpBtn.setBounds(247, 506, 90, 26);
+
+        passwordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordFieldActionPerformed(evt);
+            }
+        });
+        Left.add(passwordField);
+        passwordField.setBounds(30, 260, 340, 22);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -242,7 +243,7 @@ public class Login extends javax.swing.JFrame {
         if ("".equals(username.getText())) {
              JOptionPane.showMessageDialog(new JFrame(), "Email Address is required", "Error",
                      JOptionPane.ERROR_MESSAGE);
-         } else if ("".equals(jTextPane6.getText())) {
+         } else if ("".equals(passwordField.getPassword().length == 0)) {
              JOptionPane.showMessageDialog(new JFrame(), "Password is required", "Error",
                      JOptionPane.ERROR_MESSAGE);
          } else if (jComboBox1.getSelectedItem() == null) {
@@ -250,7 +251,7 @@ public class Login extends javax.swing.JFrame {
                      JOptionPane.ERROR_MESSAGE);
          } else {
              Email = username.getText();
-             Password = jTextPane6.getText();
+             Password = new String(passwordField.getPassword());
              String selectedType = jComboBox1.getSelectedItem().toString();
 
 
@@ -298,7 +299,7 @@ public class Login extends javax.swing.JFrame {
                         JOptionPane.ERROR_MESSAGE);
                 }
 
-        jTextPane6.setText("");
+        passwordField.setText("");
 
             }
         } catch (Exception e) {
@@ -315,6 +316,10 @@ public class Login extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_SignUpBtnActionPerformed
 
+    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordFieldActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Left;
@@ -330,8 +335,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextPane jTextPane6;
     private javax.swing.JLabel logo;
+    private javax.swing.JPasswordField passwordField;
     private javax.swing.JTextPane username;
     // End of variables declaration//GEN-END:variables
 }
