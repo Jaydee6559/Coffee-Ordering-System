@@ -464,14 +464,14 @@
             <Component class="javax.swing.JPasswordField" name="Password">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="40" y="350" width="320" height="-1"/>
+                  <AbsoluteConstraints x="35" y="350" width="330" height="22"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JPasswordField" name="ConfirmPassword">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="40" y="410" width="320" height="-1"/>
+                  <AbsoluteConstraints x="35" y="410" width="330" height="22"/>
                 </Constraint>
               </Constraints>
             </Component>

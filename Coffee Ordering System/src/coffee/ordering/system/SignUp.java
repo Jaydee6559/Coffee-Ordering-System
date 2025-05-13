@@ -226,9 +226,9 @@ private ImageIcon getScaledIcon(String path, int width, int height) {
         Left.add(jLabel13);
         jLabel13.setBounds(35, 455, 74, 19);
         Left.add(Password);
-        Password.setBounds(40, 350, 320, 22);
+        Password.setBounds(35, 350, 330, 22);
         Left.add(ConfirmPassword);
-        ConfirmPassword.setBounds(40, 410, 320, 22);
+        ConfirmPassword.setBounds(35, 410, 330, 22);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
