@@ -288,7 +288,7 @@ public class AdminFrame extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "user_id", "Full Name", "Payment Type", "Payment Method", "Total", "City", "Address", "Number", "Status"
+                "user_id", "Full Name", "Payment Type", "Payment Method", "Address", "Total", "City", "Number", "Status"
             }
         ));
         jScrollPane3.setViewportView(order_status);

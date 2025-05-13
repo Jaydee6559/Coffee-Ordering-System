@@ -396,9 +396,9 @@
                 <Column editable="true" title="Full Name" type="java.lang.Object"/>
                 <Column editable="true" title="Payment Type" type="java.lang.Object"/>
                 <Column editable="true" title="Payment Method" type="java.lang.Object"/>
+                <Column editable="true" title="Address" type="java.lang.Object"/>
                 <Column editable="true" title="Total" type="java.lang.Object"/>
                 <Column editable="true" title="City" type="java.lang.Object"/>
-                <Column editable="true" title="Address" type="java.lang.Object"/>
                 <Column editable="true" title="Number" type="java.lang.Object"/>
                 <Column editable="true" title="Status" type="java.lang.Object"/>
               </Table>
